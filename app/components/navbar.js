@@ -2,12 +2,8 @@
 import Image from "next/image";
 import Sidebar from "./sidebar";
 import logo from "../assets/yeti_logo-removebg-preview.png";
+import { useState } from "react";
 export default function Navbar(){
-    function sidebar(){
-        return(
-        <Sidebar/>
-        );
-    }
 
 return(
     <div className="flex items-center h-20 border-b-2 border-neutral-400 sm:h-24 sm:border-b-2 sm:border-neutral-400">
@@ -20,7 +16,7 @@ return(
         <a href="#">Contact us</a>
     </div>
     <div className="  sm:hidden ml-auto mr-7">
-    <svg xmlns="http://www.w3.org/2000/svg" onClick={sidebar} width="30" height="30" fill="WHITE" className="bi bi-list ml-auto hover:scale-110" viewBox="0 0 16 16">
+    <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" fill="WHITE" className="bi bi-list ml-auto hover:scale-110" viewBox="0 0 16 16">
   <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
 </svg>
     </div>
