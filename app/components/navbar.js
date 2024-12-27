@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import Sidebar from "./sidebar";
-import logo from "../assets/yeti_logo-removebg-preview.png";
+import logo from "../yeti_logo-removebg-preview.png";
 import { useState } from "react";
 export default function Navbar(){
 

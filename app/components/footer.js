@@ -1,5 +1,5 @@
 "use client"
-import logo from "../assets/yeti_logo-removebg-preview.png"
+import logo from "../yeti_logo-removebg-preview.png"
 import Image from "next/image"
 export default function Footer(){
     return(
