@@ -1,3 +1,5 @@
+import { Rajdhani } from 'next/font/google';
+
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: ["class"],
@@ -8,6 +10,12 @@ export default {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			zenDots: ['"Zen Dots"', 'sans-serif'], // Add Zen Dots font
+			Rajdhani: ['"Rajdhani"', 'sans-serif'], // Add Zen Dots font
+
+		  },
+
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

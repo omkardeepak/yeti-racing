@@ -1,14 +1,14 @@
 "use client"
-import logo from "../yeti_logo-removebg-preview.png"
+import logo from '../asset/yeti_logo-removebg-preview.png'
 import Image from "next/image"
 export default function Footer(){
     return(
-      <div className=" bg-stone-900 pt-5 pr-2 pl-2">  
-  <footer className="flex  space-x-2 sm:space-x-9 sm:p-8  pb-3 text-slate-50 ">
-    <div className="sm:flex sm:flex-1 text-sm justify-center items-center border-r-2 hidden">
+      <div className=" bg-stone-900  pr-2 pl-2 z-10">  
+  <footer className="flex pt-3 space-x-2 sm:space-x-9 sm:pt-4  pb-0 text-slate-50 ">
+    <div className="sm:flex text-sm  sm:w-1/6 justify-center items-center border-r-2 hidden">
       <Image src={logo} alt="yeti logo" className="sm:h-24 sm:w-24"></Image>
     </div>
-    <div className="flex-1 text-sm border-r-2 sm:ml-auto sm:justify-center">
+    <div className="w-1/2 sm:w-1/6 text-sm border-r-2 sm:border-r-2 sm:ml-auto sm:justify-center">
       <h5 className="sm:justify-center md:text-2xl">SECTION</h5>
       <br></br>
       <ul className="">
@@ -19,8 +19,8 @@ export default function Footer(){
         <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Contact us</a></li>
       </ul>
     </div>
-    <div className="flex-1 text-sm sm:border-r-2">
-      <h5 className="mb-7 md:text-2xl">CONTACT US</h5>
+    <div className="w-1/2 sm:w-1/6 text-sm sm:border-r-2">
+      <h5 className="mb-4 md:text-2xl">CONTACT US</h5>
       <ul className="">
         <li className="flex space-x-2 sm:space-x-10">
          Name:
@@ -39,9 +39,9 @@ export default function Footer(){
     </div>
     <div className="flex-1 text-sm sm:block hidden">
     <iframe   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.618667966787!2d76.32889797507872!3d10.048292090059604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3a571be335%3A0xe9d0d17ee3a87389!2sSchool%20of%20Engineering%2C%20CUSAT!5e0!3m2!1sen!2sin!4v1735200976648!5m2!1sen!2sin&q=" 
- width="200" height="200"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="md:w-80 md:h-80 sm:w-50 sm:h-50 "></iframe></div>   
+ width="200" height="200"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="md:w-full md:h-60 sm:w-50 sm:h-50 "></iframe></div>   
   </footer>
-      <div className="flex text-center justify-center space-x-10 items-center h-20 p-6 mb-2 border-b-white border-b-2">
+      <div className="flex text-center justify-center space-x-10 items-center h-14 mb-2 border-b-white border-b-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" className="bi bi-envelope" viewBox="0 0 16 16">
   <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
 </svg><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" className="bi bi-instagram" viewBox="0 0 16 16">

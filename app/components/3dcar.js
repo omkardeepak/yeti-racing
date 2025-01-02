@@ -26,16 +26,16 @@ function Car() {
       // console.log(loadedModel);
 
       gltfScene.scene.rotation.y = Math.PI / 8;
-      gltfScene.scene.position.y = -3;
-      gltfScene.scene.scale.set(6,6,6);
+      gltfScene.scene.position.y = 0;
+      gltfScene.scene.scale.set(6.5,6.5,6.5);
       test.scene.add(gltfScene.scene);
     });
 
     const animate = () => {
       if (loadedModel) {
-        // loadedModel.scene.rotation.x += 0.01;
+        // loadedModel.scene.rotation.x += 0.1;
         loadedModel.scene.rotation.y += 0.005;
-        // loadedModel.scene.rotation.z += 0.01;
+        // loadedModel.scene.rotation.z += 0.1;
       }
       requestAnimationFrame(animate);
     };

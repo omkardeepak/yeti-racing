@@ -1,12 +1,12 @@
 "use client"
 import Image from "next/image";
 import Sidebar from "./sidebar";
-import logo from "../yeti_logo-removebg-preview.png";
+import logo from "../asset/yeti_logo-removebg-preview.png";
 import { useState } from "react";
 export default function Navbar(){
 
 return(
-    <div className="flex items-center h-20 border-b-2 border-neutral-400 sm:h-24 sm:border-b-2 sm:border-neutral-400">
+    <div className="flex items-center h-20 border-b-2 border-neutral-400 sm:h-24 sm:border-b-2 sm:border-neutral-400 bg-black">
     <Image src={logo} alt="yeti logo" className=" h-12 w-12 ml-5 sm:h-20 sm:w-20 sm:ml-3 sm:p-1 "></Image>
     <div className="hidden sm:flex sm:items-center sm:text-1xl sm:space-x-6 sm:text-neutral-100 sm:ml-auto sm:mr-7">
         <a href="#">Team</a>
