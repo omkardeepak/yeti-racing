@@ -13,7 +13,7 @@ export default {
 		fontFamily: {
 			zenDots: ['"Zen Dots"', 'sans-serif'], // Add Zen Dots font
 			Rajdhani: ['"Rajdhani"', 'sans-serif'], // Add Zen Dots font
-
+			Orbitron: ['"Orbitron"', 'sans-serif'],
 		  },
 
   		colors: {

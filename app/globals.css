@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Zen+Dots&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 @layer base {
   :root {
