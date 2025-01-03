@@ -68,6 +68,22 @@ export default {
   				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
+		 
+		  animation: {
+			'infinite-scrollr': 'infinite-scrollr 15s linear infinite',
+			'infinite-scrolll': 'infinite-scrolll 15s linear infinite',
+
+			},
+			keyframes: {
+			'infinite-scrollr': {
+				from: { transform: 'translateX(0)' },
+				to: { transform: 'translateX(-45%)' },
+			},
+			'infinite-scrolll': {
+				from: { transform: 'translateX(-45%)' },
+				to: { transform: 'translateX(0)' },
+			}
+		  },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
