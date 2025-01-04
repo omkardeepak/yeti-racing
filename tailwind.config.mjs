@@ -1,4 +1,4 @@
-import { Rajdhani } from 'next/font/google';
+import { Goldman, Rajdhani } from 'next/font/google';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,6 +14,7 @@ export default {
 			zenDots: ['"Zen Dots"', 'sans-serif'], // Add Zen Dots font
 			Rajdhani: ['"Rajdhani"', 'sans-serif'], // Add Zen Dots font
 			Orbitron: ['"Orbitron"', 'sans-serif'],
+			Goldman:['"Goldman"', 'sans-serif'],
 		  },
 
   		colors: {
@@ -68,6 +69,7 @@ export default {
   				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
+		  
 		 
 		  animation: {
 			'infinite-scrollr': 'infinite-scrollr 15s linear infinite',
@@ -91,5 +93,8 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require('tailwindcss-animate'),
+  ]
+  
 };

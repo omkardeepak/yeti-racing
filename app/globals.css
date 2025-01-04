@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Zen+Dots&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Zen+Dots&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Zen+Dots&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
