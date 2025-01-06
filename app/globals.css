@@ -9,11 +9,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none; 
+ 
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 
 @layer base {

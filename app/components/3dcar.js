@@ -34,7 +34,7 @@ function Car() {
     const animate = () => {
       if (loadedModel) {
         // loadedModel.scene.rotation.x += 0.1;
-        loadedModel.scene.rotation.y += 0.005;
+        loadedModel.scene.rotation.y += 0.008;
         // loadedModel.scene.rotation.z += 0.1;
       }
       requestAnimationFrame(animate);
@@ -43,7 +43,9 @@ function Car() {
   }, []);
 
   return (
-      <canvas id="myThreeJsCanvas" className="" />
+    <div className=''>
+      <canvas id="myThreeJsCanvas" className="z-0" />
+      </div>
   );
 }
 

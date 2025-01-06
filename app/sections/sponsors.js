@@ -11,13 +11,14 @@ export default function Sponsor(){
 
       
     return (
-        <div className="h-screen bg-neutral-950 text-white overflow-hidden z-0">
+        <div className="relative h-screen bg-neutral-950 text-white overflow-hidden z-0">
             <video className=" absolute w-full h-full z-0 object-cover" src='/assets/IMG_6205.mp4' autoPlay loop muted></video>
-            <div className="relative flex sm:mt-20 mt-24 justify-center text-5xl md:text-8xl  font-Goldman z-50">
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-0"></div>
+            <div className="relative flex sm:mt-20 mt-24 justify-center text-5xl md:text-8xl  font-Goldman z-50 ">
       <span className=" mr-4 sm:mr-7 text-red-600">Our </span><span className="text-red-600">Sponsors</span>
     </div>
 
-<div className="absolute pt-64 sm:pt-28 lg:pt-52 z-0">
+<div className="absolute pt-64 sm:pt-28 lg:pt-52 z-20">
 <div className=" w-full overflow-hidden ">
 <hr></hr>
   <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrollr">

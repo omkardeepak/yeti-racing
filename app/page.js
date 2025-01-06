@@ -4,6 +4,7 @@ import Navbar from "@/app/components/navbar";
 import Footer from "./components/footer";
 import About from "./sections/about"
 import Sponsor from "./sections/sponsors";
+import Car from "./components/3dcar";
 export default function Home() {
   return (
     <div>
@@ -12,8 +13,9 @@ export default function Home() {
     home
   </div>
   {/* page 2 */}
-  <About></About>
-  <Sponsor></Sponsor>
+  <About>
+  </About>
+<Car></Car>  <Sponsor></Sponsor>
 
 <Footer></Footer>
 </div>

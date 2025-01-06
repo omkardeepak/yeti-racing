@@ -3,7 +3,7 @@ import logo from '../asset/yeti_logo-removebg-preview.png'
 import Image from "next/image"
 export default function Footer(){
     return(
-      <div className=" bg-stone-900  pr-2 pl-2 z-10">  
+      <div className=" bg-neutral-950  pr-2 pl-2 z-10 pt-5">  
   <footer className="flex pt-3 space-x-2 sm:space-x-9 sm:pt-4  pb-0 text-slate-50 ">
     <div className="sm:flex text-sm  sm:w-1/6 justify-center items-center border-r-2 hidden">
       <Image src={logo} alt="yeti logo" className="sm:h-24 sm:w-24"></Image>

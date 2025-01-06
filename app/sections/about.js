@@ -42,7 +42,7 @@ import Image from "next/image";
       Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology, Kochi, embodies dedication and collaboration, with a strong presence in competitions like SAE SUPRA, FFS INDIA, and FORMULA BHARAT. Since our debut in SUPRA 2017, we've made significant strides in automotive engineering excellence, progressing from an initial 102nd placement to impressive rankings including 4th in Design Event, 7th overall in FFS INDIA 2017, and 12th in FFS INDIA 2018.
     </div>
   </div>
-  <div className="relative z-30 md:ml-40 mt-44">
+  <div className="relative z-30 md:ml-40 mt-36">
   {/* Pins (Markers) */}
   <div id="1" className="hidden -mt-40 z-50 absolute">
     <ul className="flex flex-row md:grid grid-cols-3 gap-5 text-redis-neutral-800 max-w-2xl mx-auto p-10 mt-10 lg:flex lg:flex-col lg:-ml-40">
@@ -88,24 +88,24 @@ import Image from "next/image";
     </li>
 </ul>
   </div> */}
-  <div id="3" className="hidden -mt-40 z-50 absolute">
-  <ul className="flex flex-row text-center md:grid grid-cols-3 gap-5 text-redis-neutral-800 max-w-2xl mx-auto p-10 mt-10 lg:flex lg:flex-col lg:-ml-40">
-  <div className="text-xl font-zenDots ">
+  <div id="3" className="hidden -mt-40 z-50 absolute mr-20">
+  <ul className="flex flex-row text-center md:grid grid-cols-3 gap-2  mr-12    text-redis-neutral-800 max-w-2xl mx-auto p-10 mt-10 lg:flex lg:flex-col lg:-ml-40">
+  <div className="text-lg font-zenDots -ml-6">
       SAE Supra 2024
     </div>
     <li
-        className="w-full text-sm font-zenDots text-white p-6 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-neutral-300 shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center">
-        <span className="mb-1 text-green-500  font-display text-3xl">9th</span>
+        className="w-full text-sm font-zenDots text-white p-3 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-neutral-300 shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center">
+        <span className="mb-1 text-green-500  font-display text-xl">9th</span>
         Overall
     </li>
     <li
-        className="w-full text-sm font-zenDots text-white p-6 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-neutral-300 shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center">
-        <span className="mb-1 text-green-500 font-display text-3xl">3rd</span>
+        className="w-full text-sm font-zenDots text-white p-3 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-neutral-300 shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center">
+        <span className="mb-1 text-green-500 font-display text-xl">3rd</span>
         Cost
     </li>
     <li
-        className="w-full text-sm font-zenDots text-white p-6 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-neutral-300 shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center">
-        <span className="mb-1 text-green-500 font-display text-3xl">6th</span>
+        className="w-full text-sm font-zenDots text-white p-3 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-neutral-300 shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center">
+        <span className="mb-1 text-green-500 font-display text-xl">6th</span>
         Endurance
     </li>
 </ul>

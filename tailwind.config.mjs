@@ -74,6 +74,8 @@ export default {
 		  animation: {
 			'infinite-scrollr': 'infinite-scrollr 15s linear infinite',
 			'infinite-scrolll': 'infinite-scrolll 15s linear infinite',
+			'infinite-scrollyr': 'infinite-scrollyr 15s linear infinite',
+			'infinite-scrollyl': 'infinite-scrollyl 15s linear infinite',
 
 			},
 			keyframes: {
@@ -84,6 +86,14 @@ export default {
 			'infinite-scrolll': {
 				from: { transform: 'translateX(-45%)' },
 				to: { transform: 'translateX(0)' },
+			},
+			'infinite-scrollyr': {
+				from: { transform: 'translateY(0)' },
+				to: { transform: 'translateY(-45%)' },
+			},
+			'infinite-scrollyl': {
+				from: { transform: 'translateY(-45%)' },
+				to: { transform: 'translateY(0)' },
 			}
 		  },
   		borderRadius: {
