@@ -1,5 +1,7 @@
 "use client"
 import Car from "../components/3dcar"
+import carimg from "../asset/all car pic fb23.webp"
+import bg from "../asset/DSC_0106.JPG"
 import Navbar from "../components/navbar"
 import img1 from "../asset/DSC_0113 (1).JPG"
 import img5 from "../asset/DSC_0113.JPG"
@@ -11,6 +13,7 @@ import img7 from "../asset/DSC_0664.JPG"
 import Image from "next/image"
 import lab1 from "../asset/lab1.jpg"
 import lab2 from "../asset/lab2.jpg"
+import news from "../asset/WhatsApp Image 2025-01-07 at 16.13.02_024b0c67.jpg"
 
 import Footer from "../components/footer"
 
@@ -207,9 +210,9 @@ export default function Gallery(){
 </div>
 </div>
 </div>
-<div className="sm:h-screen bg-neutral-950 text-white overflow-hidden">
+<div className="sm:h-screen bg-gradient-to-b from-black to-red-700 text-white overflow-hidden">
   <div className="text-4xl pr-10 pl-4 sm:text-5xl font-zenDots flex  pt-10 sm:pt-20 pb-10 justify-center">Turning wrenches, pushing limits.</div>
-  <div className=" w-full overflow-hidden ">
+  <div className=" w-full overflow-hidden md:mt-10 ">
     <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrollr">
       <li>
         <Image src={lab1} height="350" alt="helloscore" />
@@ -248,9 +251,42 @@ export default function Gallery(){
       </li>
     </ul>
   </div>
-  <div className="text-3xl font-Rajdhani flex justify-center p-5 sm:pt-14 ">"Behind every great race is a great team in the garage."</div>
+  <div className=" text-2xl md:text-3xl font-Rajdhani flex justify-center p-5 sm:pt-24 ">"Behind every great race is a great team in the garage."</div>
+</div>
+<div className="h-96 sm:h-screen bg-gradient-to-b from-red-700 to-black text-white overflow-hidden">
+<div className="text-4xl pr-10 pl-4  sm:text-6xl font-zenDots flex  pt-10 sm:pt-20 pb-10 justify-center">Media Coverage</div>
+<div className="flex md:mt-36 justify-center items-center">
+  <Image src={news} alt="news " height="4000" />
+</div>
+</div>
+<div className="relative h-screen sm:h-screen bg-neutral-950 text-white overflow-hidden">
+  <Image src={bg} className="w-full h-full sm:object-fill object-cover z-0"/>
+  <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+<div className="z-30  inset-0 absolute flex text-4xl pr-10 pl-4 sm:text-7xl font-zenDots pt-10 sm:pt-10  justify-center">SAE Supra <span className="pl-3 text-red-600"> '</span>  24</div>
+<div className="flex flex-wrap justify-center gap-2 p-10 md:p-16 absolute z-50 inset-0 mt-12 items-center">
+  <div className="w-4/5 sm:w-1/4 p-1">
+    <Image src={img1} alt="Image 1" className="w-full h-auto object-cover" />
+  </div>
+  <div className="w-4/5 sm:w-1/4 p-1">
+    <Image src={img2} alt="Image 2" className="w-full h-auto object-cover" />
+  </div>
+  <div className="w-4/5 sm:w-1/4 p-1">
+    <Image src={img3} alt="Image 3" className="w-full h-auto object-cover" />
+  </div>
+  <div className="w-4/5 sm:w-1/4 p-1">
+    <Image src={img4} alt="Image 4" className="w-full h-auto object-cover" />
+  </div>
+  <div className="hidden sm:block sm:w-1/4 p-1">
+    <Image src={img5} alt="Image 5" className="w-full h-auto object-cover" />
+  </div>
+  <div className="hidden sm:block sm:w-1/4 p-1">
+    <Image src={img6} alt="Image 6" className="w-full h-auto object-cover" />
+  </div>
 </div>
 
+
+
+</div>
 <Footer></Footer>
 </div>
 

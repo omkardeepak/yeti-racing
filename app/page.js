@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <div>
   <Navbar></Navbar>
-  <div className="h-screen bg-gradient-to-b from-black to-red-500 text-white">
+  <div className="h-screen bg-gradient-to-b from-black to-red-700 text-white">
     home
   </div>
   {/* page 2 */}
   <About>
   </About>
-<Car></Car>  <Sponsor></Sponsor>
+<Sponsor></Sponsor>
 
 <Footer></Footer>
 </div>

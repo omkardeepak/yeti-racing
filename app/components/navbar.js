@@ -13,7 +13,7 @@ export default function Navbar(){
 
 return(
     <div className="flex items-center h-20 border-b-2 border-neutral-400 sm:h-24 sm:border-b-2 sm:border-neutral-400 bg-black">
-    <Image src={logo} alt="yeti logo" className=" h-16 w-16 ml-5 sm:h-20 sm:w-20 sm:ml-3 sm:p-1 "></Image>
+    <a href="/"><Image src={logo} alt="yeti logo"className="hover:scale-105 h-16 w-16 ml-5 sm:h-20 sm:w-20 sm:ml-3 sm:p-1 "></Image></a>
     <div className="hidden sm:flex sm:items-center sm:text-1xl sm:space-x-9 sm:text-neutral-100 sm:ml-auto sm:mr-7 font-Orbitron ">
         <a className="hover:scale-110" href="/team">Team</a>
         <a className="hover:scale-110" href="/subsystem">Subsystem</a>

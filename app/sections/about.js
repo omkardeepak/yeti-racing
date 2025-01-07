@@ -2,7 +2,7 @@
 import track from "../asset/images.png";
 import track2 from "../asset/images1.png";
 import marker from "../asset/94717-angle-icons-sphere-pen-computer-location-marker (1).png"
-import logo from "../asset/yeti_logo-removebg-preview.png"
+import logo from "../asset/YetiRacing_1Logo.png"
 import Image from "next/image";
  export default function About(){
 
@@ -29,8 +29,8 @@ import Image from "next/image";
 
 
     return(
-        <div className="h-screen bg-gradient-to-b from-red-500 to-black z-0 text-white overflow-hidden relative">
-  <div className="absolute inset-0 flex justify-center items-center z-10 opacity-35">
+        <div className="h-screen bg-gradient-to-b from-red-700 to-black z-0 text-white overflow-hidden relative">
+  <div className="absolute inset-0 flex justify-center items-center z-10 opacity-50">
     <Image src={logo} alt="yeti logo" className="h-1/2 w-auto" />
   </div>
   <div className="md:flex ">
@@ -38,7 +38,7 @@ import Image from "next/image";
     <div className="-mt-4 mb-1 text-xl md:text-3xl   md:pl-2 font-zenDots xl:p-4 xl:text-4xl">
       About us
     </div>
-    <div className="font-Rajdhani text-sm sm:text-base md:text-xl font-light text-justify xl:text-2xl">
+    <div className="font-Rajdhani text-sm sm:text-base md:text-xl  text-justify xl:text-2xl">
       Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology, Kochi, embodies dedication and collaboration, with a strong presence in competitions like SAE SUPRA, FFS INDIA, and FORMULA BHARAT. Since our debut in SUPRA 2017, we've made significant strides in automotive engineering excellence, progressing from an initial 102nd placement to impressive rankings including 4th in Design Event, 7th overall in FFS INDIA 2017, and 12th in FFS INDIA 2018.
     </div>
   </div>
