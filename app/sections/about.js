@@ -30,12 +30,12 @@ import Image from "next/image";
 
     return(
         <div className="h-screen bg-gradient-to-b from-red-700 to-black z-0 text-white overflow-hidden relative">
-  <div className="absolute inset-0 flex justify-center items-center z-10 opacity-50">
-    <Image src={logo} alt="yeti logo" className="h-1/2 w-auto" />
+  <div className="absolute inset-0 flex justify-center items-center z-10 opacity-25">
+    <Image src={logo} alt="yeti logo" className="h-4/5 w-auto object-contain" />
   </div>
   <div className="md:flex ">
-  <div className=" flex flex-col ml-6 mr-6 mt-7 p-6 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-neutral-300 z-30 w-5/6 md:w-2/3 rounded-3xl  md:p-6 md:mt-32 md:ml-28 lg:w-2/5 lg:h-1/3 xl:w-2/6 xl:mr-36">
-    <div className="-mt-4 mb-1 text-xl md:text-3xl   md:pl-2 font-zenDots xl:p-4 xl:text-4xl">
+  <div className=" flex flex-col ml-6 mr-6 mt-7 p-6 z-30 w-5/6 md:w-2/3  md:p-6 md:mt-32 md:ml-28 lg:w-2/5 lg:h-3/5 xl:w-2/5 xl:mr-36  [background:linear-gradient(45deg,#fb3000,theme(colors.red.800)_30%,black)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.green.500)_86%,_theme(colors.green.300)_90%,_theme(colors.green.500)_94%,_theme(colors.green.600/.48))_border-box] rounded-2xl border-2 border-transparent animate-border items-center">
+    <div className=" -mt-4 mb-1 text-xl md:text-4xl   xl:pb-10 font-zenDots xl:p-4 xl:text-6xl justify-center flex">
       About us
     </div>
     <div className="font-Rajdhani text-sm sm:text-base md:text-xl  text-justify xl:text-2xl">
@@ -120,8 +120,8 @@ import Image from "next/image";
   <button className="absolute top-40 md:top-48 md:right-7 z-40 hover:scale-125" onClick={() => enl3()}><p className="font-zenDots">2024</p>
     <Image src={marker} alt="marker" className="h-14 w-14" />
   </button>
-    <Image src={track} alt="track" className="h-72 w-full z-30 md:hidden " />
-    <Image src={track2} alt="track" className=" md:h-screen w-auto object-contain lg:-mt-48  z-30 hidden md:block " />
+    <Image src={track} alt="track" className="h-72 w-full z-30 md:hidden object-" />
+    <Image src={track2} alt="track" className=" md:h-screen w-auto  lg:-mt-48  z-30 hidden md:block object-contain" />
 
 </div>
 

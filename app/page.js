@@ -4,7 +4,7 @@ import Navbar from "@/app/components/navbar";
 import Footer from "./components/footer";
 import About from "./sections/about"
 import Sponsor from "./sections/sponsors";
-import Car from "./components/3dcar";
+import Crowdfund from "./sections/gallery";
 export default function Home() {
   return (
     <div>
@@ -15,6 +15,7 @@ export default function Home() {
   {/* page 2 */}
   <About>
   </About>
+  <Crowdfund/>
 <Sponsor></Sponsor>
 
 <Footer></Footer>

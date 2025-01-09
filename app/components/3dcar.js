@@ -43,7 +43,7 @@ function Car() {
   }, []);
 
   return (
-    <div className=''>
+    <div className='h-screen'>
       <canvas id="myThreeJsCanvas" className="z-0" />
       </div>
   );

@@ -287,6 +287,8 @@ export default function Gallery(){
 
 
 </div>
+<div className="h-screen "><Car></Car></div>
+
 <Footer></Footer>
 </div>
 

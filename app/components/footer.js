@@ -12,7 +12,7 @@ export default function Footer(){
         CUSAT
       </div>
     </div>
-    <div className='flex flex-row justify-between h-full'>
+    <div className='flex flex-row justify-between h-full flex-1'>
     <div className="w-1/2  text-sm border-r-2 sm:border-r-2   font-Orbitron ">
       <h5 className="sm:justify-center md:text-2xl">SECTION</h5>
       <br></br>

@@ -76,9 +76,19 @@ export default {
 			'infinite-scrolll': 'infinite-scrolll 15s linear infinite',
 			'infinite-scrollyr': 'infinite-scrollyr 15s linear infinite',
 			'infinite-scrollyl': 'infinite-scrollyl 15s linear infinite',
+            'border': 'border 4s linear infinite',
+			rotate: "rotate 5s linear infinite",
+
 
 			},
 			keyframes: {
+				rotate: {
+					"0%": { transform: "rotate(0deg) scale(10)" },
+					"100%": { transform: "rotate(-360deg) scale(10)" },
+				  },
+				'border': {
+                    to: { '--border-angle': '360deg' },
+                },
 			'infinite-scrollr': {
 				from: { transform: 'translateX(0)' },
 				to: { transform: 'translateX(-45%)' },
