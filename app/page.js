@@ -5,13 +5,12 @@ import Footer from "./components/footer";
 import About from "./sections/about"
 import Sponsor from "./sections/sponsors";
 import Crowdfund from "./sections/gallery";
+import Landing from "./sections/landing";
 export default function Home() {
   return (
-    <div>
+    <div className="">
   <Navbar></Navbar>
-  <div className="h-screen bg-gradient-to-b from-black to-red-700 text-white">
-    home
-  </div>
+    <Landing></Landing>
   {/* page 2 */}
   <About>
   </About>

@@ -29,16 +29,16 @@ import Image from "next/image";
 
 
     return(
-        <div className="h-screen bg-gradient-to-b from-red-700 to-black z-0 text-white overflow-hidden relative">
+        <div className="h-screen  bg-gradient-to-b from-red-700 to-black z-0 text-white relative ">
   <div className="absolute inset-0 flex justify-center items-center z-10 opacity-25">
     <Image src={logo} alt="yeti logo" className="h-4/5 w-auto object-contain" />
   </div>
   <div className="md:flex ">
-  <div className=" flex flex-col ml-6 mr-6 mt-7 p-6 z-30 w-5/6 md:w-2/3  md:p-6 md:mt-32 md:ml-28 lg:w-2/5 lg:h-3/5 xl:w-2/5 xl:mr-36  [background:linear-gradient(45deg,#fb3000,theme(colors.red.800)_30%,black)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.green.500)_86%,_theme(colors.green.300)_90%,_theme(colors.green.500)_94%,_theme(colors.green.600/.48))_border-box] rounded-2xl border-2 border-transparent animate-border items-center">
-    <div className=" -mt-4 mb-1 text-xl md:text-4xl   xl:pb-10 font-zenDots xl:p-4 xl:text-6xl justify-center flex">
+  <div className=" flex flex-col h-5/6  z-30 justify-center w-full md:w-2/3  md:p-6 md:mt-32 md:ml-28 lg:w-2/5 lg:h-3/5 xl:w-2/5 xl:mr-36  [background:linear-gradient(45deg,#fb3000,theme(colors.red.800)_30%,black)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.green.500)_86%,_theme(colors.green.300)_90%,_theme(colors.green.500)_94%,_theme(colors.green.600/.48))_border-box] rounded-2xl border-2 border-transparent animate-border items-center">
+    <div className="pb-3 text-3xl md:text-4xl   xl:pb-10 font-zenDots xl:p-4 xl:text-6xl justify-center flex">
       About us
     </div>
-    <div className="font-Rajdhani text-sm sm:text-base md:text-xl  text-justify xl:text-2xl">
+    <div className="font-Rajdhani text-lg sm:text-base md:text-xl  text-justify xl:text-2xl">
       Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology, Kochi, embodies dedication and collaboration, with a strong presence in competitions like SAE SUPRA, FFS INDIA, and FORMULA BHARAT. Since our debut in SUPRA 2017, we've made significant strides in automotive engineering excellence, progressing from an initial 102nd placement to impressive rankings including 4th in Design Event, 7th overall in FFS INDIA 2017, and 12th in FFS INDIA 2018.
     </div>
   </div>
@@ -121,7 +121,7 @@ import Image from "next/image";
     <Image src={marker} alt="marker" className="h-14 w-14" />
   </button>
     <Image src={track} alt="track" className="h-72 w-full z-30 md:hidden object-" />
-    <Image src={track2} alt="track" className=" md:h-screen w-auto  lg:-mt-48  z-30 hidden md:block object-contain" />
+    <Image src={track2} alt="track" className=" md:h-screen w-auto  lg:-mt-36  z-30 hidden md:block object-contain" />
 
 </div>
 

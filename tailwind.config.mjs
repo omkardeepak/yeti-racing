@@ -15,6 +15,11 @@ export default {
 			Rajdhani: ['"Rajdhani"', 'sans-serif'], // Add Zen Dots font
 			Orbitron: ['"Orbitron"', 'sans-serif'],
 			Goldman:['"Goldman"', 'sans-serif'],
+			RacingSansOne:['"Racing Sans One"', 'serif'],
+			Fb: ['Formulab', 'sans-serif'],
+			Fn: ['Formulan', 'sans-serif'],
+			Fw: ['Formulaw', 'sans-serif'],
+
 		  },
 
   		colors: {
@@ -72,16 +77,49 @@ export default {
 		  
 		 
 		  animation: {
+				'line-draw': 'draw-line 1s forwards',
+			'move-out-left': 'move-out-left 1s forwards',
+			'move-out-right': 'move-out-right 1s forwards',
 			'infinite-scrollr': 'infinite-scrollr 15s linear infinite',
 			'infinite-scrolll': 'infinite-scrolll 15s linear infinite',
 			'infinite-scrollyr': 'infinite-scrollyr 15s linear infinite',
 			'infinite-scrollyl': 'infinite-scrollyl 15s linear infinite',
             'border': 'border 4s linear infinite',
 			rotate: "rotate 5s linear infinite",
+			blink: " blink .7s infinite"
 
 
 			},
 			keyframes: {
+				// typing: {
+				// 	"0%": {
+				// 	  width: "0%",
+				// 	  visibility: "hidden"
+				// 	},
+				// 	"100%": {
+				// 	  width: "85%"
+				// 	}
+				//   },
+				  blink: {
+					"50%": {
+					  borderColor: "transparent"
+					},
+					"100%": {
+					  borderColor: "white"
+					}
+				  },
+						'draw-line': {
+				'0%': { transform: 'scaleY(0)' },
+				'100%': { transform: 'scaleY(1)' },
+				},
+				'move-out-left': {
+				'0%': { opacity: '0', transform: 'translateX(50%)' },
+				'100%': { opacity: '1', transform: 'translateX(-200%)' },
+				},
+				'move-out-right': {
+				'0%': { opacity: '0', transform: 'translateX(-10%)' },
+				'100%': { opacity: '1', transform: 'translateX(200%)' },
+				},
 				rotate: {
 					"0%": { transform: "rotate(0deg) scale(10)" },
 					"100%": { transform: "rotate(-360deg) scale(10)" },

@@ -28,7 +28,7 @@ export default function Sidebar() {
       <div
         className={`fixed top-0 right-0 h-86  bg-rose-50 bg-opacity-90 text-red-600 w-44 transform transition-transform duration-300  ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } z-40`}
+        } z-50`}
       >
         <div className="p-4 pt-5 pl-6 space-y-5">
           <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/team")}>
