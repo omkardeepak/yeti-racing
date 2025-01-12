@@ -10,14 +10,15 @@ export default function Landing() {
     const text = "'First ever team from Kerala to complete endurance race in SAE Supra'";
     const typewriter = document.getElementById('typewriter');
     let i = 0;
+    let timeoutId;
 
     function typeWrite() {
       if (i < text.length) {
         typewriter.innerHTML += text.charAt(i);
         i++;
-        setTimeout(typeWrite, 100); // Adjust speed here (milliseconds)
+        timeoutId = setTimeout(typeWrite, 100); // Adjust speed here (milliseconds)
       } else {
-        setTimeout(resetTypewriter, 2000); // Wait before resetting
+        timeoutId = setTimeout(resetTypewriter, 2000); // Wait before resetting
       }
     }
 
@@ -27,8 +28,10 @@ export default function Landing() {
       typeWrite();
     }
 
-    typeWrite(); 
+    typeWrite();
+
     return () => {
+      clearTimeout(timeoutId); // Clear the timeout if the component is unmounted
       typewriter.innerHTML = ''; // Clear the text if component is unmounted
     };
   }, []);
@@ -71,22 +74,24 @@ export default function Landing() {
           >
             
             <div className=" relative w-full h-full md:ml-0 -mt-20 z-20">
-  <div className=" absolute inset-0  sm:text-[17rem] w-full -translate-x-2 -translate-y-1.5 font-RacingSansOne stroke-text ">
+  <div className=" absolute inset-0 lg:text-[13rem]  xl:text-[17rem] w-full -translate-x-2 -translate-y-1.5 font-RacingSansOne stroke-text ">
     YETI
   </div>
 
-  <div className="relative sm:text-[17rem] bg-gradient-to-br from-pink-600 via-red-600 to-red-600 inline-block text-transparent bg-clip-text w-full -mb-28 font-RacingSansOne ">
+  <div className="relative lg:text-[13rem] xl:text-[17rem] bg-gradient-to-br from-pink-600 via-red-600 to-red-600 inline-block text-transparent bg-clip-text w-full -mb-28 font-RacingSansOne animate-float">
     YETI
   </div>
 </div>
-            <div className='ml-72 text-7xl bg-gradient-to-br from-neutral-400 via-white to-zinc-300 inline-block text-transparent bg-clip-text font-Fn'>Racing</div>
+            <div className='lg:ml-60 xl:ml-72 lg:text-5xl xl:text-7xl bg-gradient-to-br from-neutral-400 via-white to-zinc-300 inline-block text-transparent bg-clip-text font-Fn'>Racing</div>
           </div>
           <div className=" w-96 h-full sm:hidden flex mt-16 z-20 ">
           <div className="z-20 absolute mt-8 flex justify-center inset-0 text-[12rem]  w-full -translate-x-2 -translate-y-1.5 font-RacingSansOne stroke-text ">
             YETI
           </div>
 
-          <div className="z-20 relative text-[12rem] flex justify-center bg-gradient-to-br from-pink-600 via-red-600 to-red-600  text-transparent bg-clip-text w-full -mb-28 font-RacingSansOne">
+          <div className={`z-20 relative text-[12rem] flex justify-center bg-gradient-to-br from-pink-600 via-red-600 to-red-600  text-transparent bg-clip-text w-full -mb-28 font-RacingSansOne animate-float overflow-hidden transition-all duration-1000 ${
+                showText ? 'translate-x-[55%] opacity-100 blur-0' : 'translate-x-0 opacity-0 blur-xl'
+              }`}>
             YETI
           </div>
         </div>

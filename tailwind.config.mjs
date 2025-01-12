@@ -86,20 +86,25 @@ export default {
 			'infinite-scrollyl': 'infinite-scrollyl 15s linear infinite',
             'border': 'border 4s linear infinite',
 			rotate: "rotate 5s linear infinite",
-			blink: " blink .7s infinite"
+			blink: " blink .7s infinite",
+			float: 'float 2s ease-in-out infinite',
+			'scale-blur': 'scaleBlur 1.5s ease-in-out',
+
+
+
 
 
 			},
 			keyframes: {
-				// typing: {
-				// 	"0%": {
-				// 	  width: "0%",
-				// 	  visibility: "hidden"
-				// 	},
-				// 	"100%": {
-				// 	  width: "85%"
-				// 	}
-				//   },
+				scaleBlur: {
+					'0%': { transform: 'scale(0.9)', filter: 'blur(8px)', opacity: '0' },
+					'50%': { transform: 'scale(1.07)', filter: 'blur(4px)', opacity: '0.8' },
+					'100%': { transform: 'scale(1)', filter: 'blur(0)', opacity: '1' },
+				  },
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' },
+				  },
 				  blink: {
 					"50%": {
 					  borderColor: "transparent"

@@ -19,7 +19,7 @@ return(
         <a className="hover:scale-110" href="/subsystem">Subsystem</a>
         <a className="hover:scale-110" href="/gallery">Gallery</a>
         <a className="hover:scale-110" href="/sponsors">Sponsors</a>
-        <a className="hover:scale-110" href="/contact">Contact us</a>
+        <a className="hover:scale-110" href="#footer">Contact us</a>
     </div>
     <div className="  sm:hidden ml-auto mr-7">
         <Sidebar></Sidebar>

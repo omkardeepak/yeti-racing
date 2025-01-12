@@ -26,7 +26,7 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-86  bg-rose-50 bg-opacity-90 text-red-600 w-44 transform transition-transform duration-300  ${
+        className={`fixed top-0 right-0 h-[17rem] rounded-md bg-rose-50 bg-opacity-90 text-red-600 w-44 transform transition-transform duration-300  ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } z-50`}
       >
