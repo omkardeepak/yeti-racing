@@ -116,7 +116,7 @@ export default function Gallery(){
             {galleryLetters.map((letter, index) => (
               <span
                 key={index}
-                className="text-9xl  z-10  bg-gradient-to-br to-pink-900 via-neutral-300 from-neutral-300  text-transparent bg-clip-text"
+                className="md:text-9xl text-6xl mb-52 md:mb-0 z-10  bg-gradient-to-br to-pink-900 via-neutral-300 from-neutral-300  text-transparent bg-clip-text"
                 // style={{
                 //   background: 'linear-gradient(to right, rgb(128, 4, 4), rgb(114, 55, 55))',
                 //   WebkitBackgroundClip: 'text',

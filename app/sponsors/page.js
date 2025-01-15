@@ -39,7 +39,7 @@ export default function SponsorsPage() {
       <div className="bg-gradient-to-b from-black to-red-900 pb-20">
         <div className="max-w-[90%] 2xl:max-w-[1400px] mx-auto px-4 py-16">
           {/* Previous content remains the same until the gradient change */}
-          <h1 className="text-center mb-12 animate-bounce text-4xl  lg:text-6xl">
+          <h1 className="text-center mb-12 animate-bounce text-4xl  lg:text-6xl flex flex-col md:flex-row justify-center">
             <span className="text-red-600  font-bold font-zenDots">OUR</span>
             <span className="text-white  font-bold ml-4 font-zenDots ">SPONSORS</span>
           </h1>
@@ -91,7 +91,7 @@ export default function SponsorsPage() {
                 </div>
                 <div className="flex-1 ">
                   <h2 className="text-3xl font-bold mb-6  animate-pulse font-Orbitron text-neutral-200 text-amber-500">Santa monica</h2>
-                  <p className="text-gray-300 text-lg leading-relaxed font-Rajdhani">
+                  <p className="text-gray-300 text-lg text-justify leading-relaxed font-Rajdhani">
                     Santa Monica Study Abroad, founded in 2002, is a leading educational consultancy that helps students pursue higher education opportunities overseas. With over two decades of experience, they provide expert guidance on university selection, visa processes, and scholarship options, making the study abroad journey smooth and hassle-free.
                   </p>
                 </div>
@@ -111,7 +111,7 @@ export default function SponsorsPage() {
               <div className="flex flex-col lg:flex-row gap-12 items-start">
                 <div className="flex-1 ">
                   <h2 className="text-3xl font-bold mb-6 animate-pulse font-Orbitron text-amber-500">DTS Racing</h2>
-                  <p className="text-gray-300 text-lg leading-relaxed mb-4 font-Rajdhani">
+                  <p className="text-gray-300 text-lg leading-relaxed mb-4 text-justify font-Rajdhani">
                     DTS Racing, founded in 2015 by National and International Champion Dilljith T S, is a prominent motorsports team in India dedicated to promoting motorsports among the younger generation.
                   </p>
                   <p className="text-gray-300 text-lg leading-relaxed font-Rajdhani">
@@ -158,7 +158,7 @@ export default function SponsorsPage() {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-3xl font-bold mb-6 animate-pulse font-Orbitron text-neutral-200 text-amber-500">EDS Technologies</h2>
-                  <p className="text-gray-300 text-lg leading-relaxed font-Rajdhani">
+                  <p className="text-gray-300 text-lg leading-relaxed text-justify font-Rajdhani">
                     EDS Technologies is one of India's leading providers of engineering and enterprise solutions.The company specializes in offering end-to-end solutions in areas such as CAD, CAM, CAE and 3D visual simulation. EDS Technologies serves a wide range of industries, including automotive, aerospace, defense, education, industrial machinery, and electronics.
                   </p>
                 </div>
@@ -172,7 +172,7 @@ export default function SponsorsPage() {
               <div className="flex flex-col lg:flex-row gap-12 items-start">
                 <div className="flex-1">
                   <h2 className="text-3xl font-bold mb-6 animate-pulse font-Orbitron text-neutral-200 text-amber-500">Helloscore</h2>
-                  <p className="text-gray-300 text-lg leading-relaxed font-Rajdhani">
+                  <p className="text-gray-300 text-lg leading-relaxed text-justify font-Rajdhani">
                     Helloscore, a subsidiary of the esteemed Analyt Group of Companies, is a premier financial services provider dedicated to empowering individuals and businesses with tailored credit solutions.Helloscore specializes in comprehensive credit management services,credit score improvement, credit monitoring, debt settlement, and wealth management.
                   </p>
                 </div>
@@ -216,7 +216,7 @@ export default function SponsorsPage() {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-3xl font-bold mb-6 animate-pulse font-Orbitron text-neutral-200 text-amber-500">TyreGuru</h2>
-                  <p className="text-gray-300 text-lg leading-relaxed font-Rajdhani">
+                  <p className="text-gray-300 text-lg leading-relaxed text-justify font-Rajdhani">
                   Tyreguru is dedicated to providing expert advice and education about tyres, helping consumers make informed decisions. With engaging content like reels addressing tyre scams and maintenance tips, the page aims to raise awareness and transform the automotive industry through informed choices. Boasting over 101,000 followers, Tyreguru emphasizes customer education and personalized assistance, offering direct support via their contact number, +91 98955 88524.
                   </p>
                 </div>

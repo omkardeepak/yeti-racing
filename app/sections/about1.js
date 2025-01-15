@@ -41,9 +41,9 @@ import { useEffect } from "react";
   <div className="absolute inset-0 bg-black opacity-50 z-30"></div>
   <Image src={pitlane2} className="absolute inset-0  flex item justify-center  z-20  object-cover  w-full h-full "/>
             <div className="md:w-1/2 left-0 justify-center  flex flex-col items-center absolute z-50 sm:p-7 md:h-full mb-10 md:space-y-16 space-y-3 w-full">
-            <div className="text-center font-zenDots text-6xl md:text-7xl bg-gradient-to-r to-pink-700 via-neutral-100 from-neutral-300  text-transparent bg-clip-text md:m-0 mt-7 mb-5">About us</div>
+            <div className="text-center font-zenDots text-6xl md:text-7xl bg-gradient-to-r to-pink-700 via-neutral-100 from-neutral-300  text-transparent bg-clip-text md:m-0 mt-12 mb-5">About us</div>
             
-            <div className="border-2 md:w-5/6 md:h-4/6  justify-center  rounded-xl  bg-black bg-opacity-40   ">
+            <div className="border-2 md:w-5/6 md:h-4/6  justify-center  rounded-xl  bg-black bg-opacity-40 w-80  ">
             <div className="font-Goldman flex flex-col p-6 pt-2 pb-2 text-2xl md:text-5xl md:p-6 text-white"><div className="flex"><span className=""> Y</span>eti Racing</div><span className="md:text-3xl text-xl text-red-600 ">CUSAT</span></div>
             <div className="p-7 pb-2 pt-0 md:pb-3 md:text-2xl text-lg flex w-full  text-justify text-white font-Rajdhani">
             Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology, Kochi, embodies dedication and collaboration, with a strong presence in prestigious competitions like SAE SUPRA, FFS INDIA, and FORMULA BHARAT. Since our debut in SUPRA 2017, we've made significant strides in automotive engineering excellence.            </div>
@@ -54,7 +54,7 @@ import { useEffect } from "react";
 
             </div>
             </div>
-          <div className=" w-full bottom-0 flex h-3/2 z-40 md:w-1/2 md:right-0 flex-grow md:items-center absolute md:z-50 p-7 md:h-full  md:flex">
+          <div className=" w-full bottom-0 hidden h-3/2 z-40 md:w-1/2 md:right-0 flex-grow md:items-center absolute md:z-50 p-7 md:h-full  md:flex">
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute h-full w-1 bg-indigo-800 left-1 bottom-7"></div>

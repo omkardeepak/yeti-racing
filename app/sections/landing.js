@@ -73,35 +73,35 @@ export default function Landing() {
               }`}
           >
             
-            <div className=" relative w-full h-full md:ml-0 -mt-20 z-20">
+            <div className=" relative w-full h-full md:ml-0 -mt-20 z-20 ">
   <div className=" absolute inset-0 lg:text-[13rem]  xl:text-[17rem] w-full -translate-x-2 -translate-y-1.5 font-RacingSansOne stroke-text ">
     YETI
   </div>
 
-  <div className="relative lg:text-[13rem] xl:text-[17rem] bg-gradient-to-br from-pink-600 via-red-600 to-red-600 inline-block text-transparent bg-clip-text w-full -mb-28 font-RacingSansOne animate-float">
+  <div className="relative  lg:text-[13rem] xl:text-[17rem] bg-gradient-to-br from-pink-600 via-red-600 to-red-600 inline-block text-transparent bg-clip-text w-full -mb-28 font-RacingSansOne animate-float">
     YETI
   </div>
 </div>
             <div className='lg:ml-60 xl:ml-72 lg:text-5xl xl:text-7xl bg-gradient-to-br from-neutral-400 via-white to-zinc-300 inline-block text-transparent bg-clip-text font-Fn'>Racing</div>
           </div>
           <div className=" w-96 h-full sm:hidden flex mt-16 z-20 ">
-          <div className="z-20 absolute mt-8 flex justify-center inset-0 text-[12rem]  w-full -translate-x-2 -translate-y-1.5 font-RacingSansOne stroke-text ">
+          <div className="z-20 absolute mt-8 flex justify-center inset-0 text-[10rem]  w-full -translate-x-2 -translate-y-1.5 font-RacingSansOne stroke-text ">
             YETI
           </div>
 
-          <div className={`z-20 relative text-[12rem] flex justify-center bg-gradient-to-br from-pink-600 via-red-600 to-red-600  text-transparent bg-clip-text w-full -mb-28 font-RacingSansOne animate-float overflow-hidden transition-all duration-1000 ${
+          <div className={`z-20 relative text-[10rem] flex justify-center bg-gradient-to-br from-pink-600 via-red-600 to-red-600  text-transparent bg-clip-text w-full -mb-28 font-RacingSansOne animate-float overflow-hidden transition-all duration-1000 ${
                 showText ? 'translate-x-[55%] opacity-100 blur-0' : 'translate-x-0 opacity-0 blur-xl'
               }`}>
             YETI
           </div>
         </div>
-        <div className='flex absolute w-full sm:hidden overflow-visible justify-end text-5xl bg-gradient-to-br from-neutral-400 via-white to-zinc-300  text-transparent bg-clip-text font-Fn mb-28 pr-4'>Racing</div>
+        <div className='flex absolute w-full sm:hidden overflow-visible justify-end text-4xl mt-12 bg-gradient-to-br from-neutral-400 via-white to-zinc-300  text-transparent bg-clip-text font-Fn mb-28 pr-4'>Racing</div>
           <div>
           
           </div>
         </div>
         <p id="typewriter"
-      className="z-30 sm:w-1/3 sm:h-1/6 h-1/5 sm:right-10  text-shadow p-5 sm:pr-9 sm:mt-10 bottom-0 mb-7 sm:mb-32 absolute text-3xl text-white font-Fn " >
+      className="z-30 sm:w-1/3 sm:h-1/6 h-1/5 sm:right-10  text-shadow p-5 sm:pr-9 sm:mt-10 bottom-0 mb-10 sm:mb-32 absolute text-2xl text-white font-Fn " >
          </p>
         {/* <div className='w-full h-36 backdrop-blur-sm z-30 flex items-end'>asd</div> */}
       </div>

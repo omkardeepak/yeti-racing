@@ -32,7 +32,7 @@ export default function TeamPage() {
     </svg>
   </div>
   <div className="relative flex items-center justify-center w-32 h-32">
-    <div className="text-4xl font-Fb text-white">
+    <div className="md:text-4xl font-Fb text-white">
       {achievement.rank}
     </div>
   </div>
@@ -40,7 +40,7 @@ export default function TeamPage() {
 
 
       {/* Event */}
-      <div className="text-sm text-gray-400 font-Fb">
+      <div className=" text-xs md:text-sm text-gray-400 md:font-Fb font-Fn">
         {achievement.event}
       </div>
     </div>
@@ -52,14 +52,14 @@ export default function TeamPage() {
     <div className="min-h-screen bg-gradient-to-b from-black via-black to-red-950 pb-9">
       <div className="max-w-[1400px] mx-auto px-8 pt-16">
         <h1 className="text-center mb-8 lg:mb-12">
-          <span className="text-4xl lg:text-7xl font-zenDots bg-gradient-to-r from-red-800 via-red-600 to-red-400 text-transparent bg-clip-text">
+          <span className="text-4xl lg:text-7xl font-zenDots bg-gradient-to-r from-red-800 via-red-600 to-red-400 text-transparent bg-clip-text flex justify-center">
             ABOUT US
           </span>
         </h1>
         
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-8 justify-center">
           <div className="col-start-2 col-span-10 mb-12">
-            <p className="text-gray-300 text-2xl  text-justify font-Rajdhani">
+            <p className="text-gray-300 md:text-2xl  text-lg text-justify font-Rajdhani">
               Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology,
               KOCHI, embodies dedication and collaboration with a strong presence in prestigious competitions like SAE SUPRA, F1S
               INDIA, and FORMULA BHARAT. Yeti Racing has recently achieved remarkable success at SUPRA 2024, securing an
@@ -80,21 +80,21 @@ export default function TeamPage() {
 
             <div className="col-span-6 col-start-7">
               <div className="mb-8">
-                <p className="text-gray-300 text-2xl  font-Rajdhani">
+                <p className="text-gray-300 md:text-2xl  font-Rajdhani">
                   Looking ahead, Yeti Racing is gearing up for exciting challenges at Formula Bharat 2025 and Formula Imperial
                   2025, with aspirations to push the boundaries of design and performance even further.
                 </p>
               </div>
 
               <div className="mb-12">
-                <p className="text-gray-300 text-2xl  font-Rajdhani">
+                <p className="text-gray-300 md:text-2xl  font-Rajdhani">
                   Reflecting on our journey, the team first participated in SUPRA 2017, where we secured an impressive 4th place
                   in the Design event. This early achievement showcased our innovative engineering and laid the foundation for
                   future successes.
                 </p>
               </div>
 
-              <div className="flex flex-row gap-4">
+              <div className="flex text-xs md:text-2xl flex-col md:flex-row w-full gap-4 justify-center ">
                 <a 
                   href="https://www.suprasaeindia.org/" 
                   target="_blank" 

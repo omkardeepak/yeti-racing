@@ -14,7 +14,7 @@ export default function Sponsor(){
         <div className="relative flex flex-col h-screen bg-neutral-950 text-white overflow-hidden z-0 ">
             <video className=" absolute w-full h-full z-0 object-cover" src='/assets/IMG_6205.mp4' autoPlay loop muted></video>
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-0"></div>
-            <div className="relative flex sm:mt-32 mt-32 justify-center text-6xl md:text-8xl font-zenDots z-50 animate-float">
+            <div className="relative flex sm:mt-32 mt-32 justify-center text-5xl md:text-8xl font-zenDots z-50 animate-float">
       <span className=" p-4 sm:mr-7 bg-gradient-to-r from-red-300 via-red-600 to-orange-400 inline-block text-transparent bg-clip-text">Our Sponsors</span>
     </div>
 <div  className='flex items-end h-full'>

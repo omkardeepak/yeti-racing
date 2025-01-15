@@ -34,7 +34,7 @@ export default function Sidebar() {
           <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/team")}>
             Team
           </div>
-          <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/subsystem")}>
+          <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/")}>
             Subsystem
           </div>
           <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/gallery")}>
@@ -43,7 +43,7 @@ export default function Sidebar() {
           <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/sponsors")}>
             Sponsors
           </div>
-          <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/contact")}>
+          <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("#footer")}>
             Contact us
           </div>
         </div>
