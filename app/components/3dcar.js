@@ -43,9 +43,7 @@ function Car() {
   }, []);
 
   return (
-    <div className='h-screen'>
-      <canvas id="myThreeJsCanvas" className="z-0" />
-      </div>
+    <canvas id="myThreeJsCanvas" className="h-1/6  absolute z-50" />
   );
 }
 

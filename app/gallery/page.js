@@ -1,4 +1,6 @@
 "use client"
+import { useState, useEffect, useRef } from "react";
+
 import Car from "../components/3dcar"
 import carimg from "../asset/all car pic fb23.webp"
 import bg from "../asset/DSC_0106.JPG"
@@ -18,278 +20,202 @@ import news from "../asset/WhatsApp Image 2025-01-07 at 16.13.02_024b0c67.jpg"
 import Footer from "../components/footer"
 
 export default function Gallery(){
-    return(
-        <div>
-            <Navbar></Navbar>
-            <div className=" sm:h-screen bg-black text-white sm:flex h-1/2">
-            <div className="relative">
-  <Image
-    src={img7}
-    alt="yeti background"
-    className="sm:object-contain h-full w-full z-0 object-cover"
-  />
-  <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-  <div className="absolute inset-0 flex md:mr-56 justify-center items-center z-20">
-    <div className="font-Orbitron font-extrabold text-6xl lg:text-8xl lg:mr-36 xl:text-9xl text-white">Gallery</div>
-  </div>
-</div>
-
-
-<div className="hidden space-x-6  h-screen absolute z-20 right-0 md:space-x-4  sm:flex">
-<div className=" overflow-hidden ">
-  <ul className="flex flex-col items-center justify-center  min-w-max animate-infinite-scrollyr space-y-3">
-    <li>
-      <Image src={img1} height="130" alt="helloscore" />
-    </li>
-    <li>
-      <Image src={img2} height="130" alt="tyreguru"/>
-    </li>
-    <li>
-      <Image src={img3} height="130" alt="eds" />
-    </li>
-    <li>
-      <Image src={img4} height="130" alt="dts" />
-    </li>
-    <li>
-      <Image src={img5} height="130" alt="santamonica" />
-    </li>
-
-    {/* Duplicate set */}
-    <li>
-      <Image src={img6} height="130" alt="helloscore" />
-    </li>
-    <li>
-      <Image src={img7} height="130" alt="tyreguru" />
-    </li>
-    <li>
-      <Image src={img1} height="130" alt="eds" />
-    </li>
-    <li>
-      <Image src={img2} height="130" alt="dts" />
-    </li>
-    <li>
-      <Image src={img6} height="130" alt="santamonica" />
-    </li>
-    <li>
-      <Image src={img4} height="130" alt="helloscore" />
-    </li>
-  </ul>
-</div>
-<div className=" overflow-hidden pb-3">
-  <ul className="flex flex-col items-center justify-center min-w-max animate-infinite-scrollyl space-y-3">
-    <li>
-      <Image src={img3} height="130" alt="helloscore" />
-    </li>
-    <li>
-      <Image src={img6} height="130" alt="tyreguru" />
-    </li>
-    <li>
-      <Image src={img2} height="130" alt="eds" />
-    </li>
-    <li>
-      <Image src={img1} height="130" alt="dts" />
-    </li>
-    <li>
-      <Image src={img7} height="130" alt="santamonica" />
-    </li>
-
-    {/* Duplicate set */}
-    <li>
-      <Image src={img1} height="130" alt="helloscore" />
-    </li>
-    <li>
-      <Image src={img2} height="130" alt="tyreguru"/>
-    </li>
-    <li>
-      <Image src={img3} height="130" alt="eds" />
-    </li>
-    <li>
-      <Image src={img4} height="130" alt="dts" />
-    </li>
-    <li>
-      <Image src={img5} height="130" alt="santamonica" />
-    </li>
-
-    {/* Duplicate set */}
-    <li>
-      <Image src={img6} height="130" alt="helloscore" />
-    </li>
-    <li>
-      <Image src={img7} height="130" alt="tyreguru" />
-    </li>
-    <li>
-      <Image src={img1} height="130" alt="eds" />
-    </li>
-    <li>
-      <Image src={img2} height="130" alt="dts" />
-    </li>
-    <li>
-      <Image src={img6} height="130" alt="santamonica" />
-    </li>
-    <li>
-      <Image src={img4} height="130" alt="helloscore" />
-    </li>
-  </ul>
-</div>
-
-<div className=" overflow-hidden pb-3 sm:hidden lg:hidden xl:block">
-  <ul className="flex flex-col items-center justify-center  min-w-max animate-infinite-scrollyr space-y-3">
-  <li>
-      <Image src={img1} height="130" alt="helloscore" />
-    </li>
-    <li>
-      <Image src={img2} height="130" alt="tyreguru"/>
-    </li>
-    <li>
-      <Image src={img3} height="130" alt="eds" />
-    </li>
-    <li>
-      <Image src={img4} height="130" alt="dts" />
-    </li>
-    <li>
-      <Image src={img5} height="130" alt="santamonica" />
-    </li>
-
-    {/* Duplicate set */}
-    <li>
-      <Image src={img6} height="130" alt="helloscore" />
-    </li>
-    <li>
-      <Image src={img7} height="130" alt="tyreguru" />
-    </li>
-    <li>
-      <Image src={img1} height="130" alt="eds" />
-    </li>
-    <li>
-      <Image src={img2} height="130" alt="dts" />
-    </li>
-    <li>
-      <Image src={img6} height="130" alt="santamonica" />
-    </li>
-    <li>
-      <Image src={img4} height="130" alt="helloscore" />
-    </li>
-
-    {/* Duplicate set */}
-    <li>
-      <Image src={img1} height="130" alt="helloscore" />
-    </li>
-    <li>
-      <Image src={img2} height="130" alt="tyreguru"/>
-    </li>
-    <li>
-      <Image src={img3} height="130" alt="eds" />
-    </li>
-    <li>
-      <Image src={img4} height="130" alt="dts" />
-    </li>
-    <li>
-      <Image src={img5} height="130" alt="santamonica" />
-    </li>
-
-    {/* Duplicate set */}
-    <li>
-      <Image src={img6} height="130" alt="helloscore" />
-    </li>
-    <li>
-      <Image src={img7} height="130" alt="tyreguru" />
-    </li>
-    <li>
-      <Image src={img1} height="130" alt="eds" />
-    </li>
-    <li>
-      <Image src={img2} height="130" alt="dts" />
-    </li>
-    <li>
-      <Image src={img6} height="130" alt="santamonica" />
-    </li>
-    <li>
-      <Image src={img4} height="130" alt="helloscore" />
-    </li>
-  </ul>
-</div>
-</div>
-</div>
-<div className="sm:h-screen bg-gradient-to-b from-black to-red-700 text-white overflow-hidden">
-  <div className="text-4xl pr-10 pl-4 sm:text-5xl font-zenDots flex  pt-10 sm:pt-20 pb-10 justify-center">Turning wrenches, pushing limits.</div>
-  <div className=" w-full overflow-hidden md:mt-10 ">
-    <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrollr">
-      <li>
-        <Image src={lab1} height="350" alt="helloscore" />
-      </li>
-      <li>
-        <Image src={lab2} height="350" alt="tyreguru"/>
-      </li>
-      <li>
-        <Image src={lab1} height="350" alt="eds" />
-      </li>
-      <li>
-        <Image src={lab2} height="350" alt="dts" />
-      </li>
-      <li>
-        <Image src={lab1} height="350" alt="santamonica" />
-      </li>
+  const [rotation, setRotation] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(1920);
+    const animationRef = useRef(null);
   
-      {/* Duplicate set */}
-      <li>
-        <Image src={lab2} height="350" alt="helloscore" />
-      </li>
-      <li>
-        <Image src={lab1} height="350" alt="tyreguru" />
-      </li>
-      <li>
-        <Image src={lab2} height="350" alt="eds" />
-      </li>
-      <li>
-        <Image src={lab1} height="350" alt="dts" />
-      </li>
-      <li>
-        <Image src={lab2} height="350" alt="santamonica" />
-      </li>
-      <li>
-        <Image src={lab1} height="350" alt="helloscore" />
-      </li>
-    </ul>
-  </div>
-  <div className=" text-2xl md:text-3xl font-Rajdhani flex justify-center p-5 sm:pt-24 ">"Behind every great race is a great team in the garage."</div>
-</div>
-<div className="h-96 sm:h-screen bg-gradient-to-b from-red-700 to-black text-white overflow-hidden">
-<div className="text-4xl pr-10 pl-4  sm:text-6xl font-zenDots flex  pt-10 sm:pt-20 pb-10 justify-center">Media Coverage</div>
-<div className="flex md:mt-36 justify-center items-center">
+    const images = [
+      "/assets/DSC_0664.JPG",
+      "/assets/DSC_0027.JPG",
+      "/assets/DSC_0139.JPG",
+      "/assets/DSC_0173.JPG",
+      "/assets/DSC_0181.jpg",
+      "/assets/1.jpg",
+      "/assets/2.jpg",
+      "/assets/4.jpg"
+    ];
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      
+      window.addEventListener('resize', handleResize);
+      handleResize();
+      
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
+    const animate = () => {
+      setRotation((prev) => (prev + 0.3) % 360);
+      animationRef.current = requestAnimationFrame(animate);
+    };
+  
+    useEffect(() => {
+      if (!isPaused) {
+        animationRef.current = requestAnimationFrame(animate);
+      }
+      return () => {
+        if (animationRef.current) {
+          cancelAnimationFrame(animationRef.current);
+        }
+      };
+    }, [isPaused]);
+  
+    const getImageStyle = (index) => {
+      const angleStep = 360 / images.length;
+      const angle = (rotation + angleStep * index) * (Math.PI / 180);
+      
+      const baseRadius = windowWidth < 768 ? 250 : 
+                        windowWidth < 1024 ? 350 :
+                        windowWidth < 1440 ? 450 : 550;
+      
+      const x = baseRadius * Math.sin(angle);
+      const z = baseRadius * Math.cos(angle);
+      const y = baseRadius * Math.sin(angle) * 0.3 - Math.abs(baseRadius * Math.cos(angle) * 0.2);
+  
+      const zPosition = (z + baseRadius) / (2 * baseRadius);
+      const scale = parseFloat((zPosition * 0.5 + 0.5).toFixed(3));
+      const opacity = parseFloat((zPosition * 0.6 + 0.4).toFixed(3));
+  
+      return {
+        transform: `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, ${z.toFixed(2)}px)
+                  rotateY(${(angleStep * index + rotation).toFixed(2)}deg)
+                  scale(${scale})`,
+        opacity: opacity,
+        zIndex: Math.round(zPosition * 1000),
+        display: 'block',
+      };
+    };
+  
+    const getImageDimensions = () => {
+      if (windowWidth < 768) return 'w-36 h-24';
+      if (windowWidth < 1024) return 'w-48 h-32';
+      if (windowWidth < 1440) return 'w-64 h-44';
+      return 'w-72 h-48';
+    };
+  
+    const gridImages = images.slice(0, 8);
+    const galleryLetters = "Gallery".split("");
+    return(
+        <div className="flex flex-col min-h-screen">
+            <Navbar></Navbar>
+            <div className="w-full h-screen relative bg-gray-900 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${images[0]})`,
+            filter: 'blur(5px) brightness(0.4)',
+          }}
+        />
+
+        <div className="relative z-10 w-full h-screen flex flex-col items-center justify-center">
+        
+          <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-row z-10 space-x-1 font-zenDots">
+            {galleryLetters.map((letter, index) => (
+              <span
+                key={index}
+                className="text-9xl  z-10  bg-gradient-to-br to-pink-900 via-neutral-300 from-neutral-300  text-transparent bg-clip-text"
+                // style={{
+                //   background: 'linear-gradient(to right, rgb(128, 4, 4), rgb(114, 55, 55))',
+                //   WebkitBackgroundClip: 'text',
+                //   WebkitTextFillColor: 'transparent',
+                //   backgroundClip: 'text',
+                //   animationDelay: `${index * 0.1}s`
+                // }}
+              >
+                {letter}
+              </span>
+            ))}
+          </div>
+
+          <div
+            className="relative w-full max-w-[2000px] h-[400px] md:h-[500px] lg:h-[600px] z-10 mx-auto"
+            style={{
+              perspective: windowWidth < 768 ? "1600px" : "2400px",
+              perspectiveOrigin: "50% 40%",
+            }}
+          >
+            <div
+              className="relative w-full h-full"
+              style={{
+                transformStyle: "preserve-3d",
+                transform: "rotateX(0deg)",
+              }}
+            >
+              {images.map((img, index) => (
+                <div
+                  key={index}
+                  className={`absolute left-1/2 top-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2
+                            ${getImageDimensions()}
+                            transition-all duration-300 
+                            hover:scale-20 cursor-pointer
+                            shadow-2xl`}
+                  style={getImageStyle(index)}
+                  onClick={() => setIsPaused(!isPaused)}
+                >
+                  <img
+                    src={img}
+                    alt={`Gallery image ${index + 1}`}
+                    className="w-full h-full object-cover rounded-2xl 
+                              border-2 border-red-400/30 hover:border-red-400
+                              transition-all duration-300"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div
+                    className="absolute w-full h-1/2 bottom-0 left-0 
+                              bg-gradient-to-b from-white/20 to-transparent
+                              rounded-b-2xl opacity-50"
+                    style={{
+                      transform: "rotateX(180deg) translateY(50%)",
+                      pointerEvents: "none",
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-16 bg-gradient-to-b from-black via-red-950 to-red-700">
+          <h2 className="text-5xl lg:text-7xl  text-white mb-12 text-center font-zenDots">SAE Supra<span className="ml-3 text-red-700">'</span>24</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {gridImages.map((img, index) => (
+              <div 
+                key={index}
+                className="aspect-square overflow-hidden rounded-2xl transition-all duration-500 cursor-pointer
+                           transform hover:scale-90 group"
+              >
+                <img
+                  src={img}
+                  alt={`Grid gallery image ${index + 1}`}
+                  className="w-full h-full object-cover transition-all duration-500
+                           filter grayscale hover:grayscale-0
+                           group-hover:rotate-6"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+<div className="h-96 sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-hidden">
+<div className="text-4xl pr-10 pl-4  sm:text-7xl font-zenDots flex  pt-10 sm:pt-20 pb-10 justify-center">Media Coverage</div>
+<div className="flex md:mt-36 justify-center items-center lg:w-full w-full p-4">
   <Image src={news} alt="news " height="4000" />
 </div>
 </div>
-<div className="relative h-screen sm:h-screen bg-neutral-950 text-white overflow-hidden">
-  <Image src={bg} className="w-full h-full sm:object-fill object-cover z-0"/>
-  <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-<div className="z-30  inset-0 absolute flex text-4xl pr-10 pl-4 sm:text-7xl font-zenDots pt-10 sm:pt-10  justify-center">SAE Supra <span className="pl-3 text-red-600"> '</span>  24</div>
-<div className="flex flex-wrap justify-center gap-2 p-10 md:p-16 absolute z-50 inset-0 mt-12 items-center">
-  <div className="w-4/5 sm:w-1/4 p-1">
-    <Image src={img1} alt="Image 1" className="w-full h-auto object-cover" />
-  </div>
-  <div className="w-4/5 sm:w-1/4 p-1">
-    <Image src={img2} alt="Image 2" className="w-full h-auto object-cover" />
-  </div>
-  <div className="w-4/5 sm:w-1/4 p-1">
-    <Image src={img3} alt="Image 3" className="w-full h-auto object-cover" />
-  </div>
-  <div className="w-4/5 sm:w-1/4 p-1">
-    <Image src={img4} alt="Image 4" className="w-full h-auto object-cover" />
-  </div>
-  <div className="hidden sm:block sm:w-1/4 p-1">
-    <Image src={img5} alt="Image 5" className="w-full h-auto object-cover" />
-  </div>
-  <div className="hidden sm:block sm:w-1/4 p-1">
-    <Image src={img6} alt="Image 6" className="w-full h-auto object-cover" />
-  </div>
-</div>
 
 
+  {/* Car component takes all available space */}
+<div>
+  <Footer className=""></Footer> 
+  <Car />  {/* Car should be rendered inside this div */}
 
-</div>
-<div className="h-screen "><Car></Car></div>
-
-<Footer></Footer>
+  </div> {/* Footer sticks to the bottom */}
 </div>
 
     )
