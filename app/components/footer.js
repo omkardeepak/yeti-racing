@@ -28,17 +28,17 @@ export default function Footer(){
       <h5 className="mb-4 md:text-2xl">CONTACT US</h5>
       <ul className="">
         <li className="flex space-x-2 sm:space-x-10">
-         Name:
+         Asif
         </li>
         <li className="flex space-x-2 sm:space-x-10">
-            +91 3456789032
+            +91 6238118843
         </li>
         <br></br>
         <li className="flex space-x-2 sm:space-x-10">
-         Name:
+         Abhijith Mohan
         </li>
         <li className="flex space-x-2 sm:space-x-10">
-            +91 3456789032
+            +91 8547177020
         </li>
       </ul>
     </div>

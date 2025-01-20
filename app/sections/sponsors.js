@@ -5,6 +5,7 @@ import helloscore from "../asset/helloscore.png"
 import tyreguru from "../asset/tyreguru.png"
 import eds from "../asset/eds.png"
 import dts from "../asset/dts.png"
+import wrapstyle from "../asset/wrapstyle.png"
 import santamonica from "../asset/santamonica.png"
 import Image from "next/image"
 export default function Sponsor(){
@@ -26,6 +27,9 @@ export default function Sponsor(){
       <Image src={helloscore} height="60" alt="helloscore" className='' />
     </li>
     <li>
+      <Image src={wrapstyle} height="350" alt="wrapstyle" />
+    </li>
+    <li>
       <Image src={tyreguru} height="70" alt="tyreguru"/>
     </li>
     <li>
@@ -41,6 +45,9 @@ export default function Sponsor(){
     {/* Duplicate set */}
     <li>
       <Image src={helloscore} height="60" alt="helloscore" />
+    </li>
+    <li>
+      <Image src={wrapstyle} height="350" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru" />
@@ -64,6 +71,8 @@ export default function Sponsor(){
   <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrolll h-24">
     <li>
       <Image src={helloscore} height="60" alt="helloscore" />
+    </li><li>
+      <Image src={wrapstyle} height="350" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru" />
@@ -81,6 +90,8 @@ export default function Sponsor(){
     {/* Duplicate set */}
     <li>
       <Image src={helloscore} height="60" alt="helloscore" />
+    </li><li>
+      <Image src={wrapstyle} height="350" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru" />
@@ -105,6 +116,8 @@ export default function Sponsor(){
   <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrollr h-24">
     <li>
       <Image src={helloscore} height="60" alt="helloscore"/>
+    </li><li>
+      <Image src={wrapstyle} height="350" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru" />
@@ -122,6 +135,8 @@ export default function Sponsor(){
     {/* Duplicate set */}
     <li>
       <Image src={helloscore} height="60" alt="helloscore" />
+    </li><li>
+      <Image src={wrapstyle} height="350" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru" />
