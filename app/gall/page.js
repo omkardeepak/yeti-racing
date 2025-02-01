@@ -84,8 +84,8 @@ const Gallery3D = () => {
 
   return (
     <>
-      <div className="w-full h-screen relative bg-gray-900 overflow-hidden">
-        <div 
+      {/*<div className="w-full h-screen relative bg-gray-900 overflow-hidden">
+         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${images[0]})`,
@@ -162,6 +162,9 @@ const Gallery3D = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="h-screen w-full bg-white">
+
       </div>
 
       <div className="w-full min-h-screen bg-gray-900 relative overflow-hidden">

@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <>
-    {loading ? (
+    {/* {loading ? (
        <Loader></Loader>
       ) : (
         <div id="content">
@@ -55,15 +55,15 @@ export default function Home() {
         <Sponsor />
         <Footer />        
         </div>
-      )}
-      {/* <div id="content">
+      )} */}
+      <div id="content">
           <Navbar />
         <Landing />
-        <About />
+        <About1 />
         <Crowdfund />
         <Sponsor />
         <Footer />        
-        </div> */}
+        </div>
     </>
   );
 }

@@ -73,6 +73,9 @@ export default {
           }
         },
         animation: {
+          drawLine: 'drawLine 1.5s ease-out forwards',
+        slideInLeft: 'slideInLeft 1s ease-out forwards 1.2s',
+        slideInRight: 'slideInRight 1s ease-out forwards 1.2s',
           'line-draw': 'draw-line 1s forwards',
           'move-out-left': 'move-out-left 1s forwards',
           'move-out-right': 'move-out-right 1s forwards',
@@ -90,6 +93,18 @@ export default {
           slideInFromLeft: 'slideInFromLeft 1s ease-in-out'
         },
         keyframes: {
+          drawLine: {
+            '0%': { height: '0%' },
+            '100%': { height: '60%' },
+          },
+          slideInLeft: {
+            '0%': { transform: 'translateX(-50%)', opacity: '0' },
+            '100%': { transform: 'translateX(0)', opacity: '1' },
+          },
+          slideInRight: {
+            '0%': { transform: 'translateX(50%)', opacity: '0' },
+            '100%': { transform: 'translateX(0%)', opacity: '1' },
+          },
           scaleBlur: {
             '0%': { transform: 'scale(0.9)', filter: 'blur(8px)', opacity: '0' },
             '50%': { transform: 'scale(1.07)', filter: 'blur(4px)', opacity: '0.8' },

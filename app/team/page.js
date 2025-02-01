@@ -1,39 +1,69 @@
+"use client"
 import React from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import { useEffect, useRef } from 'react';
+import confetti from 'canvas-confetti';
+
 
 export default function TeamPage() {
+  const confettiRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Trigger the confetti when the div is visible
+          confetti({
+            particleCount: 350,
+            spread: 350,
+            origin: { y: 0.4 },
+            colors: ['#ffd700', '#ffffff'], // Customize confetti colors
+          });
+        }
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the div is visible
+      }
+    );
+
+    if (confettiRef.current) {
+      observer.observe(confettiRef.current);
+    }
+
+    // Cleanup observer on unmount
+    return () => {
+      if (confettiRef.current) {
+        observer.unobserve(confettiRef.current);
+      }
+    };
+  }, []);
+
   const achievements = [
-    { id: 1, title: "OVERALL AIR", rank: "9", event: "SAE SUPRA 2024" },
-    { id: 2, title: "COST & MFG", rank: "3", event: "SAE SUPRA 2024" },
-    { id: 3, title: "ENDURANCE RACE", rank: "6", event: "SAE SUPRA 2024" },
-    { id: 4, title: "Eng. DESIGN", rank: "9", event: "SAE SUPRA 2024" },
-    { id: 5, title: "DESIGN   EVENT RANK", rank: "4", event: "SUPRA 2017" },
-    { id: 6, title: "QUALIFICATION RANK", rank: "17", event: "FORMULA BHARAT'25" },
+    { id: 1, title: "OVERALL", rank: "1", event: "FB 2025" },
+    { id: 2, title: "DYNAMICS", rank: "1", event: "FB 2025" },
+    { id: 3, title: "ENDURANCE RACE", rank: "1", event: "FB 2025" },
+    { id: 4, title: "EFFICIENCY", rank: "1", event: "FB 2025" },
+    { id: 5, title: "Eng. DESIGN", rank: "7", event: "FB 2025" },
+    { id: 7, title: "OVERALL", rank: "9", event: "SAE SUPRA 2024" },
+    { id: 8, title: "COST & MFG", rank: "3", event: "SAE SUPRA 2024" },
+    { id: 9, title: "ENDURANCE RACE", rank: "6", event: "SAE SUPRA 2024" },
   ];
 
   const Badge = ({ achievement }) => (
     <div className="relative group flex flex-col items-center space-y-2 text-center">
       {/* Title */}
-      <div className="text-xs text-red-500 font-Fn px-2">
+      <div className="md:text-lg text-red-500 font-Fn px-2">
         {achievement.title}
       </div>
       
       {/* Rank with spinning star */}
       <div className="relative">
-        <div className="absolute inset-0 animate-spin-slow">
-          <svg
-            viewBox="0 0 300 300"
-            className="w-24 h-24 md:w-32 md:h-32 drop-shadow-[0_0_9px_rgba(255,255,0,1)]"
-          >
-            <path
-              d="M150 10 L180 100 L290 100 L200 160 L230 260 L150 200 L70 260 L100 160 L10 100 L120 100 Z"
-              className="fill-transparent stroke-yellow-400 stroke-2"
-            />
-          </svg>
+        <div className="absolute inset-0 ">
+          <img src="/assets/1st.png" alt="star"></img>
         </div>
-        <div className="relative flex items-center justify-center w-24 h-24 md:w-32 md:h-32">
-          <div className="text-3xl md:text-4xl font-Fb text-white">
+        <div className="relative flex items-center justify-center w-24 h-24 md:w-32 md:h-32 bottom-3 ">
+          <div className="text-3xl md:text-4xl font-Fb  drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-br from-gray-400 to-amber-200">
             {achievement.rank}
           </div>
         </div>
@@ -49,7 +79,7 @@ export default function TeamPage() {
   return (
     <div>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-b from-black via-black to-red-950 pb-9">
+      <div className="min-h-screen bg-gradient-to-b from-black via-black to-neutral-900 pb-9">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 pt-16">
           <h1 className="text-center mb-8 lg:mb-12">
             <span className="text-4xl lg:text-7xl font-zenDots bg-gradient-to-r from-red-800 via-red-600 to-red-400 text-transparent bg-clip-text flex justify-center">
@@ -58,44 +88,25 @@ export default function TeamPage() {
           </h1>
           
           <div className="grid grid-cols-12 gap-4 md:gap-8 justify-center">
-            <div className="col-span-12 md:col-start-2 md:col-span-10 mb-8 md:mb-12">
-              <p className="text-gray-300 md:text-2xl text-lg text-justify font-Rajdhani">
+            <div className="col-span-12 md:col-start-2 md:col-span-10 mb-8 md:mb-20">
+              <p className="text-gray-300 md:text-2xl text-lg text-justify font-Rajdhani mb-10">
                 Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology,
                 KOCHI, embodies dedication and collaboration with a strong presence in prestigious competitions like SAE SUPRA, F1S
                 INDIA, and FORMULA BHARAT. Yeti Racing has recently achieved remarkable success at SUPRA 2024, securing an
                 impressive All India Rank of 9 overall. Notably, we completed a successful endurance run, becoming one of only six cars to
                 achieve this feat and marking a significant milestone as the first team from Kerala to complete endurance at the
                 competition.
-              </p>
-            </div>
-
-            <div className="col-span-full grid grid-cols-12 gap-4 md:gap-8">
-              <div className="col-span-12 md:col-span-5">
-                {/* Two-column grid for mobile, three-column for desktop */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {achievements.map((achievement) => (
-                    <Badge key={achievement.id} achievement={achievement} />
-                  ))}
-                </div>
-              </div>
-
-              <div className="col-span-12 md:col-span-6 md:col-start-7">
-                <div className="mb-8">
-                  <p className="text-gray-300 md:text-2xl font-Rajdhani">
+              </p> 
+              <p className="text-gray-300 md:text-2xl font-Rajdhani text-justify">
                     Looking ahead, Yeti Racing is gearing up for exciting challenges at Formula Bharat 2025 and Formula Imperial
                     2025, with aspirations to push the boundaries of design and performance even further.
-                  </p>
-                </div>
-
-                <div className="mb-8 md:mb-12">
-                  <p className="text-gray-300 md:text-2xl font-Rajdhani">
+                  </p> <br></br>
+                  <p className="text-gray-300 md:text-2xl font-Rajdhani text-justify mb-10">
                     Reflecting on our journey, the team first participated in SUPRA 2017, where we secured an impressive 4th place
                     in the Design event. This early achievement showcased our innovative engineering and laid the foundation for
                     future successes.
                   </p>
-                </div>
-
-                <div className="flex text-xs md:text-2xl flex-col md:flex-row w-full gap-4 justify-center">
+                  <div className="flex text-xs md:text-xl flex-col md:flex-row w-full gap-4 justify-center">
                   <a 
                     href="https://www.suprasaeindia.org/" 
                     target="_blank" 
@@ -117,12 +128,37 @@ export default function TeamPage() {
                       FORMULA BHARAT
                     </button>
                   </a>
+                  <a 
+                    href="https://www.fmae.in/fmaeffsindia/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex-1"
+                  >
+                    <button className="w-full bg-transparent border-2 border-green-500 text-white px-8 py-3 rounded-full transition-all duration-300 font-Goldman hover:scale-105 hover:bg-green-500/7 hover:border-green-400 hover:shadow-[0_0_10px_5px_rgba(34,197,94,0.5)]">
+                      FFS INDIA
+                    </button>
+                  </a>
+                </div>
+            </div>
+
+            <div ref={confettiRef} className="col-span-full grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8 mb-3">
+              <div className="col-span-12 md:col-span-5">
+                {/* Two-column grid for mobile, three-column for desktop */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 gap-y-8">
+                  {achievements.map((achievement) => (
+                    <Badge key={achievement.id} achievement={achievement} />
+                  ))}
                 </div>
               </div>
+
+              
             </div>
           </div>
         </div>
       </div>
+{/* <div ref={confettiRef} className="h-screen flex flex-col justify-center items-center bg-gradient-to-b from bg-red-950 via-black to-black">
+      
+    </div> */}
       <Footer />
     </div>
   );

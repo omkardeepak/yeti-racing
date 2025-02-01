@@ -41,7 +41,7 @@ import { useEffect } from "react";
   <div className="absolute inset-0 bg-black opacity-50 z-30"></div>
   <Image src={pitlane2} className="absolute inset-0  flex item justify-center  z-20  object-cover  w-full h-full "/>
             <div className="md:w-1/2 left-0 justify-center  flex flex-col items-center absolute z-50 sm:p-7 md:h-full mb-10 md:space-y-16 space-y-3 w-full">
-            <div className="text-center font-zenDots text-6xl md:text-7xl bg-gradient-to-r to-pink-700 via-neutral-100 from-neutral-300  text-transparent bg-clip-text md:m-0 mt-12 mb-5">About us</div>
+            <div className="text-center font-zenDots text-6xl md:text-7xl bg-gradient-to-r to-neutral-400 via-neutral-100 from-neutral-300  text-transparent bg-clip-text md:m-0 mt-12 mb-5">About us</div>
             
             <div className="border-2 md:w-5/6 md:h-4/6  justify-center  rounded-xl  bg-black bg-opacity-40 w-80  ">
             <div className="font-Goldman flex flex-col p-6 pt-2 pb-2 text-2xl md:text-5xl md:p-6 text-white"><div className="flex"><span className=""> Y</span>eti Racing</div><span className="md:text-3xl text-xl text-red-600 ">CUSAT</span></div>
@@ -54,7 +54,7 @@ import { useEffect } from "react";
 
             </div>
             </div>
-          <div className=" w-full bottom-0 hidden h-3/2 z-40 md:w-1/2 md:right-0 flex-grow md:items-center absolute md:z-50 p-7 md:h-full  md:flex">
+          <div className=" w-full top-7 hidden h-3/2 z-40 md:w-1/2 md:right-0 flex-grow md:items-center absolute md:z-50 p-7 md:h-full  md:flex">
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute h-full w-1 bg-indigo-800 left-1 bottom-7"></div>
@@ -64,14 +64,21 @@ import { useEffect } from "react";
                 <div className="absolute left-0 top-0 w-4 h-4 bg-orange-500 rounded-full"></div>
                 <div className="p-4 bg-gray-800 rounded-lg shadow-md w-full h-36 space-y-3 space-x-3">
                   <h3 className="text-orange-500 md:text-lg font-Fb">SAE SUPRA 2017</h3>
+                  <div className="absolute right-7 top-1 hover:scale-110">
+                    <a href="/team" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="lightgreen" class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                </svg>
+                </a>
+                  </div>
                   <div className="text-gray-300 font-Fn flex flex-row space-x-7  ">
-                    <div className="flex flex-col font-Fw h-full items-center md:text-xl  text-red-600">
+                    <div className="flex flex-col font-Fw h-full items-center md:text-2xl  text-red-600">
                     AIR 4<span className="font-fn text-sm text-white">Design</span>
                     </div>
-                    <div className="flex flex-col font-Fw h-full items-center md:text-xl text-red-600">
+                    <div className="flex flex-col font-Fw h-full items-center md:text-2xl text-red-600">
                     AIR 6<span className="font-fn text-sm text-white">Endurance</span>
                     </div>
-                    <div className="flex flex-col font-Fw h-full items-center md:text-xl text-red-600">
+                    <div className="flex flex-col font-Fw h-full items-center md:text-2xl text-red-600">
                     AIR 3<span className="font-fn text-sm text-white">Cost</span>
                     </div>
                    
@@ -84,14 +91,21 @@ import { useEffect } from "react";
                 <div className="absolute left-0 top-0 w-4 h-4 bg-orange-500 rounded-full"></div>
                 <div className="p-4 bg-gray-800 rounded-lg shadow-md md:w-full h-36 space-y-3 space-x-3">
                   <h3 className="text-orange-500 md:text-lg font-Fb  ">SAE SUPRA 2024</h3>
+                  <div className="absolute right-7 top-1 hover:scale-110">
+                    <a href="/team" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="lightgreen" class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                </svg>
+                </a>
+                  </div>
                   <div className="text-gray-300 font-Fn flex flex-row space-x-7 ">
-                    <div className="flex flex-col font-Fw h-full items-center md:text-xl text-red-600 ">
+                    <div className="flex flex-col font-Fw h-full items-center md:text-2xl text-red-600 ">
                     AIR 9<span className="font-fn text-sm text-white">Overall</span>
                     </div>
-                    <div className="flex flex-col font-Fw h-full items-center md:text-xl text-red-600 ">
+                    <div className="flex flex-col font-Fw h-full items-center md:text-2xl text-red-600 ">
                     AIR 6<span className="font-fn text-sm text-white">Endurance</span>
                     </div>
-                    <div className="flex flex-col font-Fw h-full items-center md:text-xl text-red-600 ">
+                    <div className="flex flex-col font-Fw h-full items-center md:text-2xl text-red-600 ">
                     AIR 3<span className="font-fn text-sm text-white">Cost</span>
                     </div>
                    
@@ -103,9 +117,28 @@ import { useEffect } from "react";
     
               <div className="relative md:mb-16 pl-10 timeline-item md:block hidden">
                 <div className="absolute left-0 top-0 w-4 h-4 bg-orange-500 rounded-full"></div>
-                <div className="p-4 bg-gray-800 rounded-lg shadow-md w-1/2 h-1/2">
+                <div className="p-4 bg-gray-800 rounded-lg shadow-md w-full h-36 space-y-3 space-x-3">
                   <h3 className="text-orange-500 text-lg font-Fb">Formula Bharath 2025</h3>
+                  <div className="absolute right-7 top-1 hover:scale-110">
+                    <a href="/team" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="lightgreen" class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                </svg>
+                </a>
+                  </div>
+                  <div className="text-gray-300 font-Fn flex flex-row space-x-7 ">
+                    <div className="flex flex-col font-Fw h-full items-center md:text-2xl text-red-600 ">
+                    AIR 1<span className="font-fn text-sm text-white">Overall</span>
+                    </div>
+                    <div className="flex flex-col font-Fw h-full items-center md:text-2xl text-red-600 ">
+                    AIR 1<span className="font-fn text-sm text-white">Endurance</span>
+                    </div>
+                    <div className="flex flex-col font-Fw h-full items-center md:text-2xl text-red-600 ">
+                    AIR 3<span className="font-fn text-sm text-white">Efficiency</span>
+                    </div>
+                   
                   
+                  </div>
                 </div>
               </div>
 
