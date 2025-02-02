@@ -1,29 +1,28 @@
 "use client"
 import { useState, useEffect, useRef } from "react";
-
 import Car from "../components/3dcar"
-import carimg from "../asset/all car pic fb23.webp"
-import bg from "../asset/DSC_0106.JPG"
 import Navbar from "../components/navbar"
-import img1 from "../asset/DSC_0113 (1).JPG"
-import img5 from "../asset/DSC_0113.JPG"
-import img3 from "../asset/DSC_0139.JPG"
-import img4 from "../asset/DSC_0140.JPG"
-import img2 from "../asset/DSC_0466[1].jpg"
-import img6 from "../asset/DSC_0483[1].jpg"
-import img7 from "../asset/DSC_0664.JPG"
-import Image from "next/image"
-import lab1 from "../asset/lab1.jpg"
-import lab2 from "../asset/lab2.jpg"
-import news from "../asset/WhatsApp Image 2025-01-07 at 16.13.02_024b0c67.jpg"
-
 import Footer from "../components/footer"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+
+} from "@/components/ui/carousel"
+import {
+  Card,
+  CardContent,
+} from "@/components/ui/card"
 
 export default function Gallery(){
   const [rotation, setRotation] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const [windowWidth, setWindowWidth] = useState(1920);
     const animationRef = useRef(null);
+
+    
   
     const images = [
       "/assets/DSC_0664.JPG",
@@ -92,12 +91,13 @@ export default function Gallery(){
     const getImageDimensions = () => {
       if (windowWidth < 768) return 'w-36 h-24';
       if (windowWidth < 1024) return 'w-48 h-32';
-      if (windowWidth < 1440) return 'w-64 h-44';
+      if (windowWidth < 1440) return 'w-64 h-40';
       return 'w-72 h-48';
     };
   
     const gridImages = images.slice(0, 8);
     const galleryLetters = "Gallery".split("");
+
     return(
         <div className="flex flex-col min-h-screen">
             <Navbar></Navbar>
@@ -202,18 +202,109 @@ export default function Gallery(){
             ))}
           </div>
         </div>
-<div className="h-96 sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-hidden">
-<div className="text-4xl pr-10 pl-4  sm:text-7xl font-zenDots flex  pt-10 sm:pt-20 pb-10 justify-center">Media Coverage</div>
-<div className="flex md:mt-36 justify-center items-center lg:w-full w-full p-4">
-  <Image src={news} alt="news " height="4000" />
+        <div className="h-screen sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-hidden ">
+        <div className="text-4xl   sm:text-7xl font-zenDots flex  pt-10 sm:pt-10 pb-10 justify-center">Media Coverage</div>
+
+          <div className="flex md:flex-row flex-col items-center justify-center  ">
+          <div className="p-8 ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VCa9h0X5KDc?si=4YzUt2p1vywAYzYp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="h-[250px] w-[440px] md:h-[330px] md:w-[550px]  "referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div className="p-8 ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SLfs0he6we0?si=gKjCbQiQiC0f9rqV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="h-[250px] w-[440px] md:h-[330px] md:w-[550px]  " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+            <div>
+
+            </div>
+          </div>
+          
+          
+        </div>
+        <div className="h-screen w-full bg-gradient-to-b from-black to-red-700">
+          <div className="hidden  w-full h-1/2 items-center justify-center md:flex mb-10">
+        <iframe width="1200" height="620" src="https://www.youtube.com/embed/N_NSTtLch1I?si=Sv5zWi2HkalrT1RR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share " className="h-[250px] w-[440px] md:h-[400px] md:w-[1100px]  " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div className="h-screen md:h-1/2 w-full">
+        <div className="sm:flex flex-col md:flex-row space-x-10 justify-center hidden ">
+        
+<div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
+  <img src="/assets/tni1.png" className="card-img-top" alt="Fissure in Sandstone"/>
+  <div className="card-body bg-neutral-100 h-40 p-2">
+    <p className="font-Rajdhani mb-6 font-medium text-justify"><span className="font-bold font-Rajdhani"> TNIE : </span>Yeti Racing team from Cusat’s School of Engineering with their prize-winning car at the International........</p>
+    <div className="w-52">
+      <img src="https://images-assettype-com.cdn.ampproject.org/ii/AW/s/images.assettype.com/newindianexpress/2024-01/513ad66b-9f6c-4c96-a3d5-ea0e785580a6/Long_Light_Mode_500_Height.png?w=600" alt="tnie"></img>
+    </div>
+    <div className="absolute inset-0 bg-neutral-500 bg-opacity-75 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
+    <a href="https://www-newindianexpress-com.cdn.ampproject.org/v/s/www.newindianexpress.com/amp/story/states/kerala/2025/Jan/31/students-from-cusat-win-international-formula-race-car-making-competition?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=From%20%251%24s&aoh=17384271772138&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.newindianexpress.com%2Fstates%2Fkerala%2F2025%2FJan%2F31%2Fstudents-from-cusat-win-international-formula-race-car-making-competition" 
+       className="font-Orbitron text-white text-xl">
+      Read more
+    </a>
+  </div>
+  
+  </div>
 </div>
+<div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
+  <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20250130034012_Yeti_Racing_Formula_Bharat.jpg&w=700&c=1" className="card-img-top" alt="Fissure in Sandstone"/>
+  <div className="card-body bg-neutral-100 h-40 p-2">
+    <p className="font-Rajdhani mb-6 font-medium text-justify"><span className="font-bold font-Rajdhani"> Autocar : </span><span>The ninth edition of Formula Bharat saw 51 teams battling it out for a shot at ultimate engineering glory.......</span></p>
+    <div className="w-40">
+      <img src="https://cdni.autocarindia.com/aci/prod-new/images/autocar-logo-v2.png" alt="tnie"></img>
+    </div>
+    <div className="absolute inset-0 bg-neutral-500 bg-opacity-75 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
+    <a href="https://www.autocarindia.com/motor-sports-news/formula-bharat-2025-yeti-racing-team-kratos-racing-electric-crowned-winners-434408" 
+       className="font-Orbitron text-white text-xl">
+      Read more
+    </a>
+  </div>
+  </div>
+</div>
+<div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
+  <img src="/assets/hindu.jpg" className="card-img-top" alt="Fissure in Sandstone"/>
+  <div className="card-body bg-neutral-100 h-40 p-2">
+    <p className="font-Rajdhani mb-6 font-medium text-justify"><span className="font-bold font-Rajdhani"> The Hindu :</span> <span className="">Young talents at the School of Engineering at CUSAT have made a mark at an all-India engineering.......</span></p>
+    <div className="w-52">
+      <img src="https://www-thehindu-com.cdn.ampproject.org/ii/w220/s/www.thehindu.com/theme/images/th-online/thehindu-logo.svg" alt="tnie"></img>
+    </div>
+    <div className="absolute inset-0 bg-neutral-500 bg-opacity-75 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
+    <a href="https://www-thehindu-com.cdn.ampproject.org/v/s/www.thehindu.com/news/cities/Kochi/recognition-for-young-talents-at-cusat/article69151050.ece/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=From%20%251%24s&aoh=17384271772138&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.thehindu.com%2Fnews%2Fcities%2FKochi%2Frecognition-for-young-talents-at-cusat%2Farticle69151050.ece" 
+       className="font-Orbitron text-white text-xl">
+      Read more
+    </a>
+  </div>
+  </div>
+</div>
+<div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
+  <img src="/assets/mat.jpg" className="card-img-top" alt="Fissure in Sandstone"/>
+  <div className="card-body bg-neutral-100 h-40 p-2">
+    <p className="font-Rajdhani mb-1 font-medium text-justify"><span className="font-bold font-Rajdhani"> Mathrubhumi :</span> <span className="font-light">അന്താരാഷ്ട്ര ഫോർമുല ഭാരത് മത്സരം കുസാറ്റിന് കിരീടം<span className="font-medium">......</span></span></p>
+    <div className="w-40 ">
+      <img src="/assets/mat.png" alt="tnie"></img>
+    </div>
+  <div className="absolute inset-0 bg-neutral-500 bg-opacity-75 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
+    <a href="https://newspaper.mathrubhumi.com/ernakulam/news/ernakulam-1.10293480" 
+       className="font-Orbitron text-white text-xl">
+      Read more
+    </a>
+  </div>
+  </div>
 </div>
 
+</div>
+
+
+
+
+
+
+        </div>
+        </div>
+        <div className="h-screen w-full bg-gradient-to-b from-red-700 to-black">
+        </div>
 
   {/* Car component takes all available space */}
 <div>
   <Footer className=""></Footer> 
-  <Car />  {/* Car should be rendered inside this div */}
+  {/* <Car />  Car should be rendered inside this div */}
 
   </div> {/* Footer sticks to the bottom */}
 </div>

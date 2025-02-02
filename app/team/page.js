@@ -70,7 +70,7 @@ export default function TeamPage() {
       </div>
 
       {/* Event */}
-      <div className="text-xs md:text-sm text-gray-400 md:font-Fb font-Fn">
+      <div className="text-xs md:text-sm text-neutral-300 md:font-Fb font-Fn">
         {achievement.event}
       </div>
     </div>
