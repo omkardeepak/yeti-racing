@@ -202,7 +202,7 @@ export default function Gallery(){
             ))}
           </div>
         </div>
-        <div className="h-screen sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-scroll ">
+        <div className="h-screen sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-scroll scroll-smooth">
         <div className="text-4xl   sm:text-7xl font-zenDots flex  pt-3 sm:pt-6 pb-4 justify-center">Media Coverage</div>
 
           <div className="flex md:flex-row flex-col items-center justify-center ">
@@ -224,7 +224,7 @@ export default function Gallery(){
           
         </div>
         <div className="h-screen w-full bg-gradient-to-b from-black to-red-700">
-          <div className="text-5xl sm:text-6xl flex justify-center font-zenDots  pt-16 w-full h-1/3 text-white">Articles</div>
+          <div className="text-5xl sm:text-6xl flex justify-center font-zenDots  pt-16 w-full  text-white pb-20">Articles</div>
           
         <div className="h-screen md:h-screen w-full md:pl-20 md:pr-20 pl-2 pr-2">
         <div className="sm:flex flex-col md:flex-row space-x-10 justify-center hidden rounded-sm  h-[420px] items-center ">
@@ -292,10 +292,10 @@ export default function Gallery(){
 </div>
 
 </div>
-<div className="sm:hidden p-custom !py-[1px] flex space-x-2 bg-white flex-nowrap card-container !overflow-scroll md:!overflow-hidden">
-  <div className="card-wrap">
-  <div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
-  <img src="/assets/tni1.png" className="card-img-top" alt="Fissure in Sandstone"/>
+<div className="sm:hidden p-custom !py-[1px] flex space-x-4 bg-white  rounded-xl flex-nowrap card-container !overflow-scroll md:!overflow-hidden">
+  <div className="card-wrap ">
+  <div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out ">
+  <img src="/assets/tni1.png" className="card-img-top rounded-t-xl" alt="Fissure in Sandstone"/>
   <div className="card-body bg-neutral-100 h-40 p-2">
     <p className="font-Rajdhani mb-6 font-medium text-justify"><span className="font-bold font-Rajdhani"> TNIE : </span>Yeti Racing team from Cusat’s School of Engineering with their prize-winning car at the International........</p>
     <div className="w-52">
@@ -314,7 +314,7 @@ export default function Gallery(){
   <div className="card-wrap">
 
   <div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
-  <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20250130034012_Yeti_Racing_Formula_Bharat.jpg&w=700&c=1" className="card-img-top" alt="Fissure in Sandstone"/>
+  <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20250130034012_Yeti_Racing_Formula_Bharat.jpg&w=700&c=1" className="card-img-top rounded-t-xl" alt="Fissure in Sandstone"/>
   <div className="card-body bg-neutral-100 h-40 p-2">
     <p className="font-Rajdhani mb-6 font-medium text-justify"><span className="font-bold font-Rajdhani"> Autocar : </span><span>The ninth edition of Formula Bharat saw 51 teams battling it out for a shot at ultimate engineering glory.......</span></p>
     <div className="w-40">
@@ -332,15 +332,15 @@ export default function Gallery(){
   <div className="card-wrap">
 
   <div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
-  <img src="/assets/hindu.jpg" className="card-img-top" alt="Fissure in Sandstone"/>
+  <img src="/assets/hindu.jpg" className="rounded-t-xl card-img-top" alt="Fissure in Sandstone"/>
   <div className="card-body bg-neutral-100 h-40 p-2">
     <p className="font-Rajdhani mb-6 font-medium text-justify"><span className="font-bold font-Rajdhani"> The Hindu :</span> <span className="">Young talents at the School of Engineering at CUSAT have made a mark at an all-India engineering.......</span></p>
     <div className="w-52">
-      <img src="https://www-thehindu-com.cdn.ampproject.org/ii/w220/s/www.thehindu.com/theme/images/th-online/thehindu-logo.svg" alt="tnie"></img>
+      <img src="https://www-thehindu-com.cdn.ampproject.org/ii/w220/s/www.thehindu.com/theme/images/th-online/thehindu-logo.svg" alt="tnie" ></img>
     </div>
     <div className="absolute inset-0 bg-neutral-500 bg-opacity-75 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
     <a href="https://www-thehindu-com.cdn.ampproject.org/v/s/www.thehindu.com/news/cities/Kochi/recognition-for-young-talents-at-cusat/article69151050.ece/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=From%20%251%24s&aoh=17384271772138&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.thehindu.com%2Fnews%2Fcities%2FKochi%2Frecognition-for-young-talents-at-cusat%2Farticle69151050.ece" 
-       className="font-Orbitron text-white text-xl">
+       className="font-Orbitron text-white text-xl ">
       Read more
     </a>
   </div>
@@ -350,7 +350,7 @@ export default function Gallery(){
   <div className="card-wrap">
 
   <div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
-  <img src="/assets/mat.jpg" className="card-img-top" alt="Fissure in Sandstone"/>
+  <img src="/assets/mat.jpg" className="card-img-top rounded-t-xl" alt="Fissure in Sandstone"/>
   <div className="card-body bg-neutral-100 h-40 p-2">
     <p className="font-Rajdhani mb-1 font-medium text-justify"><span className="font-bold font-Rajdhani"> Mathrubhumi :</span> <span className="font-light">അന്താരാഷ്ട്ര ഫോർമുല ഭാരത് മത്സരം കുസാറ്റിന് കിരീടം<span className="font-medium">......</span></span></p>
     <div className="w-40 ">
@@ -358,7 +358,7 @@ export default function Gallery(){
     </div>
   <div className="absolute inset-0 bg-neutral-500 bg-opacity-75 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
     <a href="https://newspaper.mathrubhumi.com/ernakulam/news/ernakulam-1.10293480" 
-       className="font-Orbitron text-white text-xl">
+       className="font-Orbitron text-white text-xl ">
       Read more
     </a>
   </div>
