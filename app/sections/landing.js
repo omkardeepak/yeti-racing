@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import logo from "../asset/yeti_logo-removebg-preview.png";
 import Image from "next/image"
-import car from "../asset/landing.jpg"
+import car from "../asset/land.jpg"
 import car1 from "../asset/landing1.jpg"
 export default function Landing() {
 
