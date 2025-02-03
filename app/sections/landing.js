@@ -87,8 +87,11 @@ export default function Landing() {
             <div className="absolute inset-0 z-0 w-full h-full ">
         {/* Car Image */}
         <Image 
-          src={car} 
-          alt="Car Image" 
+          src='/assets/land.jpg' 
+          width={1000} 
+          height={500} 
+          alt="Landing Image" 
+          quality={100}
           className="object-cover hidden sm:block object-bottom w-full h-full  sm:left-0" 
         />
         <Image 
