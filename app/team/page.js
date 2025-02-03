@@ -79,10 +79,10 @@ export default function TeamPage() {
   return (
     <div>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-b from-black via-black to-neutral-900 pb-9">
+      <div className="min-h-screen bg-gradient-to-b from-black via-black to-neutral-800 pb-9">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 pt-16">
           <h1 className="text-center mb-8 lg:mb-12">
-            <span className="text-4xl lg:text-7xl font-zenDots bg-gradient-to-r from-red-800 via-red-600 to-red-400 text-transparent bg-clip-text flex justify-center">
+            <span className="text-4xl lg:text-7xl font-zenDots bg-gradient-to-r from-red-700 via-red-700 to-red-700 text-transparent bg-clip-text flex justify-center animate-bounce">
               ABOUT US
             </span>
           </h1>
@@ -92,8 +92,8 @@ export default function TeamPage() {
               <p className="text-gray-300 md:text-2xl text-lg text-justify font-Rajdhani mb-10">
                 Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology,
                 KOCHI, embodies dedication and collaboration with a strong presence in prestigious competitions like SAE SUPRA, F1S
-                INDIA, and FORMULA BHARAT. Yeti Racing has recently achieved remarkable success at SUPRA 2024, securing an
-                impressive All India Rank of 9 overall. Notably, we completed a successful endurance run, becoming one of only six cars to
+                INDIA, and FORMULA BHARAT. Yeti Racing has recently achieved remarkable success at Formula Bharath 2025, securing an
+                impressive <span className='font-semibold'>All India Rank 1</span> overall. Notably, we completed a successful endurance run, becoming one of only six cars to
                 achieve this feat and marking a significant milestone as the first team from Kerala to complete endurance at the
                 competition.
               </p> 
@@ -102,9 +102,7 @@ export default function TeamPage() {
                     2025, with aspirations to push the boundaries of design and performance even further.
                   </p> <br></br>
                   <p className="text-gray-300 md:text-2xl font-Rajdhani text-justify mb-10">
-                    Reflecting on our journey, the team first participated in SUPRA 2017, where we secured an impressive 4th place
-                    in the Design event. This early achievement showcased our innovative engineering and laid the foundation for
-                    future successes.
+                   
                   </p>
                   <div className="flex text-xs md:text-xl flex-col md:flex-row w-full gap-4 justify-center">
                   <a 

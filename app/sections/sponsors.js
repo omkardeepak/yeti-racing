@@ -22,12 +22,12 @@ export default function Sponsor(){
 <div className="absolute z-20">
 <div className=" w-full overflow-hidden ">
 <hr></hr>
-  <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrollr h-24 ">
+  <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrollr  hover:animate-none h-24 ">
     <li>
       <Image src={helloscore} height="60" alt="helloscore" className='' />
     </li>
     <li>
-      <Image src={wrapstyle} height="350" alt="wrapstyle" />
+      <Image src={wrapstyle} height="60" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru"/>
@@ -47,7 +47,7 @@ export default function Sponsor(){
       <Image src={helloscore} height="60" alt="helloscore" />
     </li>
     <li>
-      <Image src={wrapstyle} height="350" alt="wrapstyle" />
+      <Image src={wrapstyle} height="60" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru" />
@@ -68,11 +68,11 @@ export default function Sponsor(){
 </div>
 <hr className=" bg-red-800"></hr>
 <div className="w-full overflow-hidden">
-  <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrolll h-24">
+  <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrolll hover:animate-none h-24">
     <li>
       <Image src={helloscore} height="60" alt="helloscore" />
     </li><li>
-      <Image src={wrapstyle} height="350" alt="wrapstyle" />
+      <Image src={wrapstyle} height="60" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru" />
@@ -91,7 +91,7 @@ export default function Sponsor(){
     <li>
       <Image src={helloscore} height="60" alt="helloscore" />
     </li><li>
-      <Image src={wrapstyle} height="350" alt="wrapstyle" />
+      <Image src={wrapstyle} height="60" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru" />
@@ -113,34 +113,33 @@ export default function Sponsor(){
 <hr></hr>
 
 <div className="w-full overflow-hidden">
-  <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrollr h-24">
+  <ul className="flex items-center justify-center space-x-11 min-w-max animate-infinite-scrollr hover:animate-none h-24">
     <li>
-      <Image src={helloscore} height="60" alt="helloscore"/>
-    </li><li>
-      <Image src={wrapstyle} height="350" alt="wrapstyle" />
+      <Image src={wrapstyle} height="60" alt="wrapstyle" />
     </li>
     <li>
       <Image src={tyreguru} height="70" alt="tyreguru" />
     </li>
     <li>
-      <Image src={eds} height="100" alt="eds" />
+      <Image src={helloscore} height="60" alt="helloscore"/>
     </li>
+    
     <li>
-      <Image src={dts} height="90" alt="dts" />
+      <Image src={eds} height="100" alt="eds" />
     </li>
     <li>
       <Image src={santamonica} height="80" alt="santamonica" />
     </li>
+    <li>
+      <Image src={dts} height="90" alt="dts" />
+    </li>
+    
 
     {/* Duplicate set */}
     <li>
-      <Image src={helloscore} height="60" alt="helloscore" />
-    </li><li>
-      <Image src={wrapstyle} height="350" alt="wrapstyle" />
+      <Image src={wrapstyle} height="60" alt="wrapstyle" />
     </li>
-    <li>
-      <Image src={tyreguru} height="70" alt="tyreguru" />
-    </li>
+    
     <li>
       <Image src={eds} height="100" alt="eds" />
     </li>
@@ -148,7 +147,13 @@ export default function Sponsor(){
       <Image src={dts} height="90" alt="dts" />
     </li>
     <li>
+      <Image src={tyreguru} height="70" alt="tyreguru" />
+    </li>
+    <li>
       <Image src={santamonica} height="80" alt="santamonica" />
+    </li>
+    <li>
+      <Image src={helloscore} height="60" alt="helloscore" />
     </li>
     <li>
       <Image src={helloscore} height="60" alt="helloscore" />
