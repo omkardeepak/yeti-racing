@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import logo from "../asset/yeti_logo-removebg-preview.png";
 import Image from "next/image"
-import car from "../asset/land.jpg"
+import car from "../asset/DSC_0483[1] (6).jpg"
 import car1 from "../asset/landing1.jpg"
 export default function Landing() {
 
@@ -87,11 +87,8 @@ export default function Landing() {
             <div className="absolute inset-0 z-0 w-full h-full ">
         {/* Car Image */}
         <Image 
-          src='/assets/land.jpg' 
-          width={1000} 
-          height={500} 
-          alt="Landing Image" 
-          quality={100}
+          src={car} 
+          
           className="object-cover hidden sm:block object-bottom w-full h-full  sm:left-0" 
         />
         <Image 
