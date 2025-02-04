@@ -202,7 +202,7 @@ export default function Gallery(){
             ))}
           </div>
         </div>
-        <div className="h-screen sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-scroll scroll-smooth">
+        <div className="min-h-screen sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-scroll scroll-smooth">
         <div className="text-4xl   sm:text-7xl font-zenDots flex  pt-3 sm:pt-6 pb-4 justify-center">Media Coverage</div>
 
           <div className="flex md:flex-row flex-col items-center justify-center ">
@@ -294,7 +294,7 @@ export default function Gallery(){
 </div>
 <div className="sm:hidden p-custom !py-[1px] flex space-x-4 bg-white  rounded-xl flex-nowrap card-container !overflow-scroll md:!overflow-hidden">
   <div className="card-wrap ">
-  <div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out ">
+  <div className="card group h-98 w-64 hover:scale-105  transition-transform duration-500 ease-in-out ">
   <img src="/assets/tni1.png" className="card-img-top rounded-t-xl" alt="Fissure in Sandstone"/>
   <div className="card-body bg-neutral-100 h-40 p-2">
     <p className="font-Rajdhani mb-6 font-medium text-justify"><span className="font-bold font-Rajdhani"> TNIE : </span>Yeti Racing team from Cusat’s School of Engineering with their prize-winning car at the International........</p>
@@ -313,7 +313,7 @@ export default function Gallery(){
   </div>
   <div className="card-wrap">
 
-  <div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
+  <div className="card group h-98 w-64 hover:scale-105  transition-transform duration-500 ease-in-out">
   <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20250130034012_Yeti_Racing_Formula_Bharat.jpg&w=700&c=1" className="card-img-top rounded-t-xl" alt="Fissure in Sandstone"/>
   <div className="card-body bg-neutral-100 h-40 p-2">
     <p className="font-Rajdhani mb-6 font-medium text-justify"><span className="font-bold font-Rajdhani"> Autocar : </span><span>The ninth edition of Formula Bharat saw 51 teams battling it out for a shot at ultimate engineering glory.......</span></p>
@@ -331,7 +331,7 @@ export default function Gallery(){
   </div>
   <div className="card-wrap">
 
-  <div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
+  <div className="card group h-98 w-64 hover:scale-105  transition-transform duration-500 ease-in-out">
   <img src="/assets/hindu.jpg" className="rounded-t-xl card-img-top" alt="Fissure in Sandstone"/>
   <div className="card-body bg-neutral-100 h-40 p-2">
     <p className="font-Rajdhani mb-6 font-medium text-justify"><span className="font-bold font-Rajdhani"> The Hindu :</span> <span className="">Young talents at the School of Engineering at CUSAT have made a mark at an all-India engineering.......</span></p>
@@ -349,7 +349,7 @@ export default function Gallery(){
   </div>
   <div className="card-wrap">
 
-  <div className="card group h-98 w-72 hover:scale-105  transition-transform duration-500 ease-in-out">
+  <div className="card group h-98 w-64 hover:scale-105  transition-transform duration-500 ease-in-out">
   <img src="/assets/mat.jpg" className="card-img-top rounded-t-xl" alt="Fissure in Sandstone"/>
   <div className="card-body bg-neutral-100 h-40 p-2">
     <p className="font-Rajdhani mb-1 font-medium text-justify"><span className="font-bold font-Rajdhani"> Mathrubhumi :</span> <span className="font-light">അന്താരാഷ്ട്ര ഫോർമുല ഭാരത് മത്സരം കുസാറ്റിന് കിരീടം<span className="font-medium">......</span></span></p>
@@ -368,11 +368,6 @@ export default function Gallery(){
 </div>
 
 </div>
-
-
-        </div>
-        <div className="h-screen w-full bg-gradient-to-b from-red-700 to-black">
-        
 
 
         </div>
