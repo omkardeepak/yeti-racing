@@ -108,7 +108,7 @@ export default function Landing() {
         <div className=' mt-8 w-full h-1/2 hidden sm:block'>
         <p
       id="typewriter"
-      className={`z-50 sm:w-[600px] sm:h-1/6 h-1/5 sm:left-20 text-shadow p-5 sm:pr-9 sm:mt-10 bottom-0 mb-10 sm:mb-96 relative text-3xl  text-white font-Fn text-justify leading-relaxed transition-transform duration-1000 ease-out ${
+      className={`z-50 sm:w-[400px] xl:w-[570px] sm:h-1/6 h-1/5 sm:left-20 text-shadow p-5 sm:pr-9 sm:mt-10 bottom-0 mb-10 sm:mb-96 relative md:text-3xl xl:text-3xl  text-white font-Fn text-justify leading-relaxed transition-transform duration-1000 ease-out ${
         showText ? '-translate-x-[0%] opacity-100' : 'translate-x-[100%] opacity-0'
       }`}
     ></p>

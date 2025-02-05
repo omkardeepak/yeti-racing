@@ -5,21 +5,21 @@ export default function Subsystem(){
 
   const teamMembers = [
 
-    { name: "Govind E S", role: "Manager 1" },
-    { name: "Devan P Das", role: "Manager 2" },
-    { name: "Ashwin S", role: "Powertrain" },
-    { name: "Vivek H", role: "Steering" },
-    { name: "Saif Ali K N", role: "Rollcage" },
-    { name: "Aswin A", role: "Suspension" },
-    { name: "Govind E S", role: "Brake" },
-    { name: "Lena Alingal", role: "Statics" },
-    { name: "Vishnu M Krishnan", role: "Media" },
+    { name: "Govind E S", role: "Manager 1" , img:"/assets/govind.jpg" },
+    { name: "Devan P Das", role: "Manager 2", img:"/assets/devan.jpg" },
+    { name: "Ashwin S", role: "Powertrain" , img:"/assets/ashwins.jpg"},
+    { name: "Vivek H", role: "Steering", img:"/assets/vivek.jpg" },
+    { name: "Saif Ali K N", role: "Rollcage", img:"/assets/saif.jpg" },
+    { name: "Aswin A", role: "Suspension" , img:"/assets/devan"},
+    { name: "Govind E S", role: "Brake" , img:"/assets/devan"},
+    { name: "Lena Alingal", role: "Statics", img:"/assets/devan" },
+    { name: "Vishnu M Krishnan", role: "Media", img:"/assets/vishnu.jpg" },
   ];
 
   const Profile = ({ teamMember }) => (
 <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxoZWFkc2hvdHxlbnwwfDB8fHwxNjk1ODE3MjEzfDA&ixlib=rb-4.0.3&q=80&w=1080" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src={teamMember.img} alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">{teamMember.name}</h1>
   <div className=" flex flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">

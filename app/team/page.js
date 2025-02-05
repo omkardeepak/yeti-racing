@@ -53,7 +53,7 @@ export default function TeamPage() {
   const Badge = ({ achievement }) => (
     <div className="relative group flex flex-col items-center space-y-2 text-center">
       {/* Title */}
-      <div className="md:text-lg text-red-500 font-Fn px-2">
+      <div className="md:text-lg text-red-500 font-Fn px-2 h-10">
         {achievement.title}
       </div>
       
@@ -142,7 +142,7 @@ export default function TeamPage() {
             <div ref={confettiRef} className="col-span-full grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8 mb-3">
               <div className="col-span-12 md:col-span-5">
                 {/* Two-column grid for mobile, three-column for desktop */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 gap-y-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 gap-y-10 ">
                   {achievements.map((achievement) => (
                     <Badge key={achievement.id} achievement={achievement} />
                   ))}
