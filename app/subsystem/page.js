@@ -38,12 +38,12 @@ export default function Subsystem(){
         <Navbar></Navbar>
         
         <div className="min-h-screen w-full bg-gradient-to-b from-black to-red-700  ">
-        <div className="h-72 w-full text-white font-zenDots text-5xl pt-16 md:pt-0 items-center justify-center md:flex p-3">Meet the Team Leads <span className="text-red-700 ">[</span>24-25<span className="text-red-700">]</span></div>
+        <div className="h-72 w-full text-white font-zenDots text-5xl pt-16 md:pt-0 items-center justify-center md:flex p-3">Executive Committe <span className="text-red-700 ">[</span>24-25<span className="text-red-700">]</span></div>
 
         <div className=" flex flex-row justify-center w-full space-x-2 md:space-x-14  mb-16">
             <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48 " src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxoZWFkc2hvdHxlbnwwfDB8fHwxNjk1ODE3MjEzfDA&ixlib=rb-4.0.3&q=80&w=1080" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48 " src="/assets/asif.jpg" alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">Asif Ahammad H</h1>
   <div className=" flex flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
@@ -57,7 +57,7 @@ export default function Subsystem(){
 
 <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxoZWFkc2hvdHxlbnwwfDB8fHwxNjk1ODE3MjEzfDA&ixlib=rb-4.0.3&q=80&w=1080" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="/assets/abhi.jpg" alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">Abhijith Mohan</h1>
   <div className=" flex flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
@@ -116,7 +116,7 @@ export default function Subsystem(){
 <div className=" flex flex-row justify-center w-full space-x-0 md:space-x-16">
             <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxoZWFkc2hvdHxlbnwwfDB8fHwxNjk1ODE3MjEzfDA&ixlib=rb-4.0.3&q=80&w=1080" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="/assets/nandhu.jpg" alt=""></img>
   <h1 class="text-xl  md:text-2xl text-gray-100 font-Fn mt-2">Nandu K Saju</h1>
   <div className=" flex flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
@@ -130,7 +130,7 @@ export default function Subsystem(){
 
 <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxoZWFkc2hvdHxlbnwwfDB8fHwxNjk1ODE3MjEzfDA&ixlib=rb-4.0.3&q=80&w=1080" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="/assets/ashwins.jpg" alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">Ashwin S</h1>
   <div className=" flex flex-row  w-full justify-center items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">

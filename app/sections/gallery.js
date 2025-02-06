@@ -91,7 +91,7 @@ export default function Crowdfund(){
     <div
       className=" animate-rotate  absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#ffffff_20deg,transparent_120deg)]"
     ></div>
-    <div className="hover:scale-105 relative z-20 flex w-full rounded-[0.60rem] bg-green-700  p-2">
+    <div className="hover:scale-105 relative z-20 flex w-full rounded-[0.60rem] bg-green-700  p-2 md:p-0">
       <a href='/funding'>
       <button
         type="text"

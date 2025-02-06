@@ -17,10 +17,11 @@ export default function Footer(){
       <h5 className="sm:justify-center md:text-2xl">SECTION</h5>
       <br></br>
       <ul className="">
-        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary"></a>Team</li>
-        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Subsystem</a></li>
-        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Gallery</a></li>
-        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Sponsors</a></li>
+        <li className="nav-item mb-2"><a href="/subsystem" className="nav-link p-0 text-body-secondary">Team</a></li>
+        <li className="nav-item mb-2"><a href="/gallery" className="nav-link p-0 text-body-secondary">Gallery</a></li>
+        <li className="nav-item mb-2"><a href="#media" className="nav-link p-0 text-body-secondary">Media</a></li>
+        <li className="nav-item mb-2"><a href="/team" className="nav-link p-0 text-body-secondary"></a>About us</li>
+        <li className="nav-item mb-2"><a href="/sponsors" className="nav-link p-0 text-body-secondary">Sponsors</a></li>
         <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Contact us</a></li>
       </ul>
     </div>

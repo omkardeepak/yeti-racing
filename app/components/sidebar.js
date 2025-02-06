@@ -32,10 +32,10 @@ export default function Sidebar() {
       >
         <div className="p-4 pt-5 pl-6 space-y-5">
           <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/team")}>
-            Team
+            About us
           </div>
           <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/subsystem")}>
-            Subsystem
+            Team
           </div>
           <div className="text-red-500 font-Orbitron text-lg hover:scale-110" onClick={() => navigateTo("/gallery")}>
             Gallery

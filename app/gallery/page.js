@@ -202,8 +202,8 @@ export default function Gallery(){
             ))}
           </div>
         </div>
-        <div className="min-h-screen sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-scroll scroll-smooth">
-        <div className="text-4xl   sm:text-7xl font-zenDots flex  pt-3 sm:pt-6 pb-4 justify-center">Media Coverage</div>
+        <div id="media" className="min-h-screen sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-scroll scroll-smooth">
+        <div className="text-4xl   sm:text-7xl font-zenDots flex  pt-3 sm:pt-9 pb-9 justify-center">Media Coverage</div>
 
           <div className="flex md:flex-row flex-col items-center justify-center ">
           <div className=" p-2 md:p-8 ">

@@ -104,7 +104,7 @@ export default function TeamPage() {
                   <p className="text-gray-300 md:text-2xl font-Rajdhani text-justify mb-10">
                    
                   </p>
-                  <div className="flex text-xs md:text-xl flex-col md:flex-row w-full gap-4 justify-center">
+                  <div id='achievements' className="flex text-xs md:text-xl flex-col md:flex-row w-full gap-4 justify-center">
                   <a 
                     href="https://www.suprasaeindia.org/" 
                     target="_blank" 
@@ -139,7 +139,7 @@ export default function TeamPage() {
                 </div>
             </div>
 
-            <div ref={confettiRef} className="col-span-full grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8 mb-3">
+            <div ref={confettiRef}  className="col-span-full grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8 mb-14">
               <div className="col-span-12 md:col-span-5">
                 {/* Two-column grid for mobile, three-column for desktop */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 gap-y-10 ">
