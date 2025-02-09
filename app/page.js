@@ -1,27 +1,23 @@
-"use client"; // Ensures this component is a Client Component
 
 import Navbar from "@/app/components/navbar";
 import Footer from "./components/footer";
 import About1 from "./sections/about1";
 import Sponsor from "./sections/sponsors";
 import Crowdfund from "./sections/gallery";
-import Landing from "./sections/landing";
-import Loader from "./components/loader";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import Landing from "./sections/landing1";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate loading for 3 seconds
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+  // useEffect(() => {
+  //   // Simulate loading for 3 seconds
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
 
-    // Clean up the timer
-    return () => clearTimeout(timer);
-  }, []);
+  //   // Clean up the timer
+  //   return () => clearTimeout(timer);
+  // }, []);
   // const router = useRouter();
   // const [loading, setLoading] = useState(false);
 

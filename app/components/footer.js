@@ -1,12 +1,12 @@
-"use client"
-import logo from '../asset/wlogo.png'
 import Image from "next/image"
 export default function Footer(){
+  const logo = "https://ik.imagekit.io/r70knk9pu/logo1.png?updatedAt=1739006550479";
+
     return(
       <div className=" bg-neutral-950  pr-2 pl-2 z-10 pt-5 border-t-2 " id='footer'>  
   <footer className="flex sm:flex-row flex-col pt-3 space-x-2 sm:space-x-9 sm:pt-3  pb-0 text-slate-50 space-y-6">
     <div className="sm:flex flex-col text-sm  sm:w-1/6 justify-center items-center border-r-2 ">
-      <Image src={logo} alt="yeti logo" className="h-20 w-32 sm:h-32 sm:w-52"></Image>
+      <img src={logo} width={20} height={20} alt="yeti logo" className="h-20 w-32 sm:h-24 sm:w-44 xl:h-32 xl:w-52"/>
       <div className='font-zenDots text-xl pt-2'><span className='text-red-600'>Y</span>eti Racing </div>
       <div className='font-Orbitron text-lg'>
         CUSAT

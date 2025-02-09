@@ -3,18 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Car from "../components/3dcar"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-
-} from "@/components/ui/carousel"
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card"
+import Carousel from "../components/articlecarousal";
 
 export default function Gallery(){
   const [rotation, setRotation] = useState(0);
@@ -223,10 +212,10 @@ export default function Gallery(){
           
           
         </div>
-        <div className="h-screen w-full bg-gradient-to-b from-black to-red-700">
+        <div className="min-h-screen w-full bg-gradient-to-b from-black to-red-700">
           <div className="text-5xl sm:text-6xl flex justify-center font-zenDots  pt-16 w-full  text-white pb-20">Articles</div>
-          
-        <div className="h-screen md:h-screen w-full md:pl-20 md:pr-20 pl-2 pr-2">
+          <Carousel></Carousel>
+        {/* <div className="h-screen md:h-screen w-full md:pl-20 md:pr-20 pl-2 pr-2">
         <div className="sm:flex flex-col md:flex-row space-x-10 justify-center hidden rounded-sm  h-[420px] items-center ">
         
 <div className="card group h-98 w-72 hover:scale-105 border-2 border-red-600 rounded-xl transition-transform duration-500 ease-in-out drop-shadow-2xl">
@@ -367,13 +356,12 @@ export default function Gallery(){
   </div>
 </div>
 
+</div> */}
+
+
 </div>
-
-
-        </div>
-
-  {/* Car component takes all available space */}
 <div>
+
   <Footer className=""></Footer> 
   {/* <Car />  Car should be rendered inside this div */}
 

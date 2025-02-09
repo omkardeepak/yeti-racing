@@ -1,18 +1,19 @@
 "use client"
 import React from 'react';
-import img1 from "../asset/DSC_0113 (1).JPG"
-import img5 from "../asset/DSC_0113.JPG"
-import img3 from "../asset/DSC_0139.JPG"
-import img4 from "../asset/DSC_0140.JPG"
-import img2 from "../asset/DSC_0466[1].jpg"
-import img6 from "../asset/DSC_0483[1].jpg"
+
 import { useEffect, useRef, useState } from "react";
-import img7 from "../asset/DSC_0664.JPG"
 import abstract from "../asset/clipart-wave-line-17.png"
-import Image from "next/image"
+import Image from 'next/image';
 export default function Crowdfund(){
 
- 
+  const img1 = "https://ik.imagekit.io/r70knk9pu/yeti%202.jpg?updatedAt=1739021442131"
+  const img5 = "https://ik.imagekit.io/r70knk9pu/Yeti%20Racing-2.jpg?updatedAt=1739021447030"
+  const img3 = "https://ik.imagekit.io/r70knk9pu/IMG_1257.JPG?updatedAt=1739023057605"
+  const img4 = "https://ik.imagekit.io/r70knk9pu/WhatsApp%20Image%202025-02-08%20at%2018.59.30_ec6e9de5.jpg?updatedAt=1739021433395"
+  const img2 = "https://ik.imagekit.io/r70knk9pu/mayur_6.1-08.jpg?updatedAt=1739021321620"
+  const img6 = "https://ik.imagekit.io/r70knk9pu/mayur_6.1-47.jpg?updatedAt=1739018987583"
+  const img7 = "https://ik.imagekit.io/r70knk9pu/DSC_0139.JPG?updatedAt=1739023634785"
+
     const [progress, setProgress] = useState(0);
     const progressRef = useRef(null);
   
@@ -112,95 +113,95 @@ export default function Crowdfund(){
                 <div className=" overflow-hidden ">
                   <ul className="flex flex-col items-center justify-center  min-w-max animate-infinite-scrollyr space-y-3">
                     <li>
-                      <Image src={img1} height="130" alt="helloscore" />
+                      <img src={img1} height="530" loading="lazy" width="210" alt="helloscore"  className='aspect-[3/4] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img2} height="130" alt="tyreguru"/>
+                      <img src={img2} height="130" loading="lazy" width="210" alt="tyreguru" />
                     </li>
                     <li>
-                      <Image src={img3} height="130" alt="eds" />
+                      <img src={img3} height="130" loading="lazy" width="210" alt="eds"  />
                     </li>
                     <li>
-                      <Image src={img4} height="130" alt="dts" />
+                      <img src={img4} height="130" loading="lazy" width="210" alt="dts" className='aspect-[12/16] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img5} height="130" alt="santamonica" />
+                      <img src={img5} height="130" loading="lazy" width="210" alt="santamonica" />
                     </li>
                 
                     {/* Duplicate set */}
                     <li>
-                      <Image src={img6} height="130" alt="helloscore" />
+                      <img src={img6} height="130" loading="lazy" width="210" alt="helloscore" className='aspect-[4/4] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img7} height="130" alt="tyreguru" />
+                      <img src={img7} height="130" loading="lazy" width="210" alt="tyreguru" className='aspect-[4/5] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img1} height="130" alt="eds" />
+                      <img src={img1} height="130" loading="lazy" width="210" alt="eds" className='aspect-[3/4] object-cover' />
                     </li>
                     <li>
-                      <Image src={img2} height="130" alt="dts" />
+                      <img src={img2} height="130" loading="lazy" width="210" alt="dts" />
                     </li>
                     <li>
-                      <Image src={img6} height="130" alt="santamonica" />
+                      <img src={img6} height="130" loading="lazy" width="210" alt="santamonica" />
                     </li>
                     <li>
-                      <Image src={img4} height="130" alt="helloscore" />
+                      <img src={img4} height="130" loading="lazy" width="210" alt="helloscore" className='aspect-[12/16] object-cover'/>
                     </li>
                   </ul>
                 </div>
                 <div className=" overflow-hidden pb-3">
                   <ul className="flex flex-col items-center justify-center min-w-max animate-infinite-scrollyl space-y-3">
                     <li>
-                      <Image src={img3} height="130" alt="helloscore" />
+                      <img src={img3} height="130" loading="lazy" width="210" alt="helloscore" />
                     </li>
                     <li>
-                      <Image src={img6} height="130" alt="tyreguru" />
+                      <img src={img6} height="130" loading="lazy" width="210" alt="tyreguru" />
                     </li>
                     <li>
-                      <Image src={img2} height="130" alt="eds" />
+                      <img src={img2} height="130" loading="lazy" width="210" alt="eds" />
                     </li>
                     <li>
-                      <Image src={img1} height="130" alt="dts" />
+                      <img src={img1} height="130" loading="lazy" width="210" alt="dts" className='aspect-[3/4] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img7} height="130" alt="santamonica" />
-                    </li>
-                
-                    {/* Duplicate set */}
-                    <li>
-                      <Image src={img1} height="130" alt="helloscore" />
-                    </li>
-                    <li>
-                      <Image src={img2} height="130" alt="tyreguru"/>
-                    </li>
-                    <li>
-                      <Image src={img3} height="130" alt="eds" />
-                    </li>
-                    <li>
-                      <Image src={img4} height="130" alt="dts" />
-                    </li>
-                    <li>
-                      <Image src={img5} height="130" alt="santamonica" />
+                      <img src={img7} height="130" loading="lazy" width="210" alt="santamonica" className='aspect-[4/5] object-cover'/>
                     </li>
                 
                     {/* Duplicate set */}
                     <li>
-                      <Image src={img6} height="130" alt="helloscore" />
+                      <img src={img1} height="130" loading="lazy" width="210" alt="helloscore" className='aspect-[3/4] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img7} height="130" alt="tyreguru" />
+                      <img src={img2} height="130" loading="lazy" width="210" alt="tyreguru"/>
                     </li>
                     <li>
-                      <Image src={img1} height="130" alt="eds" />
+                      <img src={img3} height="130" loading="lazy" width="210" alt="eds" />
                     </li>
                     <li>
-                      <Image src={img2} height="130" alt="dts" />
+                      <img src={img4} height="130" loading="lazy" width="210" alt="dts" className='aspect-[12/16] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img6} height="130" alt="santamonica" />
+                      <img src={img5} height="130" loading="lazy" width="210" alt="santamonica" />
+                    </li>
+                
+                    {/* Duplicate set */}
+                    <li>
+                      <img src={img6} height="130" loading="lazy" width="210" alt="helloscore" />
                     </li>
                     <li>
-                      <Image src={img4} height="130" alt="helloscore" />
+                      <img src={img7} height="130" loading="lazy" width="210" alt="tyreguru" className='aspect-[4/5] object-cover'/>
+                    </li>
+                    <li>
+                      <img src={img1} height="130" loading="lazy" width="210" alt="eds" className='aspect-[3/4] object-cover' />
+                    </li>
+                    <li>
+                      <img src={img2} height="130" loading="lazy" width="210" alt="dts" />
+                    </li>
+                    <li>
+                      <img src={img6} height="130" loading="lazy" width="210" alt="santamonica" />
+                    </li>
+                    <li>
+                      <img src={img4} height="130" loading="lazy" width="210" alt="helloscore" />
                     </li>
                   </ul>
                 </div>
@@ -208,76 +209,76 @@ export default function Crowdfund(){
                 <div className=" overflow-hidden pb-3 sm:hidden lg:hidden xl:block">
                   <ul className="flex flex-col items-center justify-center  min-w-max animate-infinite-scrollyr space-y-3">
                   <li>
-                      <Image src={img1} height="130" alt="helloscore" />
+                      <img src={img1} height="130" loading="lazy" width="210" alt="helloscore" className='aspect-[3/4] object-cover' />
                     </li>
                     <li>
-                      <Image src={img2} height="130" alt="tyreguru"/>
+                      <img src={img2} height="130" loading="lazy" width="210" alt="tyreguru"/>
                     </li>
                     <li>
-                      <Image src={img3} height="130" alt="eds" />
+                      <img src={img3} height="130" loading="lazy" width="210" alt="eds" />
                     </li>
                     <li>
-                      <Image src={img4} height="130" alt="dts" />
+                      <img src={img4} height="130" loading="lazy" width="210" alt="dts" className='aspect-[12/16] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img5} height="130" alt="santamonica" />
-                    </li>
-                
-                    {/* Duplicate set */}
-                    <li>
-                      <Image src={img6} height="130" alt="helloscore" />
-                    </li>
-                    <li>
-                      <Image src={img7} height="130" alt="tyreguru" />
-                    </li>
-                    <li>
-                      <Image src={img1} height="130" alt="eds" />
-                    </li>
-                    <li>
-                      <Image src={img2} height="130" alt="dts" />
-                    </li>
-                    <li>
-                      <Image src={img6} height="130" alt="santamonica" />
-                    </li>
-                    <li>
-                      <Image src={img4} height="130" alt="helloscore" />
+                      <img src={img5} height="130" loading="lazy" width="210" alt="santamonica" />
                     </li>
                 
                     {/* Duplicate set */}
                     <li>
-                      <Image src={img1} height="130" alt="helloscore" />
+                      <img src={img6} height="130" loading="lazy" width="210" alt="helloscore" />
                     </li>
                     <li>
-                      <Image src={img2} height="130" alt="tyreguru"/>
+                      <img src={img7} height="130" loading="lazy" width="210" alt="tyreguru" className='aspect-[4/5] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img3} height="130" alt="eds" />
+                      <img src={img1} height="130" loading="lazy" width="210" alt="eds" className='aspect-[3/4] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img4} height="130" alt="dts" />
+                      <img src={img2} height="130" loading="lazy" width="210" alt="dts" />
                     </li>
                     <li>
-                      <Image src={img5} height="130" alt="santamonica" />
+                      <img src={img6} height="130" loading="lazy" width="210" alt="santamonica" />
+                    </li>
+                    <li>
+                      <img src={img4} height="130" loading="lazy" width="210" alt="helloscore" className='aspect-[12/16] object-cover'/>
                     </li>
                 
                     {/* Duplicate set */}
                     <li>
-                      <Image src={img6} height="130" alt="helloscore" />
+                      <img src={img1} height="130" loading="lazy" width="210" alt="helloscore" className='aspect-[3/4] object-cover' />
                     </li>
                     <li>
-                      <Image src={img7} height="130" alt="tyreguru" />
+                      <img src={img2} height="130" loading="lazy" width="210" alt="tyreguru"/>
                     </li>
                     <li>
-                      <Image src={img1} height="130" alt="eds" />
+                      <img src={img3} height="130" loading="lazy" width="210" alt="eds" />
                     </li>
                     <li>
-                      <Image src={img2} height="130" alt="dts" />
+                      <img src={img4} height="130" loading="lazy" width="210" alt="dts" className='aspect-[12/16] object-cover'/>
                     </li>
                     <li>
-                      <Image src={img6} height="130" alt="santamonica" />
+                      <img src={img5} height="130" loading="lazy" width="210" alt="santamonica" />
+                    </li>
+                
+                    {/* Duplicate set */}
+                    <li>
+                      <img src={img6} height="130" loading="lazy" width="210" alt="helloscore" />
                     </li>
                     <li>
-                      <Image src={img4} height="130" alt="helloscore" />
+                      <img src={img7} height="130" loading="lazy" width="210" alt="tyreguru" className='aspect-[4/5] object-cover'/>
+                    </li>
+                    <li>
+                      <img src={img1} height="130" loading="lazy" width="210" alt="eds" className='aspect-[3/4] object-cover' />
+                    </li>
+                    <li>
+                      <img src={img2} height="130" loading="lazy" width="210" alt="dts" />
+                    </li>
+                    <li>
+                      <img src={img6} height="130" loading="lazy" width="210" alt="santamonica" />
+                    </li>
+                    <li>
+                      <img src={img4} height="130" loading="lazy" width="210" alt="helloscore" className='aspect-[12/16] object-cover'/>
                     </li>
                   </ul>
                 </div>

@@ -19,6 +19,7 @@ export default {
           Fb: ['Formulab', 'sans-serif'],
           Fn: ['Formulan', 'sans-serif'],
           Fw: ['Formulaw', 'sans-serif'],
+          Inter: ['Inter', 'sans-serif'],
         },
         colors: {
           background: 'hsl(var(--background))',

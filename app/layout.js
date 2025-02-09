@@ -15,13 +15,16 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Yeti Racing",
   description: "",
+  icons: {
+    icon: '/assets/logo1.png', // Path to your logo
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" /> {/* Add favicon link */}
+        <link rel="icon" href="/assets/logo1.png" /> {/* Add favicon link */}
         <meta name="description" content={metadata.description} />
         <title>{metadata.title}</title>
       </Head>

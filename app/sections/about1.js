@@ -61,13 +61,13 @@ import { useEffect,useRef } from "react";
       return (
         <div className="h-screen relative flex sm:flex-row flex-col items-center bg-black  z-0">
   <div className="absolute inset-0 bg-black opacity-50 z-30"></div>
-  <Image src={pitlane2} className="absolute inset-0  flex item justify-center  z-20  object-cover  w-full h-full "/>
+  <Image src={pitlane2} loading="lazy" className="absolute  inset-0  flex item justify-center  z-20  object-cover  w-full h-full "/>
             <div className="md:w-1/2 left-0 justify-center  flex flex-col items-center absolute z-50 sm:p-7 md:h-full mb-10 md:space-y-16 space-y-3 w-full">
             <div className="text-center font-zenDots text-6xl md:text-7xl bg-gradient-to-r to-neutral-300 via-neutral-100 from-neutral-300  text-transparent bg-clip-text md:m-0 mt-12 mb-5">About us</div>
             
             <div className="border-2 md:w-5/6 md:h-4/6  justify-center  rounded-xl  bg-black bg-opacity-40 w-80  ">
             <div className="font-Goldman flex flex-col p-6 pt-2 pb-2 text-3xl lg:text-4xl xl:text-5xl md:p-6 md:pb-1 xl:pb-6 text-white"><div className="flex"><span className=""> Y</span>eti Racing</div><span className="lg:text-lg xl:text-xl text-sm text-red-600 font-Fw">CUSAT</span></div>
-            <div ref={scrollDivRef} className=" opacity-0 transform  transition-all duration-1000" >
+            <div ref={scrollDivRef} className=" opacity-0 transform  transition-all duration-700" >
             <div  className="  p-7 pb-2 pt-0  xl:pb-5 text-lg lg:text-lg xl:text-2xl flex w-full  text-justify text-white font-Rajdhani">
             Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology, Kochi, embodies dedication and collaboration, with a strong presence in prestigious competitions like SAE SUPRA, FFS INDIA, and FORMULA BHARAT. Since our debut in SUPRA 2017, we've made significant strides in automotive engineering excellence.            </div>
             </div>

@@ -5,15 +5,15 @@ export default function Subsystem(){
 
   const teamMembers = [
 
-    { name: "Govind E S", role: "Manager 1" , img:"/assets/govind.jpg" },
-    { name: "Devan P Das", role: "Manager 2", img:"/assets/devan.jpg" },
-    { name: "Ashwin S", role: "Powertrain" , img:"/assets/ashwins.jpg"},
-    { name: "Vivek H", role: "Steering", img:"/assets/vivek.jpg" },
-    { name: "Saif Ali K N", role: "Rollcage", img:"/assets/saif.jpg" },
+    { name: "Govind E S", role: "Manager " , img:"/assets/govind.jpg" },
+    { name: "Devan P Das", role: "Manager ", img:"https://ik.imagekit.io/r70knk9pu/devan.jpg?updatedAt=1739005570408" },
+    { name: "Ashwin S", role: "Powertrain" , img:"https://ik.imagekit.io/r70knk9pu/ashwins.jpg?updatedAt=1739005570483"},
+    { name: "Vivek H", role: "Steering", img:"https://ik.imagekit.io/r70knk9pu/vivek.jpg?updatedAt=1739005570491" },
+    { name: "Saif Ali K N", role: "Rollcage", img:"https://ik.imagekit.io/r70knk9pu/saif.jpg?updatedAt=1739005570547" },
     { name: "Aswin A", role: "Suspension" , img:"/assets/devan"},
     { name: "Govind E S", role: "Brake" , img:"/assets/devan"},
     { name: "Lena Alingal", role: "Statics", img:"/assets/devan" },
-    { name: "Vishnu M Krishnan", role: "Media", img:"/assets/vishnu.jpg" },
+    { name: "Vishnu M Krishnan", role: "Media", img:"https://ik.imagekit.io/r70knk9pu/vishnu.jpg?updatedAt=1739005570487" },
   ];
 
   const Profile = ({ teamMember }) => (
@@ -21,7 +21,7 @@ export default function Subsystem(){
             <header class=" absolute flex flex-col justify-center  items-center text-center">
   <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src={teamMember.img} alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">{teamMember.name}</h1>
-  <div className=" flex flex-row justify-center w-full items-center space-x-2">
+  <div className=" flex flex-col md:flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
     {teamMember.role}</h2>
     <a href="" target="_blank"
@@ -43,9 +43,9 @@ export default function Subsystem(){
         <div className=" flex flex-row justify-center w-full space-x-2 md:space-x-14  mb-16">
             <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48 " src="/assets/asif.jpg" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48 " src="https://ik.imagekit.io/r70knk9pu/asif.jpg?updatedAt=1739005570560" alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">Asif Ahammad H</h1>
-  <div className=" flex flex-row justify-center w-full items-center space-x-2">
+  <div className=" flex flex-col md:flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
     Captain</h2>
     <a href="" target="_blank"
@@ -57,9 +57,9 @@ export default function Subsystem(){
 
 <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="/assets/abhi.jpg" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://ik.imagekit.io/r70knk9pu/abhi.jpg?updatedAt=1739005570416" alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">Abhijith Mohan</h1>
-  <div className=" flex flex-row justify-center w-full items-center space-x-2">
+  <div className=" flex flex-col md:flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
     Vice Captain</h2>
     <a href="" target="_blank"
@@ -88,7 +88,7 @@ export default function Subsystem(){
   <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxoZWFkc2hvdHxlbnwwfDB8fHwxNjk1ODE3MjEzfDA&ixlib=rb-4.0.3&q=80&w=1080" alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">Pavna Suresh
   </h1>
-  <div className=" flex flex-row justify-center w-full items-center space-x-2">
+  <div className=" flex flex-col md:flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
   Sponsorship    </h2>
     <a href="" target="_blank"
@@ -102,7 +102,7 @@ export default function Subsystem(){
             <header class=" absolute flex flex-col justify-center  items-center text-center">
   <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxoZWFkc2hvdHxlbnwwfDB8fHwxNjk1ODE3MjEzfDA&ixlib=rb-4.0.3&q=80&w=1080" alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">Rohan Kalathil </h1>
-  <div className=" flex flex-row  w-full justify-center items-center space-x-2">
+  <div className=" flex flex-col md:flex-row  w-full justify-center items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
   Procurement    </h2>
     <a href="" target="_blank"
@@ -116,9 +116,9 @@ export default function Subsystem(){
 <div className=" flex flex-row justify-center w-full space-x-0 md:space-x-16">
             <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="/assets/nandhu.jpg" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://ik.imagekit.io/r70knk9pu/nandhu.jpg?updatedAt=1739005570566" alt=""></img>
   <h1 class="text-xl  md:text-2xl text-gray-100 font-Fn mt-2">Nandu K Saju</h1>
-  <div className=" flex flex-row justify-center w-full items-center space-x-2">
+  <div className=" flex flex-col md:flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
   Manufacturing   </h2>
     <a href="" target="_blank"
@@ -130,9 +130,9 @@ export default function Subsystem(){
 
 <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="/assets/ashwins.jpg" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://ik.imagekit.io/r70knk9pu/ashwins.jpg?updatedAt=1739005570483" alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">Ashwin S</h1>
-  <div className=" flex flex-row  w-full justify-center items-center space-x-2">
+  <div className=" flex flex-col md:flex-row  w-full justify-center items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
   Treasurer   </h2>
     <a href="" target="_blank"
@@ -147,9 +147,9 @@ export default function Subsystem(){
 <div className=" flex flex-row justify-center w-full space-x-0 md:space-x-32">
             <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxoZWFkc2hvdHxlbnwwfDB8fHwxNjk1ODE3MjEzfDA&ixlib=rb-4.0.3&q=80&w=1080" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://ik.imagekit.io/r70knk9pu/biju%20sir%206_42f57362.jpg?updatedAt=1739015920894" alt=""></img>
   <h1 class="text-xl  md:text-2xl text-gray-100 font-Fn mt-2">Dr Biju N</h1>
-  <div className=" flex flex-row justify-center w-full items-center space-x-2">
+  <div className=" flex flex-col md:flex-row justify-center w-full items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
   Faculty Advisor </h2>
     <a href="" target="_blank"
@@ -161,9 +161,9 @@ export default function Subsystem(){
 
 <div className="w-64 flex justify-center h-64">
             <header class=" absolute flex flex-col justify-center  items-center text-center">
-  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxoZWFkc2hvdHxlbnwwfDB8fHwxNjk1ODE3MjEzfDA&ixlib=rb-4.0.3&q=80&w=1080" alt=""></img>
+  <img class="inline-flex object-cover border-2 border-white rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-green-600/100 bg-indigo-50 text-indigo-600 h-36 w-36 md:h-48 md:w-48" src="https://ik.imagekit.io/r70knk9pu/Priyadarshi-Dutt-2.png?updatedAt=1739015920763" alt=""></img>
   <h1 class="text-xl md:text-2xl text-gray-100 font-Fn mt-2">Priyadarshi Dutt</h1>
-  <div className=" flex flex-row  w-full justify-center items-center space-x-2">
+  <div className=" flex flex-col md:flex-row  w-full justify-center items-center space-x-2">
   <h2 class="text-base md:text-lg text-gray-200 font-Orbitron">
   Faculty Advisor </h2>
     <a href="" target="_blank"

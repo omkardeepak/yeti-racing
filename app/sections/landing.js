@@ -86,8 +86,8 @@ export default function Landing() {
         {/* Background Video */}
             <div className="absolute  inset-0 z-0 w-full h-full ">
         {/* Car Image */}
-        <Image 
-          src={car} 
+        <img
+          src="https://ik.imagekit.io/r70knk9pu/yeti%20bg.png?updatedAt=1739034483798" width={200} height={200}  loading='lazy'
           
           className="object-cover hidden sm:block object-bottom w-full h-full  sm:left-0" 
         />

@@ -18,7 +18,7 @@ export default function (){
                 <div className="mb-3">Fuel Our Passion:</div>
                 <div>Help Us Build the Next Generation of Formula Racing!</div>
                 </div>
-                <div className="flex  flex-col h-1/2 md:h-full w-full md:w-1/2   bg-red-600 bg-opacity-45 md:bg-opacity-35 ">
+                <div className="flex  flex-col h-52 md:h-full w-52 md:w-1/2   bg-red-600 bg-opacity-45 md:bg-opacity-35 items-center ">
                 <Image src={qr} alt="qr "className="object-contain z-20 h-3/4  flex justify-center items-center pt-10 md:pt-20"/>
                 <div className="flex justify-center pt-7 text-white  text-xl font-Rajdhani">Pay to ashwins78@fifederal using this QR code 💰
                 </div>
