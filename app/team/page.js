@@ -91,7 +91,7 @@ export default function TeamPage() {
             <div className="col-span-12 md:col-start-2 md:col-span-10 mb-8 md:mb-20">
               <p className="text-gray-300 md:text-2xl text-lg text-justify font-Rajdhani mb-10">
                 Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology,
-                KOCHI, embodies dedication and collaboration with a strong presence in prestigious competitions like SAE SUPRA, F1S
+                KOCHI, embodies dedication and collaboration with a strong presence in prestigious competitions like SAE SUPRA, FFS
                 INDIA, and FORMULA BHARAT. Yeti Racing has recently achieved remarkable success at Formula Bharath 2025, securing an
                 impressive <span className='font-semibold'>All India Rank 1</span> overall. Notably, we completed a successful endurance run, becoming one of only six cars to
                 achieve this feat and marking a significant milestone as the first team from Kerala to complete endurance at the

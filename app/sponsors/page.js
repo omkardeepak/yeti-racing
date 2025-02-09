@@ -111,7 +111,7 @@ export default function SponsorsPage() {
                 id: "helloscore",
                 direction: "left",
                 title: "Helloscore",
-                description: "Helloscore, a subsidiary of the esteemed Analyt Group of Companies, is a premier financial services provider dedicated to empowering individuals and businesses with tailored credit solutions. Helloscore specializes in comprehensive credit management services, credit score improvement, credit monitoring, debt settlement, and wealth management.",
+                description: "Helloscore, a subsidiary of the esteemed Analyct Group of Companies, is a premier financial services provider dedicated to empowering individuals and businesses with tailored credit solutions. Helloscore specializes in comprehensive credit management services, credit score improvement, credit monitoring, debt settlement, and wealth management.",
                 logo: "/assets/helloscore-logo.png",
                 link: "https://helloscore.in/"
               },

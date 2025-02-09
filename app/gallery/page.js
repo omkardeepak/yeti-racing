@@ -1,197 +1,295 @@
 "use client"
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import Car from "../components/3dcar"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
-import Carousel from "../components/articlecarousal";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Card, CardContent } from "@/components/ui/card"
 
-export default function Gallery(){
-  const [rotation, setRotation] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(1920);
-    const animationRef = useRef(null);
+// Utility function for debouncing
+const debounce = (func, wait) => {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
 
-    
-  
-    const images = [
-      "/assets/DSC_0664.JPG",
-      "/assets/DSC_0027.JPG",
-      "/assets/DSC_0139.JPG",
-      "/assets/DSC_0173.JPG",
-      "/assets/DSC_0181.jpg",
-      "/assets/1.jpg",
-      "/assets/2.jpg",
-      "/assets/4.jpg"
-    ];
+const VideoGallery = () => {
+    const [viewport, setViewport] = useState({ width: 0, height: 0 });
   
     useEffect(() => {
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
+      const updateViewport = () => {
+        setViewport({
+          width: window.innerWidth,
+          height: window.innerHeight
+        });
       };
-      
-      window.addEventListener('resize', handleResize);
-      handleResize();
-      
-      return () => window.removeEventListener('resize', handleResize);
+  
+      updateViewport();
+      const debouncedResize = debounce(updateViewport, 150);
+      window.addEventListener("resize", debouncedResize);
+      return () => window.removeEventListener("resize", debouncedResize);
     }, []);
   
-    const animate = () => {
-      setRotation((prev) => (prev + 0.3) % 360);
-      animationRef.current = requestAnimationFrame(animate);
-    };
-  
-    useEffect(() => {
-      if (!isPaused) {
-        animationRef.current = requestAnimationFrame(animate);
-      }
-      return () => {
-        if (animationRef.current) {
-          cancelAnimationFrame(animationRef.current);
-        }
-      };
-    }, [isPaused]);
-  
-    const getImageStyle = (index) => {
-      const angleStep = 360 / images.length;
-      const angle = (rotation + angleStep * index) * (Math.PI / 180);
-      
-      const baseRadius = windowWidth < 768 ? 250 : 
-                        windowWidth < 1024 ? 350 :
-                        windowWidth < 1440 ? 450 : 550;
-      
-      const x = baseRadius * Math.sin(angle);
-      const z = baseRadius * Math.cos(angle);
-      const y = baseRadius * Math.sin(angle) * 0.3 - Math.abs(baseRadius * Math.cos(angle) * 0.2);
-  
-      const zPosition = (z + baseRadius) / (2 * baseRadius);
-      const scale = parseFloat((zPosition * 0.5 + 0.5).toFixed(3));
-      const opacity = parseFloat((zPosition * 0.6 + 0.4).toFixed(3));
-  
-      return {
-        transform: `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, ${z.toFixed(2)}px)
-                  rotateY(${(angleStep * index + rotation).toFixed(2)}deg)
-                  scale(${scale})`,
-        opacity: opacity,
-        zIndex: Math.round(zPosition * 1000),
-        display: 'block',
-      };
-    };
-  
-    const getImageDimensions = () => {
-      if (windowWidth < 768) return 'w-36 h-24';
-      if (windowWidth < 1024) return 'w-48 h-32';
-      if (windowWidth < 1440) return 'w-64 h-40';
-      return 'w-72 h-48';
-    };
-  
-    const gridImages = images.slice(0, 8);
-    const galleryLetters = "Gallery".split("");
+     const calculateFontSize = () => {
+    const width = viewport.width * 0.85;  // Keep original width calculation
+    const height = viewport.height * 0.98;
+    return Math.min(width / 4.2, height / 0.85);  // Keep width ratio but adjust height
+  };
 
-    return(
-        <div className="flex flex-col min-h-screen">
-            <Navbar></Navbar>
-            <div className="w-full h-screen relative bg-gray-900 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${images[0]})`,
-            filter: 'blur(5px) brightness(0.4)',
-          }}
-        />
-
-        <div className="relative z-10 w-full h-screen flex flex-col items-center justify-center">
-        
-          <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-row z-10 space-x-1 font-zenDots">
-            {galleryLetters.map((letter, index) => (
-              <span
-                key={index}
-                className="md:text-9xl text-6xl mb-52 md:mb-0 z-10  bg-gradient-to-br to-pink-900 via-neutral-300 from-neutral-300  text-transparent bg-clip-text"
-                // style={{
-                //   background: 'linear-gradient(to right, rgb(128, 4, 4), rgb(114, 55, 55))',
-                //   WebkitBackgroundClip: 'text',
-                //   WebkitTextFillColor: 'transparent',
-                //   backgroundClip: 'text',
-                //   animationDelay: `${index * 0.1}s`
-                // }}
+  return (
+    <div className="relative w-screen h-screen bg-gradient-to-b from-black via-red-950 to-red flex items-center justify-center overflow-hidden">
+      <div className="relative">
+        {/* SVG mask for the full GALLERY text */}
+        <svg className="absolute inset-0 w-full h-full">
+          <defs>
+            <mask id="textMask">
+              <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                className="font-black uppercase tracking-tighter"
+                style={{
+                  fontSize: calculateFontSize(),
+                  letterSpacing: "-0.08em",
+                  transform: "scaleY(1.8)",  // Increased from 1.2 to 1.8 to make text taller
+                  transformOrigin: "center",
+                }}
+                fill="white"
               >
-                {letter}
-              </span>
-            ))}
-          </div>
+                GALLERY
+              </text>
+            </mask>
+          </defs>
+        </svg>
 
-          <div
-            className="relative w-full max-w-[2000px] h-[400px] md:h-[500px] lg:h-[600px] z-10 mx-auto"
+        {/* Video masked to show within all letters */}
+        <div className="relative w-screen h-screen">
+          <video
+            src="/assets/reel.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
             style={{
-              perspective: windowWidth < 768 ? "1600px" : "2400px",
-              perspectiveOrigin: "50% 40%",
+              mask: "url(#textMask)",
+              WebkitMask: "url(#textMask)"
             }}
-          >
-            <div
-              className="relative w-full h-full"
-              style={{
-                transformStyle: "preserve-3d",
-                transform: "rotateX(0deg)",
-              }}
-            >
-              {images.map((img, index) => (
-                <div
-                  key={index}
-                  className={`absolute left-1/2 top-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2
-                            ${getImageDimensions()}
-                            transition-all duration-300 
-                            hover:scale-20 cursor-pointer
-                            shadow-2xl`}
-                  style={getImageStyle(index)}
-                  onClick={() => setIsPaused(!isPaused)}
-                >
-                  <img
-                    src={img}
-                    alt={`Gallery image ${index + 1}`}
-                    className="w-full h-full object-cover rounded-2xl 
-                              border-2 border-red-400/30 hover:border-red-400
-                              transition-all duration-300"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                  <div
-                    className="absolute w-full h-1/2 bottom-0 left-0 
-                              bg-gradient-to-b from-white/20 to-transparent
-                              rounded-b-2xl opacity-50"
-                    style={{
-                      transform: "rotateX(180deg) translateY(50%)",
-                      pointerEvents: "none",
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          />
         </div>
       </div>
+    </div>
+  );
+}
 
-      <div className="relative z-10 container mx-auto px-4 py-16 bg-gradient-to-b from-black via-red-950 to-red-700">
-          <h2 className="text-5xl lg:text-7xl  text-white mb-12 text-center font-zenDots">SAE Supra<span className="ml-3 text-red-700">'</span>24</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {gridImages.map((img, index) => (
-              <div 
-                key={index}
-                className="aspect-square overflow-hidden rounded-2xl transition-all duration-500 cursor-pointer
-                           transform hover:scale-90 group"
+const ImageGrid = () => {
+  const SPIN_DURATION = 7;
+  const HOVER_IMAGES = useMemo(() => [
+    { id: 0, hoverImage: "/assets/f1.jpeg" },
+    { id: 1, hoverImage: "/assets/f2.jpg" },
+    { id: 2, hoverImage: "/assets/f3.jpg" },
+    { id: 3, hoverImage: "/assets/f4.jpg" },
+    { id: 4, hoverImage: "/assets/f5.jpg" },
+    { id: 5, hoverImage: "/assets/f6.jpg" },
+    { id: 6, hoverImage: "/assets/f7.jpg" },
+    { id: 7, hoverImage: "/assets/f8.jpg" },
+    { id: 8, hoverImage: "/assets/f9.jpg" },
+    { id: 9, hoverImage: "/assets/f10.jpg" },
+    { id: 10, hoverImage: "/assets/f11.jpg" },
+    { id: 11, hoverImage: "/assets/f12.jpg" },
+    { id: 12, hoverImage: "/assets/f13.jpg" },
+    { id: 13, hoverImage: "/assets/f14.png" },
+    { id: 14, hoverImage: "/assets/f15.jpg" }
+  ], []);
+
+  const [hoveredCell, setHoveredCell] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const cells = useMemo(() => 
+    Array.from({ length: 15 }, (_, index) => ({
+      id: index,
+      mainImageUrl: "/assets/carhd.jpg",
+      ...HOVER_IMAGES[index]
+    }))
+  , [HOVER_IMAGES]);
+
+  useEffect(() => {
+    const imagePromises = [...new Set([
+      ...cells.map(cell => cell.mainImageUrl),
+      ...cells.map(cell => cell.hoverImage),
+      "/assets/shi-rembg.png"
+    ])].map(url => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = resolve;
+        img.onerror = resolve;
+      });
+    });
+
+    Promise.all(imagePromises).then(() => setIsLoading(false));
+  }, [cells]);
+
+  if (isLoading) {
+    return (
+      <div className="w-full h-screen bg-gradient-to-b from-red-950 via-red-1000 to-black flex items-center justify-center">
+        <div className="text-white text-lg font-zenDots animate-pulse">Loading...</div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full min-h-screen transition-transform duration-500">
+      <style jsx>{`
+        @keyframes horizontalSpin {
+          from { transform: translateX(-50%) rotateY(-90deg); }
+          to { transform: translateX(-50%) rotateY(90deg); }
+        }
+        .cell-hover-effect {
+          transform: translateZ(0);
+          backface-visibility: hidden;
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          will-change: transform;
+        }
+      `}</style>
+
+      <div className="container mx-auto py-8">
+        <h1 className="text-white text-4xl md:text-6xl font-zenDots tracking-wider text-center">
+          FORMULA BHARAT'25
+        </h1>
+      </div>
+
+      <div className="flex flex-col lg:flex-row w-full px-4 gap-4">
+        <div className="w-full lg:w-3/5 p-4">
+          <div 
+            className="grid gap-1"
+            style={{
+              gridTemplateColumns: 'repeat(5, 1fr)',
+              gridTemplateRows: 'repeat(3, 1fr)',
+              aspectRatio: '5/3',
+              width: '100%'
+            }}
+          >
+            {cells.map((cell) => (
+              <div
+                key={cell.id}
+                className="relative aspect-square overflow-hidden cursor-pointer cell-hover-effect"
+                onMouseEnter={() => setHoveredCell(cell.id)}
+                onMouseLeave={() => setHoveredCell(null)}
               >
-                <img
-                  src={img}
-                  alt={`Grid gallery image ${index + 1}`}
-                  className="w-full h-full object-cover transition-all duration-500
-                           filter grayscale hover:grayscale-0
-                           group-hover:rotate-6"
+                <div
+                  className="absolute inset-0 transition-all duration-300 ease-out"
+                  style={{
+                    backgroundImage: `url(${cell.mainImageUrl})`,
+                    backgroundSize: '500% 300%',
+                    backgroundPosition: `${(cell.id % 5) * -100}% ${Math.floor(cell.id / 5) * -100}%`,
+                    transform: 'translateZ(0)',
+                    willChange: 'transform'
+                  }}
                 />
+                
+                {hoveredCell === cell.id && (
+                  <div
+                    className="absolute inset-0 transition-all duration-300 ease-out"
+                    style={{
+                      backgroundImage: `url(${cell.hoverImage})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      transform: 'translateZ(0)',
+                      willChange: 'transform'
+                    }}
+                  />
+                )}
               </div>
             ))}
           </div>
         </div>
-        <div id="media" className="min-h-screen sm:h-screen bg-gradient-to-b from-red-700 via-red-950 to-black text-white overflow-scroll scroll-smooth">
+
+        <div className="w-full lg:w-2/5 flex items-center justify-center">
+          <div className="relative w-full aspect-square" style={{ perspective: '1000px' }}>
+            <img
+              src="/assets/shi-rembg.png"
+              alt="Rotating Image"
+              className="w-full h-full object-contain absolute left-1/2"
+              style={{
+                animation: `horizontalSpin ${SPIN_DURATION}s linear infinite normal`,
+                transformStyle: 'preserve-3d',
+                willChange: 'transform',
+                backfaceVisibility: 'hidden'
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Gallery = () => {
+  const [windowWidth, setWindowWidth] = useState(1920);
+  const animationRef = useRef(null);
+
+  const images = useMemo(() => [
+    "/assets/DSC_0664.JPG",
+    "/assets/DSC_0027.JPG",
+    "/assets/DSC_0139.JPG",
+    "/assets/DSC_0173.JPG",
+    "/assets/DSC_0181.jpg",
+    "/assets/1.jpg",
+    "/assets/2.jpg",
+    "/assets/4.jpg"
+  ], []);
+
+  useEffect(() => {
+    const handleResize = debounce(() => {
+      setWindowWidth(window.innerWidth);
+    }, 150);
+    
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <div className="flex flex-col min-h-screen bg-black">
+      <Navbar />
+      <VideoGallery />
+      <ImageGrid />
+
+      <div className="relative z-10 w-full px-4 py-16 bg-gradient-to-b from-black via-red to-red-950">
+        <h2 className="text-4xl md:text-5xl lg:text-7xl text-white mb-8 md:mb-12 text-center font-zenDots">
+          SAE Supra<span className="ml-3 text-red-700">'</span>24
+        </h2>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto px-4">
+          {images.map((img, index) => (
+            <div 
+              key={index}
+              className="aspect-square overflow-hidden rounded-2xl transition-transform duration-300 cursor-pointer
+                         hover:scale-95 transform-gpu"
+            >
+              <img
+                src={img}
+                alt={`Grid gallery image ${index + 1}`}
+                className="w-full h-full object-cover transition-all duration-300
+                         grayscale hover:grayscale-0 transform-gpu hover:rotate-3"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      <div id="media" className="min-h-screen sm:h-screen bg-gradient-to-b from-red-950 via-red-1000 to-black text-white overflow-scroll scroll-smooth">
         <div className="text-4xl   sm:text-7xl font-zenDots flex  pt-3 sm:pt-9 pb-9 justify-center">Media Coverage</div>
 
           <div className="flex md:flex-row flex-col items-center justify-center ">
@@ -359,14 +457,17 @@ export default function Gallery(){
 </div> */}
 
 
-</div>
-<div>
+        </div>
+      
+        
 
-  <Footer className=""></Footer> 
-  {/* <Car />  Car should be rendered inside this div */}
 
-  </div> {/* Footer sticks to the bottom */}
-</div>
+        <Car />
+      
 
-    )
-}
+      <Footer />
+    </div>
+  );
+};
+
+export default Gallery;

@@ -170,3 +170,15 @@ html {
 img {
   transition: transform 0.5s ease;
 }
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+@keyframes verticalSpin {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
