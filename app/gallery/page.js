@@ -313,7 +313,7 @@ const Gallery = () => {
         <div className="min-h-screen w-full bg-gradient-to-b from-black to-red-700">
           <div className="text-5xl sm:text-6xl flex justify-center font-zenDots  pt-16 w-full  text-white pb-20">Articles</div>
           <Carousel></Carousel>
-        {/* <div className="h-screen md:h-screen w-full md:pl-20 md:pr-20 pl-2 pr-2">
+        <div className="h-screen md:h-screen w-full md:pl-20 md:pr-20 pl-2 pr-2">
         <div className="sm:flex flex-col md:flex-row space-x-10 justify-center hidden rounded-sm  h-[420px] items-center ">
         
 <div className="card group h-98 w-72 hover:scale-105 border-2 border-red-600 rounded-xl transition-transform duration-500 ease-in-out drop-shadow-2xl">
@@ -454,7 +454,7 @@ const Gallery = () => {
   </div>
 </div>
 
-</div> */}
+</div> 
 
 
         </div>
