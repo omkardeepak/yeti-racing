@@ -11,21 +11,35 @@ export default function Navbar(){
     };
 
 return(
-    <div className="flex items-center h-20 border-b-2 border-neutral-400 sm:h-24 sm:border-b-2 sm:border-neutral-400 bg-black">
-    <a href="/"><img src={logo} height={20} width={20} alt="yeti logo"className="hover:scale-105 h-12 md:h-20 w-20 ml-2 sm:ml-5 sm:h-20 sm:w-32 sm:ml-0 sm:p-1 "/></a>
-    <div className="hidden sm:flex sm:items-center sm:text-1xl sm:space-x-9 sm:text-neutral-100 sm:ml-auto sm:mr-7 font-Orbitron ">
-        <a className="hover:scale-110" href="/subsystem">Team</a>
-        <a className="hover:scale-110" href="/gallery">Gallery</a>
-        <a className="hover:scale-110" href="/gallery#media">Media</a>
-        <a className="hover:scale-110" href="/team">About us</a>
-        <a className="hover:scale-110" href="/sponsors">Sponsors</a>
-        <a className="hover:scale-110" href="#footer">Contact us</a>
-    </div>
-    <div className="  sm:hidden ml-auto mr-7">
-        <Sidebar></Sidebar>
-    
-    </div>
-    
+    <div className="flex items-center justify-center h-20 border-b-2 sm:h-24 sm:border-b-2 bg-transparent absolute top-0 left-0 w-full z-50">
+  {/* Logo */}
+  <a href="/" className="mr-auto sm:mr-0">
+    <img 
+      src={logo} 
+      height={20} 
+      width={20} 
+      alt="yeti logo" 
+      className="hover:scale-105 h-12 md:h-20 w-20 ml-2 sm:ml-5 sm:h-20 sm:w-32 sm:p-1"
+    />
+  </a>
+  <div className="hidden sm:block">
+
+  {/* Navigation Links */}
+  <div className="flex items-center text-1xl space-x-9 text-neutral-100 font-Orbitron justify-center">
+    <a className="hover:scale-110" href="/subsystem">Team</a>
+    <a className="hover:scale-110" href="/gallery">Gallery</a>
+    <a className="hover:scale-110" href="/gallery#media">Media</a>
+    <a className="hover:scale-110" href="/team">About us</a>
+    <a className="hover:scale-110" href="/sponsors">Sponsors</a>
+    <a className="hover:scale-110" href="#footer">Contact us</a>
+  </div>
+  </div>
+
+  {/* Mobile Sidebar (right-aligned on small screens) */}
+  <div className="sm:hidden ml-auto mr-7">
+    <Sidebar />
+  </div>
 </div>
+
 )
 }

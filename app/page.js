@@ -52,14 +52,17 @@ export default function Home() {
         <Footer />        
         </div>
       )} */}
-      <div id="content">
-          <Navbar />
-        <Landing />
-        <About1 />
-        <Crowdfund />
-        <Sponsor />
-        <Footer />        
-        </div>
+      <div id="content" className="relative">
+  <Navbar />
+  <div className="relative z-0">
+    <Landing />
+    <About1 />
+    <Crowdfund />
+    <Sponsor />
+    <Footer />
+  </div>
+</div>
+
     </>
   );
 }
