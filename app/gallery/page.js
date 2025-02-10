@@ -111,7 +111,7 @@ const ImageGrid = () => {
     { id: 6, hoverImage: "/assets/f7.webp"},
     { id: 7, hoverImage: "/assets/f8.webp"},
     { id: 8, hoverImage: "/assets/f9.webp"},
-    { id: 9, hoverImage: "/assets/f10webp" },
+    { id: 9, hoverImage: "/assets/f10.webp" },
     { id: 10, hoverImage: "/assets/f11.webp" },
     { id: 11, hoverImage: "/assets/f12.webp" },
     { id: 12, hoverImage: "/assets/f13.webp" },
