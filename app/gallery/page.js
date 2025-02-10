@@ -40,8 +40,7 @@ const VideoGallery = () => {
     return () => window.removeEventListener("resize", debouncedResize);
   }, []);
 
-  // Rest of VideoGallery component remains the same
-  // ... (previous VideoGallery code)
+  
   const calculateFontSize = () => {
     const width = viewport.width * 0.85;  // Keep original width calculation
     const height = viewport.height * 0.98;
@@ -121,12 +120,9 @@ const ImageGrid = () => {
   ], []);
 
   useEffect(() => {
-    // This will trigger the animation when the component is loaded
+    
     setIsLoaded(true);
   }, []);
-
-  // Rest of ImageGrid component remains the same
-  // ... (previous ImageGrid code)
 
   
 
@@ -268,7 +264,7 @@ const Gallery = () => {
   ], []);
 
   useEffect(() => {
-    // This will trigger the animation when the component is loaded
+   
     setIsLoaded(true);
 
     const handleResize = debounce(() => {
@@ -281,15 +277,13 @@ const Gallery = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // You can now use isLoaded state to conditionally render or animate components
+
   return (
     <div className={`flex flex-col min-h-screen bg-black transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar />
       <VideoGallery />
       <ImageGrid />
-      
-      {/* Rest of the Gallery component remains the same */}
-      {/* ... (previous Gallery code) */}
+     
       <div className="relative z-10 w-full px-4 py-16 bg-gradient-to-b from-black via-red to-red-950">
         <h2 className="text-4xl md:text-5xl lg:text-7xl text-white mb-8 md:mb-12 text-center font-zenDots">
           SAE Supra<span className="ml-3 text-red-700">'</span>24
