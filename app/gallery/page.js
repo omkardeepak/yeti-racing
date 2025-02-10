@@ -6,7 +6,6 @@ import Footer from "../components/footer"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
 
-// Utility function for debouncing
 const debounce = (func, wait) => {
   let timeout;
   return function executedFunction(...args) {
@@ -24,7 +23,6 @@ const VideoGallery = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // This will trigger the animation when the component is loaded
     setIsLoaded(true);
 
     const updateViewport = () => {
@@ -40,18 +38,15 @@ const VideoGallery = () => {
     return () => window.removeEventListener("resize", debouncedResize);
   }, []);
 
-  // Rest of VideoGallery component remains the same
-  // ... (previous VideoGallery code)
   const calculateFontSize = () => {
-    const width = viewport.width * 0.85;  // Keep original width calculation
+    const width = viewport.width * 0.85;
     const height = viewport.height * 0.98;
-    return Math.min(width / 4.2, height / 0.85);  // Keep width ratio but adjust height
+    return Math.min(width / 4.2, height / 0.85);
   };
 
   return (
     <div className="relative w-screen h-screen bg-gradient-to-b from-black via-red-950 to-red flex items-center justify-center overflow-hidden">
       <div className="relative">
-        {/* SVG mask for the full GALLERY text */}
         <svg className="absolute inset-0 w-full h-full">
           <defs>
             <mask id="textMask">
@@ -64,7 +59,7 @@ const VideoGallery = () => {
                 style={{
                   fontSize: calculateFontSize(),
                   letterSpacing: "-0.08em",
-                  transform: "scaleY(1.8)",  // Increased from 1.2 to 1.8 to make text taller
+                  transform: "scaleY(1.8)",
                   transformOrigin: "center",
                 }}
                 fill="white"
@@ -75,7 +70,6 @@ const VideoGallery = () => {
           </defs>
         </svg>
 
-        {/* Video masked to show within all letters */}
         <div className="relative w-screen h-screen">
           <video
             src="/assets/reel.mp4"
@@ -102,7 +96,6 @@ const ImageGrid = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const HOVER_IMAGES = useMemo(() => [
-    // ... (previous HOVER_IMAGES array)
     { id: 0, hoverImage: "/assets/f1.webp"},
     { id: 1, hoverImage: "/assets/f2.webp"},
     { id: 2, hoverImage: "/assets/f3.webp"},
@@ -112,36 +105,22 @@ const ImageGrid = () => {
     { id: 6, hoverImage: "/assets/f7.webp"},
     { id: 7, hoverImage: "/assets/f8.webp"},
     { id: 8, hoverImage: "/assets/f9.webp"},
-    { id: 9, hoverImage: "/assets/f10webp" },
-    { id: 10, hoverImage: "/assets/f1webp" },
-    { id: 11, hoverImage: "/assets/f1webp" },
-    { id: 12, hoverImage: "/assets/f1webp" },
-    { id: 13, hoverImage: "/assets/f1webp" },
-    { id: 14, hoverImage: "/assets/f1webp" }
+    { id: 9, hoverImage: "/assets/f10.webp" },
+    { id: 10, hoverImage: "/assets/f11.webp" },
+    { id: 11, hoverImage: "/assets/f12.webp" },
+    { id: 12, hoverImage: "/assets/f13.webp" },
+    { id: 13, hoverImage: "/assets/f14.webp" },
+    { id: 14, hoverImage: "/assets/f15.webp" }
   ], []);
 
   useEffect(() => {
-    // This will trigger the animation when the component is loaded
     setIsLoaded(true);
   }, []);
 
-  // Rest of ImageGrid component remains the same
-  // ... (previous ImageGrid code)
-
-  
-
-  const cells = useMemo(() => 
-    Array.from({ length: 15 }, (_, index) => ({
-      id: index,
-      mainImageUrl: "/assets/carhd.webp",
-      ...HOVER_IMAGES[index]
-    }))
-  , [HOVER_IMAGES]);
-
   useEffect(() => {
     const imagePromises = [...new Set([
-      ...cells.map(cell => cell.mainImageUrl),
-      ...cells.map(cell => cell.hoverImage),
+      ...Array(15).fill("/assets/carhd.webp"),
+      ...HOVER_IMAGES.map(img => img.hoverImage),
       "/assets/shi-rembg.webp"
     ])].map(url => {
       return new Promise((resolve) => {
@@ -153,7 +132,7 @@ const ImageGrid = () => {
     });
 
     Promise.all(imagePromises).then(() => setIsLoading(false));
-  }, [cells]);
+  }, []);
 
   if (isLoading) {
     return (
@@ -195,29 +174,29 @@ const ImageGrid = () => {
               width: '100%'
             }}
           >
-            {cells.map((cell) => (
+            {Array(15).fill().map((_, index) => (
               <div
-                key={cell.id}
+                key={index}
                 className="relative aspect-square overflow-hidden cursor-pointer cell-hover-effect"
-                onMouseEnter={() => setHoveredCell(cell.id)}
+                onMouseEnter={() => setHoveredCell(index)}
                 onMouseLeave={() => setHoveredCell(null)}
               >
                 <div
                   className="absolute inset-0 transition-all duration-300 ease-out"
                   style={{
-                    backgroundImage: `url(${cell.mainImageUrl})`,
+                    backgroundImage: `url("/assets/carhd.webp")`,
                     backgroundSize: '500% 300%',
-                    backgroundPosition: `${(cell.id % 5) * -100}% ${Math.floor(cell.id / 5) * -100}%`,
+                    backgroundPosition: `${(index % 5) * -100}% ${Math.floor(index / 5) * -100}%`,
                     transform: 'translateZ(0)',
                     willChange: 'transform'
                   }}
                 />
                 
-                {hoveredCell === cell.id && (
+                {hoveredCell === index && (
                   <div
                     className="absolute inset-0 transition-all duration-300 ease-out"
                     style={{
-                      backgroundImage: `url(${cell.hoverImage})`,
+                      backgroundImage: `url(${HOVER_IMAGES[index].hoverImage})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       transform: 'translateZ(0)',
@@ -248,7 +227,6 @@ const ImageGrid = () => {
       </div>
     </div>
   );
-
 };
 
 const Gallery = () => {
@@ -268,7 +246,6 @@ const Gallery = () => {
   ], []);
 
   useEffect(() => {
-    // This will trigger the animation when the component is loaded
     setIsLoaded(true);
 
     const handleResize = debounce(() => {
@@ -281,15 +258,15 @@ const Gallery = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // You can now use isLoaded state to conditionally render or animate components
   return (
     <div className={`flex flex-col min-h-screen bg-black transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar />
       <VideoGallery />
       <ImageGrid />
       
-      {/* Rest of the Gallery component remains the same */}
-      {/* ... (previous Gallery code) */}
+     
+      
+      
       <div className="relative z-10 w-full px-4 py-16 bg-gradient-to-b from-black via-red to-red-950">
         <h2 className="text-4xl md:text-5xl lg:text-7xl text-white mb-8 md:mb-12 text-center font-zenDots">
           SAE Supra<span className="ml-3 text-red-700">'</span>24
