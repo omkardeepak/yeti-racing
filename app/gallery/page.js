@@ -92,21 +92,21 @@ const VideoGallery = () => {
 const ImageGrid = () => {
   const SPIN_DURATION = 7;
   const HOVER_IMAGES = useMemo(() => [
-    { id: 0, hoverImage: "/assets/f1.jpeg" },
-    { id: 1, hoverImage: "/assets/f2.jpg" },
-    { id: 2, hoverImage: "/assets/f3.jpg" },
-    { id: 3, hoverImage: "/assets/f4.jpg" },
-    { id: 4, hoverImage: "/assets/f5.jpg" },
-    { id: 5, hoverImage: "/assets/f6.jpg" },
-    { id: 6, hoverImage: "/assets/f7.jpg" },
-    { id: 7, hoverImage: "/assets/f8.jpg" },
-    { id: 8, hoverImage: "/assets/f9.jpg" },
-    { id: 9, hoverImage: "/assets/f10.jpg" },
-    { id: 10, hoverImage: "/assets/f11.jpg" },
-    { id: 11, hoverImage: "/assets/f12.jpg" },
-    { id: 12, hoverImage: "/assets/f13.jpg" },
-    { id: 13, hoverImage: "/assets/f14.png" },
-    { id: 14, hoverImage: "/assets/f15.jpg" }
+    { id: 0, hoverImage: "/assets/f1.webp"},
+    { id: 1, hoverImage: "/assets/f2.webp"},
+    { id: 2, hoverImage: "/assets/f3.webp"},
+    { id: 3, hoverImage: "/assets/f4.webp"},
+    { id: 4, hoverImage: "/assets/f5.webp"},
+    { id: 5, hoverImage: "/assets/f6.webp"},
+    { id: 6, hoverImage: "/assets/f7.webp"},
+    { id: 7, hoverImage: "/assets/f8.webp"},
+    { id: 8, hoverImage: "/assets/f9.webp"},
+    { id: 9, hoverImage: "/assets/f10webp" },
+    { id: 10, hoverImage: "/assets/f1webp" },
+    { id: 11, hoverImage: "/assets/f1webp" },
+    { id: 12, hoverImage: "/assets/f1webp" },
+    { id: 13, hoverImage: "/assets/f1webp" },
+    { id: 14, hoverImage: "/assets/f1webp" }
   ], []);
 
   const [hoveredCell, setHoveredCell] = useState(null);
@@ -115,7 +115,7 @@ const ImageGrid = () => {
   const cells = useMemo(() => 
     Array.from({ length: 15 }, (_, index) => ({
       id: index,
-      mainImageUrl: "/assets/carhd.jpg",
+      mainImageUrl: "/assets/carhd.webp",
       ...HOVER_IMAGES[index]
     }))
   , [HOVER_IMAGES]);
@@ -124,7 +124,7 @@ const ImageGrid = () => {
     const imagePromises = [...new Set([
       ...cells.map(cell => cell.mainImageUrl),
       ...cells.map(cell => cell.hoverImage),
-      "/assets/shi-rembg.png"
+      "/assets/shi-rembg.webp"
     ])].map(url => {
       return new Promise((resolve) => {
         const img = new Image();
@@ -215,7 +215,7 @@ const ImageGrid = () => {
         <div className="w-full lg:w-2/5 flex items-center justify-center">
           <div className="relative w-full aspect-square" style={{ perspective: '1000px' }}>
             <img
-              src="/assets/shi-rembg.png"
+              src="/assets/shi-rembg.webp"
               alt="Rotating Image"
               className="w-full h-full object-contain absolute left-1/2"
               style={{
