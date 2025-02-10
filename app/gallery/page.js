@@ -111,7 +111,7 @@ const ImageGrid = () => {
     { id: 6, hoverImage: "/assets/f7.webp"},
     { id: 7, hoverImage: "/assets/f8.webp"},
     { id: 8, hoverImage: "/assets/f9.webp"},
-    { id: 9, hoverImage: "/assets/f10webp" },
+    { id: 9, hoverImage: "/assets/f10.webp" },
     { id: 10, hoverImage: "/assets/f11.webp" },
     { id: 11, hoverImage: "/assets/f12.webp" },
     { id: 12, hoverImage: "/assets/f13.webp" },
@@ -246,7 +246,6 @@ const ImageGrid = () => {
   );
 
 };
-
 const Gallery = () => {
   const [windowWidth, setWindowWidth] = useState(1920);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -277,13 +276,11 @@ const Gallery = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-
   return (
     <div className={`flex flex-col min-h-screen bg-black transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar />
       <VideoGallery />
       <ImageGrid />
-     
       <div className="relative z-10 w-full px-4 py-16 bg-gradient-to-b from-black via-red to-red-950">
         <h2 className="text-4xl md:text-5xl lg:text-7xl text-white mb-8 md:mb-12 text-center font-zenDots">
           SAE Supra<span className="ml-3 text-red-700">'</span>24
