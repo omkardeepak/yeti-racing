@@ -20,23 +20,29 @@ const debounce = (func, wait) => {
 };
 
 const VideoGallery = () => {
-    const [viewport, setViewport] = useState({ width: 0, height: 0 });
-  
-    useEffect(() => {
-      const updateViewport = () => {
-        setViewport({
-          width: window.innerWidth,
-          height: window.innerHeight
-        });
-      };
-  
-      updateViewport();
-      const debouncedResize = debounce(updateViewport, 150);
-      window.addEventListener("resize", debouncedResize);
-      return () => window.removeEventListener("resize", debouncedResize);
-    }, []);
-  
-     const calculateFontSize = () => {
+  const [viewport, setViewport] = useState({ width: 0, height: 0 });
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // This will trigger the animation when the component is loaded
+    setIsLoaded(true);
+
+    const updateViewport = () => {
+      setViewport({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    updateViewport();
+    const debouncedResize = debounce(updateViewport, 150);
+    window.addEventListener("resize", debouncedResize);
+    return () => window.removeEventListener("resize", debouncedResize);
+  }, []);
+
+  // Rest of VideoGallery component remains the same
+  // ... (previous VideoGallery code)
+  const calculateFontSize = () => {
     const width = viewport.width * 0.85;  // Keep original width calculation
     const height = viewport.height * 0.98;
     return Math.min(width / 4.2, height / 0.85);  // Keep width ratio but adjust height
@@ -87,11 +93,16 @@ const VideoGallery = () => {
       </div>
     </div>
   );
-}
+};
 
 const ImageGrid = () => {
   const SPIN_DURATION = 7;
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hoveredCell, setHoveredCell] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
   const HOVER_IMAGES = useMemo(() => [
+    // ... (previous HOVER_IMAGES array)
     { id: 0, hoverImage: "/assets/f1.webp"},
     { id: 1, hoverImage: "/assets/f2.webp"},
     { id: 2, hoverImage: "/assets/f3.webp"},
@@ -109,8 +120,15 @@ const ImageGrid = () => {
     { id: 14, hoverImage: "/assets/f1webp" }
   ], []);
 
-  const [hoveredCell, setHoveredCell] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    // This will trigger the animation when the component is loaded
+    setIsLoaded(true);
+  }, []);
+
+  // Rest of ImageGrid component remains the same
+  // ... (previous ImageGrid code)
+
+  
 
   const cells = useMemo(() => 
     Array.from({ length: 15 }, (_, index) => ({
@@ -230,24 +248,29 @@ const ImageGrid = () => {
       </div>
     </div>
   );
+
 };
 
 const Gallery = () => {
   const [windowWidth, setWindowWidth] = useState(1920);
+  const [isLoaded, setIsLoaded] = useState(false);
   const animationRef = useRef(null);
 
   const images = useMemo(() => [
-    "/assets/DSC_0664.JPG",
-    "/assets/DSC_0027.JPG",
-    "/assets/DSC_0139.JPG",
-    "/assets/DSC_0173.JPG",
-    "/assets/DSC_0181.jpg",
-    "/assets/1.jpg",
-    "/assets/2.jpg",
-    "/assets/4.jpg"
+    "/assets/DSC_0181.webp",
+    "/assets/DSC_0027.webp",
+    "/assets/DSC_0139.webp",
+    "/assets/DSC_0173.webp",
+    "/assets/DSC_0049.webp",
+    "/assets/DSC_0473.webp",
+    "/assets/2.webp",
+    "/assets/3.webp"
   ], []);
 
   useEffect(() => {
+    // This will trigger the animation when the component is loaded
+    setIsLoaded(true);
+
     const handleResize = debounce(() => {
       setWindowWidth(window.innerWidth);
     }, 150);
@@ -258,12 +281,15 @@ const Gallery = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // You can now use isLoaded state to conditionally render or animate components
   return (
-    <div className="flex flex-col min-h-screen bg-black">
+    <div className={`flex flex-col min-h-screen bg-black transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar />
       <VideoGallery />
       <ImageGrid />
-
+      
+      {/* Rest of the Gallery component remains the same */}
+      {/* ... (previous Gallery code) */}
       <div className="relative z-10 w-full px-4 py-16 bg-gradient-to-b from-black via-red to-red-950">
         <h2 className="text-4xl md:text-5xl lg:text-7xl text-white mb-8 md:mb-12 text-center font-zenDots">
           SAE Supra<span className="ml-3 text-red-700">'</span>24
@@ -459,15 +485,18 @@ const Gallery = () => {
 
         </div>
       
-        
-
-
-        <Car />
       
-
+      <Car />
       <Footer />
     </div>
   );
 };
 
 export default Gallery;
+
+
+
+
+
+
+      
