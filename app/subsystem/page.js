@@ -37,7 +37,7 @@ export default function Subsystem(){
       <div>
         <Navbar></Navbar>
         
-        <div className="min-h-screen w-full bg-gradient-to-b from-black to-red-700  ">
+        <div className="min-h-screen w-full bg-gradient-to-b from-black to-red-700 pt-20 ">
         <div className="h-72 w-full text-white font-zenDots text-5xl pt-16 md:pt-0 items-center justify-center md:flex p-3">Executive Committe <span className="text-red-700 ">[</span>24-25<span className="text-red-700">]</span></div>
 
         <div className=" flex flex-row justify-center w-full space-x-2 md:space-x-14  mb-16">

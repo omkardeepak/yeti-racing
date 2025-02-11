@@ -50,7 +50,7 @@ export default function SponsorsPage() {
   return (
     <div className="bg-black">
       <Navbar />
-      <div className="min-h-screen">
+      <div className="min-h-screen pt-28">
         {/* First Screen - Black to Dark Red Gradient */}
         <div className="bg-gradient-to-b from-black to-red-900">
           <div className="max-w-[90%] 2xl:max-w-[1400px] mx-auto px-4 py-8 sm:py-12 md:py-16">

@@ -48,7 +48,7 @@ const VideoGallery = () => {
   };
 
   return (
-    <div className="relative w-screen h-screen bg-gradient-to-b from-black via-red-950 to-red flex items-center justify-center overflow-hidden">
+    <div className="relative w-screen h-screen bg-gradient-to-b from-black via-red-950 to-red flex items-center justify-center overflow-hidden pt-10 md:pt-52">
       <div className="relative">
         {/* SVG mask for the full GALLERY text */}
         <svg className="absolute inset-0 w-full h-full">
