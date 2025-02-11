@@ -48,10 +48,10 @@ const VideoGallery = () => {
   };
 
   return (
-    <div className="relative w-screen h-screen bg-gradient-to-b from-black via-red to-red-950 flex items-center justify-center overflow-hidden pt-10 md:pt-52">
-      <div className="relative">
-        {/* SVG mask for the full GALLERY text */}
-        <svg className="absolute inset-0 w-full h-full">
+    <div className="relative w-screen h-[50vh] md:h-screen bg-gradient-to-b from-black via-red to-red-950 flex items-center justify-center overflow-hidden pt-10 md:pt-52">
+  <div className="relative">
+    {/* SVG mask for the full GALLERY text */}
+    <svg className="absolute inset-0 w-full h-full">
           <defs>
             <mask id="textMask">
               <text
@@ -62,7 +62,7 @@ const VideoGallery = () => {
                 className="font-black uppercase tracking-tighter"
                 style={{
                   fontSize: calculateFontSize(),
-                  letterSpacing: "-0.08em",
+                  letterSpacing: "-0.03em",
                   transform: "scaleY(1.8)",  // Increased from 1.2 to 1.8 to make text taller
                   transformOrigin: "center",
                 }}
