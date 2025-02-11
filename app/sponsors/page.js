@@ -119,7 +119,7 @@ export default function SponsorsPage() {
                 id: "tyreguru",
                 direction: "right",
                 title: "TyreGuru",
-                description: ")Tyreguru provides expert advice and education about tyres, drawing on over 20 years of experience in the industry and assisting consumers in making informed decisions. With engaging content like reels addressing tyre scams and maintenance tips, the page aims to raise awareness and transform the automotive industry through smarter choices. Tyreguru emphasises customer education and offers personalised assistance.",
+                description: "Tyreguru provides expert advice and education about tyres, drawing on over 20 years of experience in the industry and assisting consumers in making informed decisions. With engaging content like reels addressing tyre scams and maintenance tips, the page aims to raise awareness and transform the automotive industry through smarter choices. Tyreguru emphasises customer education and offers personalised assistance.",
                 logo: "/assets/tyreguru.png",
                 link: "https://www.instagram.com/tyreguru.in/?hl=en"
               },
