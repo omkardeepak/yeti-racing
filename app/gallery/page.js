@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect, useRef, useMemo } from "react";
-import Car from "../components/3dcar"
+
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
@@ -477,7 +477,7 @@ const Gallery = () => {
         </div>
       
       
-      <Car />
+    
       <Footer />
     </div>
   );
