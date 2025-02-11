@@ -68,7 +68,7 @@ import { useEffect,useRef } from "react";
             <div className="border-2 md:w-5/6 md:h-4/6  justify-center  rounded-xl  bg-black bg-opacity-40 w-80  ">
             <div className="font-Goldman flex flex-col p-6 pt-2 pb-2 text-3xl lg:text-4xl xl:text-5xl md:p-6 md:pb-1 xl:pb-6 text-white"><div className="flex"><span className=""> Y</span>eti Racing</div><span className="lg:text-lg xl:text-xl text-sm text-red-600 font-Fw">CUSAT</span></div>
             <div ref={scrollDivRef} className=" opacity-0 transform  transition-all duration-700" >
-            <div  className="  p-7 pb-2 pt-0  xl:pb-5 text-lg lg:text-lg xl:text-2xl flex w-full  text-justify text-white font-Rajdhani">
+            <div  className="  p-7 pb-2 pt-0  xl:pb-5 text-lg lg:text-[1rem] xl:text-2xl flex w-full  text-justify text-white font-Rajdhani">
             Yeti Racing, a leading force in Formula Student vehicle construction from Cochin University of Science and Technology, Kochi, embodies dedication and collaboration, with a strong presence in prestigious competitions like SAE SUPRA, FFS INDIA, and FORMULA BHARAT. Since our debut in SUPRA 2017, we've made significant strides in automotive engineering excellence.            </div>
             </div>
             

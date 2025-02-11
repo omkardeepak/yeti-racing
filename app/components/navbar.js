@@ -11,7 +11,7 @@ export default function Navbar(){
     };
 
 return(
-    <div className="flex items-center justify-center h-20 border-b-2 sm:h-24 sm:border-b-2 bg-transparent absolute top-0 left-0 w-full z-50">
+    <div className="flex items-center justify-center h-20 border-b-2 sm:h-24 sm:border-b-2 bg-transparent absolute top-0 left-0 w-full z-50 ">
   {/* Logo */}
   <a href="/" className="mr-auto sm:mr-0">
     <img 
@@ -19,13 +19,13 @@ return(
       height={20} 
       width={20} 
       alt="yeti logo" 
-      className="hover:scale-105 h-12 md:h-20 w-20 ml-2 sm:ml-5 sm:h-20 sm:w-32 sm:p-1"
+      className="hover:scale-105 h-12 md:h-20 w-20 ml-2 sm:ml-0 sm:h-20 sm:w-32 sm:p-1"
     />
   </a>
   <div className="hidden sm:block">
 
   {/* Navigation Links */}
-  <div className="flex items-center text-1xl space-x-9 text-neutral-100 font-Orbitron justify-center">
+  <div className="flex items-center text-xl space-x-9 text-white font-Orbitron justify-center mr-10">
     <a className="hover:scale-110" href="/subsystem">Team</a>
     <a className="hover:scale-110" href="/gallery">Gallery</a>
     <a className="hover:scale-110" href="/gallery#media">Media</a>
