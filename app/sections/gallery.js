@@ -1,9 +1,9 @@
 "use client"
 import React from 'react';
-
+import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
-import abstract from "../asset/clipart-wave-line-17.png"
-import Image from 'next/image';
+import { DotPattern } from "../components/magicui/dot-pattern";
+
 export default function Crowdfund(){
 
   const img1 = "https://ik.imagekit.io/r70knk9pu/yeti%202.jpg?updatedAt=1739021442131"
@@ -51,8 +51,15 @@ export default function Crowdfund(){
 
     return(
         <div ref={progressRef} className=" text-white flex sm:flex-col flex-row h-screen bg-gradient-to-b from-black to-red-700 ">
+          <div className='h-full w-full inset-0 mt-60  absolute z-0'>
+          <DotPattern
+        className={cn(
+          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
+        )}
+      />
+      </div>
           {/* <Image src={abstract} alt="abs" className='absolute flex z-0 h-full w-full pb-10'/> */}
-            <div className="flex flex-col p-4 sm:w-1/2 w-full h-screen left-0 justify-center items-center ">
+            <div className="z-20 flex flex-col p-4 sm:w-1/2 w-full h-screen left-0 justify-center items-center ">
             <div className=" relative bottom-10 flex ml-12 justify-center md:ml-0 text-5xl lg:text-6xl xl:text-7xl font-zenDots bg-gradient-to-r from-cyan-500 via-green-600 to-indigo-600  text-transparent bg-clip-text w-full ">Support Us</div>
       <div className="h-96 md:w-full max-w-lg bg-opacity-10 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-black  backdrop-blur-sm text-gray-100 p-8 rounded-3xl border-2 border-green-600 md:h-90 w-90">
         <div className="space-y-6 ">
@@ -108,7 +115,7 @@ export default function Crowdfund(){
         </div>
       </div>
             </div>
-            <div className="md:flex h-screen  w-1/2 right-0 absolute justify-center items-center hidden ">
+            <div className="z-20 md:flex h-screen  w-1/2 right-0 absolute justify-center items-center hidden ">
                 <div className="hidden space-x-6  absolute z-20 right-0 md:space-x-4  sm:flex h-screen">
                 <div className=" overflow-hidden ">
                   <ul className="flex flex-col items-center justify-center  min-w-max animate-infinite-scrollyr space-y-3">

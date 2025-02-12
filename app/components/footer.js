@@ -44,9 +44,9 @@ export default function Footer(){
       </ul>
     </div>
     </div>
-    <div className="flex-1 text-sm sm:block pr-8 ">
+    <div className="flex-1 text-sm sm:block pr-2 ">
     <iframe   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.618667966787!2d76.32889797507872!3d10.048292090059604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3a571be335%3A0xe9d0d17ee3a87389!2sSchool%20of%20Engineering%2C%20CUSAT!5e0!3m2!1sen!2sin!4v1735200976648!5m2!1sen!2sin&q=" 
- width="380" height="200"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="md:w-full md:h-60 sm:w-50 sm:h-50 "></iframe></div>   
+ width="380" height="200"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="md:w-full w-full md:h-60 sm:w-50 sm:h-50 "></iframe></div>   
   </footer>
       <div className="flex text-center justify-center space-x-7 items-center h-14 mb-2 border-b-white border-b-2">
         <a href="https://www.instagram.com/yetiracing_cusat/" className='hover:scale-110'>
