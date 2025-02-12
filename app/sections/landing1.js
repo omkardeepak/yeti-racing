@@ -63,11 +63,7 @@ export default function Landing(){
   </div>
 </div>
 
-<<<<<<< HEAD
 <div className=' z-50 hidden absolute md:text-base xl:text-2xl bottom-0   h-1/6  md:flex items-center  lg:p-10 xl:p-10 right-0  w-screen xl:h-1/6  text-justify font-Fn  text-neutral-200 shadow-2xl'>
-=======
-<div className=' z-50 hidden absolute md:text-base xl:text-2xl bottom-0   h-1/6  md:flex items-center xl:p-7 right-0  lg:p-6 xl:pt-10  w-screen  xl:h-1/6  text-justify font-Fn  text-neutral-200 shadow-2xl'>
->>>>>>> 90eff83a3192358a570c6a61f2b6aae2ed8ad30e
     Welcome to the official website of Yeti Racing Cusat - the first ever team from Kerala to win Formula Bharat and complete the endurance race in SAE Supra.
     </div>
     </div>
