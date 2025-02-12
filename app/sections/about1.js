@@ -95,7 +95,7 @@ import { useEffect,useRef } from "react";
                 </svg>
                 </a>
                   </div>
-                  <div className="text-gray-300 font-Fn flex flex-row md:space-x-6  xl:space-x-12  justify-center ">
+                  <div className="text-gray-300 font-Fn flex flex-row md:space-x-3  xl:space-x-12  justify-center ">
                     <div className="flex flex-col font-Fw h-full items-center md:text-lg xl:text-2xl  text-red-600">
                     AIR 4<span className="font-fn md:text-xs xl:text-sm text-white">Design</span>
                     </div>
@@ -122,7 +122,7 @@ import { useEffect,useRef } from "react";
                 </svg>
                 </a>
                   </div>
-                  <div className="text-gray-300 font-Fn flex flex-row md:space-x-6  xl:space-x-12 justify-center ">
+                  <div className="text-gray-300 font-Fn flex flex-row md:space-x-3  xl:space-x-12 justify-center ">
                     <div className="flex flex-col font-Fw h-full items-center md:text-lg xl:text-2xl text-red-600 ">
                     AIR 9<span className="font-fn md:text-xs xl:text-sm text-white">Overall</span>
                     </div>
@@ -150,7 +150,7 @@ import { useEffect,useRef } from "react";
                 </svg>
                 </a>
                   </div>
-                  <div className="text-gray-300 font-Fn flex flex-row md:space-x-6  xl:space-x-12 justify-center">
+                  <div className="text-gray-300 font-Fn flex flex-row md:space-x-3  xl:space-x-12 justify-center">
                     <div className="flex flex-col font-Fw h-full items-center md:text-lg xl:text-2xl text-red-600 ">
                     AIR 1<span className="font-fn  md:text-xs xl:text-sm text-white">Overall</span>
                     </div>

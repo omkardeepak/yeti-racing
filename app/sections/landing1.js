@@ -16,7 +16,7 @@ export default function Landing(){
   <div className='bg-black md:bg-transparent bg-opacity-50 backdrop-blur-sm rounded-3xl border-2 text-sm xl:text-base border-neutral-400 h-40 w-36 xl:h-52 xl:w-48 lg:h-40 lg:w-36  z-50 text-neutral-300 flex flex-col items-center p-2 text-center justify-center font-Orbitron '>
   Formula Bharat 2025
       <div className='xl:w-32 xl:h-32 lg:w-20 lg:h-24 w-20 h-24 flex items-center flex-col mt-2'>
-    <img src='https://ik.imagekit.io/r70knk9pu/image.png?updatedAt=1739207713019 ' />
+    <img src='https://ik.imagekit.io/r70knk9pu/image.png?updatedAt=1739207713019 ' loading='lazy' />
     </div>
     <div className='absolute xl:text-6xl text-4xl lg:text-5xl font-serif'> 
       1
@@ -29,7 +29,7 @@ export default function Landing(){
   <div className='backdrop-blur-sm rounded-3xl border-2  text-sm xl:text-base border-neutral-400 h-40 w-36 xl:h-52 xl:w-48 lg:h-40 lg:w-36 z-50 text-neutral-300 flex flex-col items-center p-2 text-center justify-center font-Orbitron '>
   Formula Bharat 2025
       <div className='xl:w-32 xl:h-32 lg:w-20 lg:h-24 w-20 h-24 flex items-center flex-col mt-2'>
-    <img src='https://ik.imagekit.io/r70knk9pu/image.png?updatedAt=1739207713019 ' />
+    <img src='https://ik.imagekit.io/r70knk9pu/image.png?updatedAt=1739207713019 ' loading='lazy' />
     </div>
     <div className='absolute xl:text-6xl text-4xl lg:text-5xl font-serif'> 
       1
@@ -41,7 +41,7 @@ export default function Landing(){
   <div className='hidden backdrop-blur-sm rounded-3xl border-2 text-sm xl:text-base border-neutral-400 bg-black bg-opacity-55 md:bg-transparent md:bg-opacity-0 h-40 w-36 xl:h-52 xl:w-48 lg:h-40 lg:w-36 z-50 text-neutral-300 md:flex flex-col items-center p-2 text-center justify-center font-Orbitron '>
   Formula Bharat 2025
       <div className='xl:w-32 xl:h-32 lg:w-20 lg:h-24  w-20 h-24 flex items-center flex-col mt-2'>
-    <img src='https://ik.imagekit.io/r70knk9pu/image.png?updatedAt=1739207713019 ' />
+    <img src='https://ik.imagekit.io/r70knk9pu/image.png?updatedAt=1739207713019 ' loading='lazy' />
     </div>
     <div className='absolute xl:text-6xl text-4xl lg:text-5xl font-serif'> 
       1
@@ -52,7 +52,7 @@ export default function Landing(){
   <div className='hidden backdrop-blur-sm rounded-3xl border-2 text-sm xl:text-base border-neutral-400 h-40 w-36 xl:h-52 xl:w-48 lg:h-40 lg:w-36 z-50 text-neutral-300 md:flex flex-col items-center p-2 text-center justify-center font-Orbitron '>
   Formula Bharat 2025
       <div className='xl:w-32 xl:h-32 lg:w-20 lg:h-24 w-20 h-24 flex items-center flex-col mt-2'>
-    <img src='https://ik.imagekit.io/r70knk9pu/image.png?updatedAt=1739207713019 ' />
+    <img src='https://ik.imagekit.io/r70knk9pu/image.png?updatedAt=1739207713019 ' loading='lazy' />
     </div>
     <div className='absolute xl:text-6xl text-4xl lg:text-5xl font-serif'> 
       1
@@ -63,7 +63,7 @@ export default function Landing(){
   </div>
 </div>
 
-<div className=' z-50 hidden absolute md:text-base xl:text-2xl bottom-0 xl:pt-48  h-1/3 xl:ml-20 md:flex items-center xl:p-28 lg:p-16   w-full xl:h-1/2  text-justify font-Fn  text-neutral-200 shadow-2xl'>
+<div className=' z-50 hidden absolute md:text-base xl:text-2xl bottom-0   h-1/6  md:flex items-center xl:p-7 right-0  lg:p-6 xl:pt-10  w-screen  xl:h-1/6  text-justify font-Fn  text-neutral-200 shadow-2xl'>
     Welcome to the official website of Yeti Racing Cusat - the first ever team from Kerala to win Formula Bharat and complete the endurance race in SAE Supra.
     </div>
     </div>
