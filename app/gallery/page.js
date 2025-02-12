@@ -1,6 +1,5 @@
 "use client"
 import { useState, useEffect, useRef, useMemo } from "react";
-
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
@@ -94,23 +93,29 @@ const VideoGallery = () => {
   );
 };
 
-const ImageGrid = () => {
-  const SPIN_DURATION = 7;
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hoveredCell, setHoveredCell] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
 
-  const HOVER_IMAGES = useMemo(() => [
-    // ... (previous HOVER_IMAGES array)
-    { id: 0, hoverImage: "/assets/f1.webp"},
-    { id: 1, hoverImage: "/assets/f2.webp"},
-    { id: 2, hoverImage: "/assets/f3.webp"},
-    { id: 3, hoverImage: "/assets/f4.webp"},
-    { id: 4, hoverImage: "/assets/f5.webp"},
-    { id: 5, hoverImage: "/assets/f6.webp"},
-    { id: 6, hoverImage: "/assets/f7.webp"},
-    { id: 7, hoverImage: "/assets/f8.webp"},
-    { id: 8, hoverImage: "/assets/f9.webp"},
+
+
+
+
+const Gallery = () => {
+  const [windowWidth, setWindowWidth] = useState(1920);
+  const [hoveredCell, setHoveredCell] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const animationRef = useRef(null);
+
+  // Formula Bharat grid images
+  const formulaImages = useMemo(() => [
+    { id: 0, hoverImage: "/assets/f1.webp" },
+    { id: 1, hoverImage: "/assets/f2.webp" },
+    { id: 2, hoverImage: "/assets/f3.webp" },
+    { id: 3, hoverImage: "/assets/f4.webp" },
+    { id: 4, hoverImage: "/assets/f5.webp" },
+    { id: 5, hoverImage: "/assets/f6.webp" },
+    { id: 6, hoverImage: "/assets/f7.webp" },
+    { id: 7, hoverImage: "/assets/f8.webp" },
+    { id: 8, hoverImage: "/assets/f9.webp" },
     { id: 9, hoverImage: "/assets/f10.webp" },
     { id: 10, hoverImage: "/assets/f11.webp" },
     { id: 11, hoverImage: "/assets/f12.webp" },
@@ -119,138 +124,7 @@ const ImageGrid = () => {
     { id: 14, hoverImage: "/assets/f15.webp" }
   ], []);
 
-  useEffect(() => {
-    
-    setIsLoaded(true);
-  }, []);
-
-  
-
-  const cells = useMemo(() => 
-    Array.from({ length: 15 }, (_, index) => ({
-      id: index,
-      mainImageUrl: "/assets/carhd.webp",
-      ...HOVER_IMAGES[index]
-    }))
-  , [HOVER_IMAGES]);
-
-  useEffect(() => {
-    const imagePromises = [...new Set([
-      ...cells.map(cell => cell.mainImageUrl),
-      ...cells.map(cell => cell.hoverImage),
-      "/assets/shi-rembg.webp"
-    ])].map(url => {
-      return new Promise((resolve) => {
-        const img = new Image();
-        img.src = url;
-        img.onload = resolve;
-        img.onerror = resolve;
-      });
-    });
-
-    Promise.all(imagePromises).then(() => setIsLoading(false));
-  }, [cells]);
-
-  if (isLoading) {
-    return (
-      <div className="w-full h-screen bg-gradient-to-b from-red-950 via-red-1000 to-black flex items-center justify-center">
-        <div className="text-white text-lg font-zenDots animate-pulse">Loading...</div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-red-950 via-red-1000 to-black transition-transform duration-500">
-      <style jsx>{`
-        @keyframes horizontalSpin {
-          from { transform: translateX(-50%) rotateY(-90deg); }
-          to { transform: translateX(-50%) rotateY(90deg); }
-        }
-        .cell-hover-effect {
-          transform: translateZ(0);
-          backface-visibility: hidden;
-          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          will-change: transform;
-        }
-      `}</style>
-
-      <div className="container mx-auto py-8">
-        <h1 className="text-white text-4xl md:text-6xl font-zenDots tracking-wider text-center">
-          FORMULA BHARAT'25
-        </h1>
-      </div>
-
-      <div className="flex flex-col lg:flex-row w-full px-4 gap-4">
-        <div className="w-full lg:w-3/5 p-4">
-          <div 
-            className="grid gap-1"
-            style={{
-              gridTemplateColumns: 'repeat(5, 1fr)',
-              gridTemplateRows: 'repeat(3, 1fr)',
-              aspectRatio: '5/3',
-              width: '100%'
-            }}
-          >
-            {cells.map((cell) => (
-              <div
-                key={cell.id}
-                className="relative aspect-square overflow-hidden cursor-pointer cell-hover-effect"
-                onMouseEnter={() => setHoveredCell(cell.id)}
-                onMouseLeave={() => setHoveredCell(null)}
-              >
-                <div
-                  className="absolute inset-0 transition-all duration-300 ease-out"
-                  style={{
-                    backgroundImage: `url(${cell.mainImageUrl})`,
-                    backgroundSize: '500% 300%',
-                    backgroundPosition: `${(cell.id % 5) * -100}% ${Math.floor(cell.id / 5) * -100}%`,
-                    transform: 'translateZ(0)',
-                    willChange: 'transform'
-                  }}
-                />
-                
-                {hoveredCell === cell.id && (
-                  <div
-                    className="absolute inset-0 transition-all duration-300 ease-out"
-                    style={{
-                      backgroundImage: `url(${cell.hoverImage})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      transform: 'translateZ(0)',
-                      willChange: 'transform'
-                    }}
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="w-full lg:w-2/5 flex items-center justify-center">
-          <div className="relative w-full aspect-square" style={{ perspective: '1000px' }}>
-            <img
-              src="/assets/shi-rembg.webp"
-              alt="Rotating Image"
-              className="w-full h-full object-contain absolute left-1/2"
-              style={{
-                animation: `horizontalSpin ${SPIN_DURATION}s linear infinite normal`,
-                transformStyle: 'preserve-3d',
-                willChange: 'transform',
-                backfaceVisibility: 'hidden'
-              }}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-
-};
-const Gallery = () => {
-  const [windowWidth, setWindowWidth] = useState(1920);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const animationRef = useRef(null);
-
+  // Gallery images
   const images = useMemo(() => [
     "/assets/DSC_0181.webp",
     "/assets/DSC_0027.webp",
@@ -262,9 +136,38 @@ const Gallery = () => {
     "/assets/3.webp"
   ], []);
 
+  // Create cells with main image and hover image
+  const cells = useMemo(() => 
+    formulaImages.map(img => ({
+      ...img
+    }))
+  , [formulaImages]);
+
   useEffect(() => {
-   
-    setIsLoaded(true);
+    const loadImages = async () => {
+      const imageUrls = [
+        ...cells.map(cell => cell.mainImageUrl),
+        ...cells.map(cell => cell.hoverImage),
+        ...images,
+        "/assets/shi-rembg.webp"
+      ];
+
+      await Promise.all(
+        [...new Set(imageUrls)].map(url => {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.src = url;
+            img.onload = resolve;
+            img.onerror = resolve;
+          });
+        })
+      );
+
+      setIsLoading(false);
+      setIsLoaded(true);
+    };
+
+    loadImages();
 
     const handleResize = debounce(() => {
       setWindowWidth(window.innerWidth);
@@ -274,13 +177,81 @@ const Gallery = () => {
     handleResize();
     
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [cells, images]);
+
+  if (isLoading) {
+    return (
+      <div className="w-full h-screen bg-gradient-to-b from-red-950 via-red-1000 to-black flex items-center justify-center">
+        <div className="text-white text-lg">Loading...</div>
+      </div>
+    );
+  }
 
   return (
     <div className={`flex flex-col min-h-screen bg-black transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar />
       <VideoGallery />
-      <ImageGrid />
+      <div className="w-full min-h-screen p-4 bg-gradient-to-b from-red-950 via-red-1000 to-black">
+  <div className="max-w-6xl mx-auto">
+    <h1 className="text-white text-4xl md:text-6xl text-center mb-8 font-zenDots">
+      FORMULA BHARAT'25
+    </h1>
+    
+    <div className="flex flex-col lg:flex-row gap-6 items-center justify-start">
+            <div className="w-full lg:w-3/5 relative">
+              {/* Main car image container */}
+              <div className="relative aspect-[5/3] border border-black overflow-hidden">
+                <div 
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage: "url('/assets/carhd.webp')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                />
+                
+                {/* Grid overlay */}
+                <div className="grid grid-cols-5 grid-rows-3 h-full">
+                  {cells.map((cell) => (
+                    <div
+                      key={cell.id}
+                      className="relative border border-black cursor-pointer overflow-hidden"
+                      onMouseEnter={() => setHoveredCell(cell.id)}
+                      onMouseLeave={() => setHoveredCell(null)}
+                    >
+                      {hoveredCell === cell.id && (
+                        <div
+                          className="absolute inset-0 transition-all duration-300"
+                          style={{
+                            backgroundImage: `url(${cell.hoverImage})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            zIndex: 10
+                          }}
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-2/5 flex items-center justify-center">
+              <div className="relative w-full aspect-square">
+                <img
+                  src="/assets/shi-rembg.webp"
+                  alt="Rotating Image"
+                  className="w-full h-full object-contain absolute transform-gpu"
+                  style={{
+                    transformOrigin: 'center center',
+                    animation: 'horizontalSpin 8s linear infinite'
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="relative z-10 w-full px-4 py-16 bg-gradient-to-b from-black via-red to-red-950">
         <h2 className="text-4xl md:text-5xl lg:text-7xl text-white mb-8 md:mb-12 text-center font-zenDots">
           SAE Supra<span className="ml-3 text-red-700">'</span>24
