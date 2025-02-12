@@ -63,7 +63,7 @@ export default function Landing(){
   </div>
 </div>
 
-<div className=' z-50 hidden absolute md:text-base xl:text-2xl bottom-0 xl:pt-48  h-1/3 xl:ml-20 md:flex items-center xl:p-28 lg:p-16   w-full xl:h-1/2  text-justify font-Fn  text-neutral-200 shadow-2xl'>
+<div className=' z-50 hidden absolute md:text-base xl:text-2xl bottom-0   h-1/6  md:flex items-center  lg:p-10 xl:p-10 right-0  w-screen xl:h-1/6  text-justify font-Fn  text-neutral-200 shadow-2xl'>
     Welcome to the official website of Yeti Racing Cusat - the first ever team from Kerala to win Formula Bharat and complete the endurance race in SAE Supra.
     </div>
     </div>
@@ -87,7 +87,7 @@ export default function Landing(){
     className="object-cover  w-full h-full object-top absolute top-0 left-0 z-40"
   /> 
  <div
-      className={`xl:mt-32 lg:mt-24  mt-32 md:ml-4 z-30 object-cover font-Inter font-extrabold lg:text-[9rem] xl:text-[14rem] text-[6rem] md:tracking-wider w-full h-full object-bottom absolute top-0 flex flex-col leading-[85px] xl:leading-[185px] lg:leading-[125px] text-gray-300  bg-gradient-to-br to-neutral-600  from-neutral-100  text-transparent bg-clip-text`
+      className={`xl:mt-32 lg:mt-24  mt-32 md:ml-4 z-30 object-cover font-Inter font-extrabold lg:text-[9rem] xl:text-[13rem] text-[6rem] md:tracking-wider w-full h-full object-bottom absolute top-0 flex flex-col leading-[85px] xl:leading-[185px] lg:leading-[125px] text-gray-300  bg-gradient-to-br to-neutral-600  from-neutral-100  text-transparent bg-clip-text`
       }
     >
       YETI <span>RACING</span>
